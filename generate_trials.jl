@@ -131,52 +131,28 @@ end
 
 
 function make_trials(; )
-    n = 11
-    rewards = exponential_rewards(8)
-    rdist = IIDSampler(n, rewards)
-    kws = (;n, rdist)
+    rdist = exponential_rewards(8)
+    practice = [sample_trial(rdist, n_layer=2, n_per_layer=4) for i in 1:20]
+    mask = map(!isequal(0), practice[1].rewards)
+    practice[1].rewards[mask] .= rdist
 
-
-    practice = repeatedly(10) do
-        p = sample_problem(;kws...) do p
-            default_problem_requirement(p) || return false
-            # value(p) > 0 || return false
-            # opaths = optimal_paths(p)
-            # length(opaths) == 1 || return false
-
-            ps = paths(p)
-            pv = value.(p, ps)
-            is_optimal = pv .== maximum(pv)
-            sum(is_optimal) == 1 || return false
-            opt_i = findall(is_optimal)[1]
-            pv[opt_i] > 0 || return false
-            maximum(pv[.!is_optimal]) ≤ pv[opt_i] - 2 || return false
-            2 ≤ length(ps[opt_i]) ≤ 3 || return false
-        end
-        (;JSON.lower(p)..., max_score=value(p))
-    end
-
-    main = repeatedly(300) do
-        p = sample_problem(;kws...)
-        (;JSON.lower(p)..., max_score=value(p))
-    end
-    (; practice, main )
+    (;
+        # intro = [sample_problem(;graph = neighbor_list(intro_graph(n)), start=1, kws..., rewards=zeros(n))],
+        # vary_transition = [sample_problem(;kws...)],
+        # practice_revealed = [sample_problem(;kws...) for i in 1:2],
+        # intro_hover = [sample_problem(;kws...)],
+        # practice_hover = [sample_problem(;kws...) for i in 1:2],
+        practice,
+        main = [sample_trial(rdist) for i in 1:100],
+    )
 end
 
-# %% --------
+# t = make_trials().main[1]
+# graph = map(x -> x .+ 1, t.graph)
+# prob = Problem(graph, t.rewards, t.start+1, -1)
 
-function circle_layout(N)
-    # we use 0:N-1 to match python's 0 indexing
-    map(0:N-1) do s
-        angle = π/2 + s * 2 * π / N
-        x = (cos(angle) + 1) / 2 - 0.5
-        y = (sin(angle) + 1) / 2 - 0.5
-        (x, y)
-    end
-end
+# # %% --------
 
-
-# %% --------
 
 function get_version()
     for line in readlines("config.py")
@@ -190,7 +166,7 @@ end
 
 
 version = get_version()
-n_subj = 200  # better safe than sorry
+n_subj = 30  # better safe than sorry
 Random.seed!(hash(version))
 subj_trials = repeatedly(make_trials, n_subj)
 layout = circle_layout(11)
