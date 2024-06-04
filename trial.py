@@ -144,6 +144,7 @@ class GraphTrial(object):
                 self.reward_labels.append(reward_label)
                 self.reward_text.append(reward_label)
 
+
     def hide(self):
         self.gfx.clear()
 
