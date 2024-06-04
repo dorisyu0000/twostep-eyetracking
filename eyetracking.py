@@ -3,11 +3,12 @@ import os
 import random
 import time
 import sys
-from functools import cached_property
 from string import ascii_letters, digits
 import logging
 import numpy as np
 import hashlib
+
+from config import KEY_CONTINUE
 
 from EyeLinkCoreGraphicsPsychoPy import EyeLinkCoreGraphicsPsychoPy
 from psychopy import visual, core, event, monitors, gui
@@ -46,13 +47,14 @@ def configure_data(tracker):
     tracker.sendCommand("file_sample_data = %s" % file_sample_flags)
     tracker.sendCommand("link_event_filter = %s" % link_event_flags)
     tracker.sendCommand("link_sample_data = %s" % link_sample_flags)
+    tracker.sendCommand("button_function 1 'accept_target_fixation'");
 
     tracker.sendCommand("calibration_type = HV9")
     tracker.sendCommand("enable_automatic_calibration = NO")
 
 def pix2height(win, pos):
     assert win.units == 'height'
-    w, h = win.size / 2  # eyetracker uses non-retina pixels
+    w, h = win.size
     x, y = pos
 
     y *= -1  # invert y axis
@@ -64,7 +66,7 @@ def pix2height(win, pos):
 
 def height2pix(win, pos):
     assert win.units == 'height'
-    w, h = win.size / 2  # eyetracker uses non-retina pixels
+    w, h = win.size
     x, y = pos
 
 
@@ -87,7 +89,7 @@ class EyeLink(object):
         self.dummy_mode = dummy_mode
         self.uniqueid = uniqueid
         self.edf_file = ensure_edf_filename(uniqueid)
-        self.disable_drift_checks = False
+        self.disable_drift_checks = True
 
         if pylink.getEYELINK():
             logging.info('Using existing tracker')
@@ -140,8 +142,8 @@ class EyeLink(object):
         self.genv.update_cal_target()
         self.genv.draw_cal_target(x, y)
         self.win.units = 'height'
-        keys = event.waitKeys(keyList=['space', 'escape'])
-        if 'space' in keys:
+        keys = event.waitKeys(keyList=['space', 'escape', KEY_CONTINUE])
+        if 'escape' not in keys:
             return 'ok'
 
         self.win.showMessage('Experimenter, choose:\n(C)ontinue  (A)bort  (R)ecalibrate  (D)isable drift check')
@@ -177,13 +179,13 @@ class EyeLink(object):
     def setup_calibration(self, full_screen=False):
         # Open a window, be sure to specify monitor parameters
         self.message(f'Set up calibration')
-        scn_width, scn_height = np.round(self.win.size / 2)  # / 2 for retina
+        scn_width, scn_height = np.round(self.win.size)
         # pygame.mouse.set_visible(True)  # show mouse cursor
 
         # Pass the display pixel coordinates (left, top, right, bottom) to the tracker
         # see the EyeLink Installation Guide, "Customizing Screen Settings"
 
-        scale = 0.85
+        scale = 0.9
         h_trim = int(((1 - scale) * scn_height) / 2)
         w_trim = int((scn_width - scale * scn_height) / 2)
 
@@ -206,6 +208,7 @@ class EyeLink(object):
 
     def calibrate(self):
         self.win.mouseVisible = False
+        self.win.clearAutoDraw()
         self.genv.setup_cal_display()
         self.win.flip()
         logging.info('doTrackerSetup')
@@ -292,6 +295,11 @@ class MouseLink(EyeLink):
 
     def calibrate(self):
         logging.info('MouseLink calibrate')
+        self.win.showMessage('This would be a calibration if not in mouse mode\npress space to continue')
+        self.win.flip()
+        keys = event.waitKeys(keyList=['space', 'c'])
+        self.win.showMessage(None)
+        self.win.flip()
         return
 
     def save_data(self):

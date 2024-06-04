@@ -50,8 +50,7 @@ class MultiShape(object):
 def shape(f):
     def wrapper(self, *args, sub_shape=False, **kwargs):
         obj = f(self, *args, **kwargs)
-        if 'autoDraw' not in kwargs:
-            obj.setAutoDraw(True)
+        obj.setAutoDraw(kwargs.get('autoDraw', True))
         if not sub_shape:
             self.objects.append(obj)
         return obj
@@ -72,12 +71,17 @@ class Graphics(object):
             o.setAutoDraw(True)
 
     @shape
-    def circle(self, pos, r=.05, lineColor='black', lineWidth=10, **kws):
-        return visual.Circle(self.win, radius=r, pos=pos, lineColor=lineColor, lineWidth=lineWidth, **kws)
+    def image(self, pos, image, size, path='images', **kws):
+        return visual.ImageStim(self.win, image=path + '/' + image, pos=pos, size=(size, size))
+
 
     @shape
-    def line(self, start, end, lineColor='black', lineWidth=10, **kws):
-        return visual.line.Line(self.win, start=start, end=end, lineColor=lineColor, lineWidth=lineWidth, **kws)
+    def circle(self, pos, r=.05, lineColor='black', fillColor='white', lineWidth=2, **kws):
+        return visual.Circle(self.win, radius=r, pos=pos, fillColor=fillColor, lineColor=lineColor, lineWidth=lineWidth, **kws)
+
+    @shape
+    def line(self, start, end, lineColor='black', lineWidth=4, **kws):
+        return visual.Line(self.win, start=start, end=end, lineColor=lineColor, lineWidth=lineWidth, **kws)
 
     @shape
     def text(self, text, pos=(0,0), height=.03, color='black', **kws):
@@ -87,7 +91,7 @@ class Graphics(object):
     def arrow(self, c0, c1):
         line = self.line(c0.pos, c1.pos, depth=2, sub_shape=True)
         vertices = .01 * np.array([[-1, -2], [1, -2], [0, 0]])
-        point = visual.ShapeStim(self.win, vertices=vertices, fillColor='black',
+        point = visual.ShapeStim(self.win, vertices=vertices, fillColor='black', lineColor='black',
                          pos=move_towards(c1.pos, c0.pos, c1.radius),
                          ori=90-angle(c0.pos, c1.pos))
         return MultiShape(line, point)
@@ -99,7 +103,7 @@ class Graphics(object):
 
     @shape
     def rect(self, pos, width, height, **kws):
-        return visual.Rect(self.win, width, height, pos=pos, **kws)
+        return visual.Rect(self.win, width, height, pos=pos, **kws, lineWidth=0)
 
     def animate(self, sec):
         self.animating = True
