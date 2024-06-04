@@ -96,28 +96,8 @@ class GraphTrial(object):
         self.mouse = event.Mouse()
         self.done = False
 
-    def wait_keys(self, keys, time_limit=float('inf')):
-        keys = event.waitKeys(maxWait=time_limit, keyList=[*keys, KEY_ABORT])
-        if keys and KEY_ABORT in keys:
-            self.status = 'abort'
-            raise AbortKeyPressed()
-        else:
-            return keys
-
-
-    def log(self, event, info={}):
-        time = core.getTime()
-        logging.debug(f'{self.__class__.__name__}.log {time:3.3f} {event} ' + ', '.join(f'{k} = {v}' for k, v in info.items()))
-        datum = {
-            'time': time,
-            'event': event,
-            **info
-        }
-        self.data["events"].append(datum)
-        if self.triggers and event in TRIGGERS:
-            self.triggers.send(TRIGGERS[event])
-        if self.eyelink:
-            self.eyelink.message(jsonify(datum), log=False)
+        # Initialize reward_text as an empty list
+        self.reward_text = []
 
     def reward_descriptions(self):
         def fmt(x):
@@ -160,9 +140,9 @@ class GraphTrial(object):
             xs = (.4, -.4)
 
             for desc, x, color in zip(descs, (.45, -.45), (COLOR_WIN, COLOR_LOSS)):
-                self.reward_labels.append(self.gfx.text(desc.replace('for', '\n'), (x, .4), color=color, height=.05))
-
-
+                reward_label = self.gfx.text(desc.replace('for', '\n'), (x, .4), color=color, height=.05)
+                self.reward_labels.append(reward_label)
+                self.reward_text.append(reward_label)
 
     def hide(self):
         self.gfx.clear()
