@@ -96,8 +96,28 @@ class GraphTrial(object):
         self.mouse = event.Mouse()
         self.done = False
 
-        # Initialize reward_text as an empty list
-        self.reward_text = []
+    def wait_keys(self, keys, time_limit=float('inf')):
+        keys = event.waitKeys(maxWait=time_limit, keyList=[*keys, KEY_ABORT])
+        if keys and KEY_ABORT in keys:
+            self.status = 'abort'
+            raise AbortKeyPressed()
+        else:
+            return keys
+
+
+    def log(self, event, info={}):
+        time = core.getTime()
+        logging.debug(f'{self.__class__.__name__}.log {time:3.3f} {event} ' + ', '.join(f'{k} = {v}' for k, v in info.items()))
+        datum = {
+            'time': time,
+            'event': event,
+            **info
+        }
+        self.data["events"].append(datum)
+        if self.triggers and event in TRIGGERS:
+            self.triggers.send(TRIGGERS[event])
+        if self.eyelink:
+            self.eyelink.message(jsonify(datum), log=False)
 
     def reward_descriptions(self):
         def fmt(x):
@@ -134,15 +154,14 @@ class GraphTrial(object):
         self.gfx.shift(*self.pos)
 
         self.reward_labels = []
-        if self.reward_info:
-            print("YO")
-            descs = self.reward_descriptions()
-            xs = (.4, -.4)
+        # if self.reward_info:
+        #     print("YO")
+        #     descs = self.reward_descriptions()
+        #     xs = (.4, -.4)
 
-            for desc, x, color in zip(descs, (.45, -.45), (COLOR_WIN, COLOR_LOSS)):
-                reward_label = self.gfx.text(desc.replace('for', '\n'), (x, .4), color=color, height=.05)
-                self.reward_labels.append(reward_label)
-                self.reward_text.append(reward_label)
+        #     for desc, x, color in zip(descs, (.45, -.45), (COLOR_WIN, COLOR_LOSS)):
+        #         self.reward_labels.append(self.gfx.text(desc.replace('for', '\n'), (x, .4), color=color, height=.05))
+
 
 
     def hide(self):
@@ -151,6 +170,18 @@ class GraphTrial(object):
     def shift(self, x, y):
         self.gfx.shift(x, y)
         self.pos = np.array(self.pos) + [x, y]
+
+
+    def set_reward(self, s, r):
+        self.rewards[s] = r
+        self.reward_labels[s].text = reward_string(r)
+
+    def get_click(self):
+        if self.mouse.getPressed()[0]:
+            pos = self.mouse.getPos()
+            for (i, n) in enumerate(self.nodes):
+                if n.contains(pos):
+                    return i
 
     def set_state(self, s):
         self.log('visit', {'state': s})
