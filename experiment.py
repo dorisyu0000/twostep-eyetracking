@@ -10,7 +10,7 @@ import numpy as np
 
 from time import sleep
 from util import jsonify
-from config import KEY_CONTINUE, KEY_SWITCH, LABEL_CONTINUE, LABEL_SWITCH
+from config import KEY_CONTINUE, KEY_SWITCH, LABEL_CONTINUE, LABEL_SWITCH, LABLE_SELECT
 from trial import GraphTrial, AbortKeyPressed
 from graphics import Graphics
 from bonus import Bonus
@@ -213,7 +213,7 @@ class Experiment(object):
         self.triggers.send(4)
         self.message(
             "Before we start, let's review the buttons. "
-            f"{LABEL_CONTINUE} is the blue one. It should be under your index finger. "
+            f"{LABLE_SELECT} is the blue one. It should be under your index finger. "
             f"It's like J from the online version", space=True
         )
         self.message(
