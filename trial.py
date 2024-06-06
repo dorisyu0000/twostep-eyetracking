@@ -43,7 +43,7 @@ class GraphTrial(object):
                  eyelink=None, triggers=None, **kws):
         self.win = win
         self.graph = graph
-        self.rewards = reward_multiplier * np.array(rewards)
+        self.rewards = list(rewards)
         self.start = start
         self.layout = layout
         self.pos = pos
