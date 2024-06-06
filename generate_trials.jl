@@ -6,32 +6,19 @@ include("$model_dir/problem.jl")
 include("$model_dir/utils.jl")
 
 IMAGES = [
-    "images/Animal_Sea_Solid_Small.png",
-    "images/Animal_Sea_Pattern_Small.png",
-    "images/Animal_Land_Solid_Large.png",
-    "images/Animal_Land_Pattern_Small.png",
-    "images/Object_Sea_Solid_Large.png",
-    "images/Object_Sea_Pattern_Large.png",
-    "images/Object_Land_Solid_Small.png",
-    "images/Object_Land_Pattern_Large.png",
+    "images/pattern_1.png",
+    "images/pattern_2.png",
+    "images/pattern_3.png",
+    "images/pattern_4.png",
+    "images/pattern_5.png",
+    "images/pattern_6.png",
+    "images/pattern_7.png",
+    "images/pattern_8.png",
+    "images/pattern_9.png"
 ]
-parse_features(img) = split(rsplit(img, "/")[end], "_")[1:3]
-FEATURES = map(IMAGES) do img
-    parse_features(IMAGES[1]) .== parse_features(img)
-end
 
-function describe_mask(mask)
-    lookup = [
-        Dict(true => "Animal", false => "Object"),
-        Dict(true => "Sea", false => "Land"),
-        Dict(true => "Solid", false => "Pattern"),
-    ]
-    items = map(1:3, mask) do i, m
-        ismissing(m) && return missing
-        lookup[i][m]
-    end |> skipmissing
-    join(items, " & ")
-end
+
+
 
 # function default_graph_requirement(sgraph)
 #     is_connected(sgraph) || return false

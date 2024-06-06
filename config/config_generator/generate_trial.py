@@ -12,6 +12,18 @@ data = {
     'key': None
 }
 
+IMAGES = [
+    "pattern_1.png",
+    "pattern_2.png",
+    "pattern_3.png",
+    "pattern_4.png",
+    "pattern_5.png",
+    "pattern_6.png",
+    "pattern_7.png",
+    "pattern_8.png",
+    "pattern_9.png"
+]
+
 
 def regular_tree(branching):
     """
@@ -156,7 +168,7 @@ def sample_problem_1(n, trialNumber=None, rewards = None, n_steps=-1, graph=None
     difficulty = difficulty_distribution.rand()
     difficulty_key = f"{difficulty:.1f}"
 
-    with open("static/json/trials_1.json", "r") as file:
+    with open("config/config_generator/trials_1.json", "r") as file:
         categorized_combinations = json.load(file)
     
     if difficulty_key in categorized_combinations:
@@ -198,7 +210,7 @@ def sample_problem_2(n, trialNumber=None, n_steps=-1, graph=None, start=None, rd
     difficulty = difficulty_distribution.rand()
     difficulty_key = f"{difficulty:.1f}"
 
-    with open("static/json/trials_2.json", "r") as file:
+    with open("config/config_generator/trials_2.json", "r") as file:
         categorized_combinations = json.load(file)
     
     if difficulty_key in categorized_combinations:
@@ -273,7 +285,7 @@ def sample_problem_3(n, trialNumber=None, n_steps=-1, graph=None, start=None, rd
     difficulty = difficulty_distribution.rand()
     difficulty_key = f"{difficulty:.1f}"
 
-    with open("static/json/trials_3.json", "r") as file:
+    with open("config/config_generator/trials_3.json", "r") as file:
         categorized_combinations = json.load(file)
     
     if difficulty_key in categorized_combinations:
@@ -304,7 +316,7 @@ def sample_problem_4(n, trialNumber=None, n_steps=-1, graph=None, start=None, rd
     difficulty = difficulty_distribution.rand()
     difficulty_key = f"{difficulty:.1f}"
 
-    with open("static/json/trials_4.json", "r") as file:
+    with open("config/config_generator/trials_4.json", "r") as file:
         categorized_combinations = json.load(file)
     
     if difficulty_key in categorized_combinations:
@@ -522,23 +534,27 @@ def reward_graphics(n = 9,rewards = [4,3,2,1,0,-1,-2,-3,-4]):
     fixed_rewards = [str(i) for i in rewards]  # convert numbers to strings
     return dict(zip(fixed_rewards, sample(emojis, n)))
 
+def circle_layout(N):
+    angles = np.pi/2 + np.arange(0, N) * 2 * np.pi / N  # calculate angles for each point
+    x = (np.cos(angles) + 1) / 2 - 0.5
+    y = (np.sin(angles) + 1) / 2 - 0.5
+    return [(-xi, yi) for xi, yi in zip(x, y)]
+
 # Generate trials
 subj_trials = [make_trials() for _ in range(2)]
 
 # Directory setup
-dest = "static/json/config/"
+dest = "config/m2"
 os.makedirs(dest, exist_ok=True)
 
 # Save trials as JSON
-for i, trials in enumerate(subj_trials, start=3):
+for i, trials in enumerate(subj_trials, start=0):
     parameters = {
-        "emojiGraphics": reward_contours(),
-        "hover_edges": False,
-        "hover_rewards": False,
-        "points_per_cent": 6,
-        "use_n_steps": True,
-        "vary_transition": False,
-        "fixed_rewards": True
+        'reward_info': reward_contours(), 
+        'images': IMAGES,  # Map permutation indices to image filenames
+        'points_per_cent': 1,
+        'revealed': True,
+        'layout': circle_layout(9)
     }
     with open(f"{dest}/{i}.json", "w", encoding='utf-8') as file:
         json.dump({"parameters": parameters, "trials": trials}, file, ensure_ascii=False)

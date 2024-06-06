@@ -37,7 +37,7 @@ class AbortKeyPressed(Exception): pass
 class GraphTrial(object):
     """Graph navigation interface"""
     def __init__(self, win, graph, rewards, start, layout, pos=(0, 0), start_mode=None, max_score=None,
-                 images=None, reward_info=None, reward_multiplier=2,
+                 images=None, reward_info=None, 
                  delayed_feedback=True, feedback_duration=3, action_time=float('inf'),
                  initial_stage='planning', hide_states=False, hide_rewards_while_acting=True, hide_edges_while_acting= False,
                  eyelink=None, triggers=None, **kws):
@@ -52,7 +52,7 @@ class GraphTrial(object):
 
         self.images = images
         self.reward_info = reward_info
-        self.reward_multiplier = reward_multiplier
+        
 
         self.delayed_feedback = delayed_feedback
         self.feedback_duration = feedback_duration
@@ -79,7 +79,7 @@ class GraphTrial(object):
                 "kind": self.__class__.__name__,
                 "graph": graph,
                 "rewards": rewards,
-                # "reward_info": reward_info,
+                "reward_info": reward_info,
                 "initial_stage": initial_stage,
                 "hide_states": hide_states,
                 "hide_rewards_while_acting": hide_rewards_while_acting,
