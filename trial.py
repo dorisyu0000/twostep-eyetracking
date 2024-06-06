@@ -139,10 +139,12 @@ class GraphTrial(object):
 
         self.nodes = nodes = []
         self.node_images = []
+
         for i, (x, y) in enumerate(self.layout):
             pos = 0.7 * np.array([x, y])
             nodes.append(self.gfx.circle(pos, name=f'node{i}', r=.05))
             self.node_images.append(self.gfx.image(pos, self.images[i], size=.08, autoDraw=not self.hide_states))
+            
         self.data["trial"]["node_positions"] = [height2pix(self.win, n.pos) for n in self.nodes]
 
         self.arrows = {}
