@@ -1,0 +1,106 @@
+2024-06-06 16:57:53,228 [INFO]  starting up 24-06-06-1657_P0-test at 2.0340234999894165
+2024-06-06 16:57:53,251 [INFO]  git SHA: 21879900953a97aeb95261e2181b175a270be34c
+2024-06-06 16:57:53,251 [INFO]  Configuration file: config/m2/0.json
+2024-06-06 16:57:53,252 [INFO]  parameters {'reward_info': {'-4': 'pattern_1', '-3': 'pattern_2', '-2': 'pattern_3', '-1': 'pattern_4', '0': 'pattern_5', '1': 'pattern_6', '2': 'pattern_7', '3': 'pattern_8', '4': 'pattern_9'}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[-0.0, 0.5], [0.2938926261462365, 0.4045084971874737], [0.47552825814757677, 0.15450849718747373], [0.4755282581475768, -0.15450849718747361], [0.2938926261462366, -0.40450849718747367], [1.1102230246251565e-16, -0.5], [-0.29389262614623646, -0.4045084971874738], [-0.4755282581475768, -0.15450849718747384], [-0.4755282581475768, 0.15450849718747361], [-0.2938926261462367, 0.4045084971874736]]}
+2024-06-06 16:57:54,341 [INFO]  Created window with size [1300 1000]
+2024-06-06 16:57:54,498 [INFO]  Using dummy triggers
+2024-06-06 16:57:54,498 [INFO]  begin intro_main
+2024-06-06 16:57:54,498 [DEBUG]  message: Alright! We're ready to begin the main phase of the experiment. (None)
+2024-06-06 16:57:55,003 [DEBUG]  message: There will be 3 blocks of 10 minutes each. (None)
+2024-06-06 16:57:55,153 [DEBUG]  message: Like before, the clock doesn't run in between rounds (when the cross is visible). (None)
+2024-06-06 16:57:55,315 [DEBUG]  message: Remember, you will earn one cent for every point you make the game. (None)
+2024-06-06 16:57:55,457 [DEBUG]  message: Good luck! (None)
+2024-06-06 16:57:55,826 [INFO]  begin main
+2024-06-06 16:57:55,826 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [7, 9], [], [5, 2], [0], [], [], [], [3, 1, 4], []], "rewards": [1, 1, 3, 4, 1, -2, 3, -2, null, 0], "reward_info": {"-4": "pattern_1", "-3": "pattern_2", "-2": "pattern_3", "-1": "pattern_4", "0": "pattern_5", "1": "pattern_6", "2": "pattern_7", "3": "pattern_8", "4": "pattern_9"}, "initial_stage": "planning", "hide_states": true, "hide_rewards_while_acting": true, "hide_edges_while_acting": false, "start": 8}
+2024-06-06 16:57:55,826 [DEBUG]  GraphTrial.log 4.632 initialize status = ok
+2024-06-06 16:57:55,826 [DEBUG]  MouseLink message
+2024-06-06 16:57:55,826 [DEBUG]  GraphTrial.log 4.632 start recording 
+2024-06-06 16:57:55,826 [DEBUG]  MouseLink message
+2024-06-06 16:57:55,826 [DEBUG]  GraphTrial.log 4.632 show graph 
+2024-06-06 16:57:55,826 [INFO]  send trigger 1
+2024-06-06 16:57:55,827 [DEBUG]  MouseLink message
+2024-06-06 16:57:55,833 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,833 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,844 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,844 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,852 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,852 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,861 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,861 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,870 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,871 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,879 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,879 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,887 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,887 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,895 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,895 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,905 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,905 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,913 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,913 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,921 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,921 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,929 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,929 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,938 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,938 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,946 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,946 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,953 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,953 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,961 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,961 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,970 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,970 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,979 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,979 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,986 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,986 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:55,994 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:55,994 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,003 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,003 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,011 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,011 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,019 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,019 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,026 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,026 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,036 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,036 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,044 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,044 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,052 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,052 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,060 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,060 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,069 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,069 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,078 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,078 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,086 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,086 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,095 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,095 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,105 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,105 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,114 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,114 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,122 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,122 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,131 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:57:56,131 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:57:56,145 [DEBUG]  GraphTrial.log 4.951 visit state = 8
+2024-06-06 16:57:56,145 [DEBUG]  MouseLink message
+2024-06-06 16:57:56,145 [ERROR]  Caught exception in main
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 345, in main
+    elapsed += self.run_trial()
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 323, in run_trial
+    gt.run()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 411, in run
+    self.set_state(self.start)
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 177, in set_state
+    self.score += self.rewards[s]
+TypeError: unsupported operand type(s) for +=: 'int' and 'NoneType'

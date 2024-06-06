@@ -1,0 +1,104 @@
+2024-06-06 16:44:33,463 [INFO]  starting up 24-06-06-1644_P0-test at 1.5600933749810793
+2024-06-06 16:44:33,482 [INFO]  git SHA: 21879900953a97aeb95261e2181b175a270be34c
+2024-06-06 16:44:33,482 [INFO]  Configuration file: config/m2/0.json
+2024-06-06 16:44:33,483 [INFO]  parameters {'reward_info': {'-4': 'pattern_1', '-3': 'pattern_2', '-2': 'pattern_3', '-1': 'pattern_4', '0': 'pattern_5', '1': 'pattern_6', '2': 'pattern_7', '3': 'pattern_8', '4': 'pattern_9'}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[-0.0, 0.5], [0.3213938048432696, 0.38302222155948895], [0.492403876506104, 0.08682408883346515], [0.4330127018922194, -0.2499999999999999], [0.17101007166283422, -0.4698463103929542], [-0.1710100716628341, -0.46984631039295427], [-0.4330127018922192, -0.2500000000000002], [-0.49240387650610407, 0.08682408883346493], [-0.32139380484326985, 0.38302222155948895]]}
+2024-06-06 16:44:34,597 [INFO]  Created window with size [1300 1000]
+2024-06-06 16:44:34,743 [INFO]  Using dummy triggers
+2024-06-06 16:44:34,743 [INFO]  begin intro_main
+2024-06-06 16:44:34,743 [DEBUG]  message: Alright! We're ready to begin the main phase of the experiment. (None)
+2024-06-06 16:44:35,250 [DEBUG]  message: There will be 3 blocks of 10 minutes each. (None)
+2024-06-06 16:44:35,423 [DEBUG]  message: Like before, the clock doesn't run in between rounds (when the cross is visible). (None)
+2024-06-06 16:44:35,588 [DEBUG]  message: Remember, you will earn one cent for every point you make the game. (None)
+2024-06-06 16:44:35,724 [DEBUG]  message: Good luck! (None)
+2024-06-06 16:44:36,093 [INFO]  begin main
+2024-06-06 16:44:36,094 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[5], [4, 6], [9], [7], [], [], [], [], [1, 2, 3], []], "rewards": [0, 1, -4, -1, 3, 3, -1, -3, null, 4], "reward_info": {"-4": "pattern_1", "-3": "pattern_2", "-2": "pattern_3", "-1": "pattern_4", "0": "pattern_5", "1": "pattern_6", "2": "pattern_7", "3": "pattern_8", "4": "pattern_9"}, "initial_stage": "planning", "hide_states": true, "hide_rewards_while_acting": true, "hide_edges_while_acting": false, "start": 8}
+2024-06-06 16:44:36,094 [DEBUG]  GraphTrial.log 4.191 initialize status = ok
+2024-06-06 16:44:36,094 [DEBUG]  MouseLink message
+2024-06-06 16:44:36,094 [DEBUG]  GraphTrial.log 4.191 start recording 
+2024-06-06 16:44:36,094 [DEBUG]  MouseLink message
+2024-06-06 16:44:36,094 [DEBUG]  GraphTrial.log 4.191 show graph 
+2024-06-06 16:44:36,094 [INFO]  send trigger 1
+2024-06-06 16:44:36,094 [DEBUG]  MouseLink message
+2024-06-06 16:44:36,100 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,100 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,109 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,110 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,118 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,118 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,127 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,127 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,137 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,137 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,146 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,146 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,155 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,155 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,163 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,163 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,173 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,173 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,182 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,182 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,190 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,190 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,198 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,198 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,208 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,208 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,216 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,216 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,224 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,224 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,233 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,233 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,242 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,242 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,251 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,251 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,259 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,259 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,267 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,267 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,276 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,276 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,284 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,284 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,292 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,292 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,300 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,300 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,311 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,311 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,319 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,319 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,328 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,328 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,337 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,337 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,347 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,347 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,356 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,356 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,365 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,365 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,374 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,374 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,384 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,384 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,393 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,393 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,402 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,402 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,411 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-06 16:44:36,411 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-06 16:44:36,421 [ERROR]  Caught exception in main
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 345, in main
+    elapsed += self.run_trial()
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 323, in run_trial
+    gt.run()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 410, in run
+    self.show()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 153, in show
+    self.arrows[(i, j)] = self.gfx.arrow(nodes[i], nodes[j])
+IndexError: list index out of range

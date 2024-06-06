@@ -481,19 +481,19 @@ def make_trials():
     trialNumber = 1
 
 
-    for _ in range(320):  # Loop for 320 iterations
-        if trialNumber % 4 == 0:
+    for _ in range(200):  
+        if trialNumber % 2 == 0:
             problem_1 = sample_problem_1(**kws, trialNumber=trialNumber)
             main.append(problem_1)
-        elif trialNumber % 4 == 1:
+        elif trialNumber % 2 == 1:
             problem_2 = sample_problem_2(**kws, trialNumber=trialNumber)
             main.append(problem_2)
-        elif trialNumber % 4 == 2:
-            problem_4 = sample_problem_3(**kws, trialNumber=trialNumber)
-            main.append(problem_4)
-        elif trialNumber % 4 == 3:
-            problem_5 = sample_problem_4(**kws, trialNumber=trialNumber)
-            main.append(problem_5)
+        # elif trialNumber % 4 == 2:
+        #     problem_4 = sample_problem_3(**kws, trialNumber=trialNumber)
+        #     main.append(problem_4)
+        # elif trialNumber % 4 == 3:
+        #     problem_5 = sample_problem_4(**kws, trialNumber=trialNumber)
+        #     main.append(problem_5)
         trialNumber += 1
 
 
@@ -515,6 +515,28 @@ def make_trials():
         'main': main
     }
     
+def reward_info(invert=False):
+    reward_info = {}
+    png = [
+        "pattern_1", "pattern_2", "pattern_3", "pattern_4", "pattern_5",
+        "pattern_6", "pattern_7", "pattern_8", "pattern_9"
+    ]
+    images = [
+        "images[0]", "images[1]", "images[2]", "images[3]", "images[4]",
+        "images[5]", "images[6]", "images[7]", "images[8]"
+    ]
+
+    rewards = list(range(-4, 5))  # This loops from -4 to 4 inclusive
+
+    if invert:
+        rewards = [-x for x in rewards]  # Invert the sign of each reward
+
+    for index, reward in enumerate(rewards):
+        desc = png[index]  
+        image_path = images[index] 
+        reward_info[reward] = {"desc": desc, "image": image_path}
+    
+    return reward_info
 
 def reward_contours(n=9):
     png = ["pattern_1","pattern_2", "pattern_3","pattern_4", "pattern_5","pattern_6", "pattern_7", "pattern_8", "pattern_9"]
@@ -550,11 +572,11 @@ os.makedirs(dest, exist_ok=True)
 # Save trials as JSON
 for i, trials in enumerate(subj_trials, start=0):
     parameters = {
-        'reward_info': reward_contours(), 
+        'reward_info': reward_info(), 
         'images': IMAGES,  # Map permutation indices to image filenames
         'points_per_cent': 1,
         'revealed': True,
-        'layout': circle_layout(9)
+        'layout': circle_layout(10)
     }
     with open(f"{dest}/{i}.json", "w", encoding='utf-8') as file:
         json.dump({"parameters": parameters, "trials": trials}, file, ensure_ascii=False)

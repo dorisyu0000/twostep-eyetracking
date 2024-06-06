@@ -62,10 +62,11 @@ class GraphTrial(object):
         self.hide_states = hide_states
         self.hide_rewards_while_acting = hide_states or hide_rewards_while_acting
         self.hide_edges_while_acting = hide_edges_while_acting
+        self.reward_labels = []
 
         self.eyelink = eyelink
         self.triggers = triggers
-
+        
         self.status = 'ok'
         self.start_time = self.done_time = None
         self.disable_click = False
@@ -127,45 +128,56 @@ class GraphTrial(object):
 
     #     return [fmt(x) for x in self.reward_info]
 
+    
+    
     def show(self):
         self.show_time = core.getTime()
         self.log('show graph')
-        self.gfx.rect((-.65, .45), .1, .1, fillColor='white')
+        self.gfx.rect((-.65, .45), .1, .1, fillColor='grey')
+        
         if hasattr(self, 'nodes'):
             self.gfx.show()
             for lab in self.reward_text:
                 lab.autoDraw = False
             return
 
-        self.nodes = nodes = []
+        self.nodes = []
         self.node_images = []
-
         for i, (x, y) in enumerate(self.layout):
             pos = 0.7 * np.array([x, y])
-            nodes.append(self.gfx.circle(pos, name=f'node{i}', r=.05))
-            self.node_images.append(self.gfx.image(pos, self.images[i], size=.08, autoDraw=not self.hide_states))
+            node = self.gfx.circle(pos, name=f'node{i}', r=.05)
+            self.nodes.append(node)
             
+            # Fetch the reward for the current node
+            reward = self.rewards[i] if i < len(self.rewards) and self.rewards[i] is not None else None
+            if reward is not None and str(reward) in self.reward_info:
+                image_path = self.reward_info[str(reward)]["image"]  # Get the image path from reward_info
+                # Assuming you need to handle the placeholder 'images[x]' correctly:
+                if 'images[' in image_path:  # Check if it contains a placeholder
+                    image_index = int(image_path.split('[')[1].split(']')[0])  # Extract the index from the placeholder
+                    actual_image_path = self.images[image_index] if image_index < len(self.images) else None
+                else:
+                    actual_image_path = image_path  # Use the path directly if it's not a placeholder
+
+                if actual_image_path:  # Check if there's a valid image path
+                    image = self.gfx.image(pos, actual_image_path, size=.12, autoDraw=not self.hide_states)
+                    self.node_images.append(image)
+                else:
+                    self.node_images.append(None)
+            else:
+                self.node_images.append(None)  # Append None if no reward or image is available
+
         self.data["trial"]["node_positions"] = [height2pix(self.win, n.pos) for n in self.nodes]
 
         self.arrows = {}
         for i, js in enumerate(self.graph):
             for j in js:
-                self.arrows[(i, j)] = self.gfx.arrow(nodes[i], nodes[j])
+                self.arrows[(i, j)] = self.gfx.arrow(self.nodes[i], self.nodes[j])
 
         self.mask = self.gfx.rect((.1,0), 1.1, 1, fillColor='gray', opacity=0)
         self.gfx.shift(*self.pos)
 
-        self.reward_labels = []
-        # if self.reward_info:
-        #     print("YO")
-        #     descs = self.reward_descriptions()
-        #     xs = (.4, -.4)
-
-        #     for desc, x, color in zip(descs, (.45, -.45), (COLOR_WIN, COLOR_LOSS)):
-        #         self.reward_labels.append(self.gfx.text(desc.replace('for', '\n'), (x, .4), color=color, height=.05))
-
-
-
+  
     def hide(self):
         self.gfx.clear()
 
@@ -176,44 +188,52 @@ class GraphTrial(object):
     def set_state(self, s):
         self.log('visit', {'state': s})
         self.nodes[s].fillColor = COLOR_PLAN if self.stage == 'planning' else COLOR_ACT
-        self.score += self.rewards[s]
+        reward = 0 if self.rewards[s] is None else self.rewards[s]
+        self.score += reward
         prev = self.current_state
-
-        # self.set_node_label(s, reward_string(self.rewards[s]))
-
 
         self.current_state = s
         if len(self.graph[self.current_state]) == 0:
             self.done = True
 
-        if prev is None:  # initial
-            self.node_images[s].setAutoDraw(False)
-
-        else:  # not initial
+        if prev is None:  # Initial state, no previous node to unset
+            if self.node_images[s]:  # Check if there is an image at index s
+                self.node_images[s].setAutoDraw(False)
+        else:  # Not initial state, handle previous node
             self.path.append(s)
             self.nodes[prev].fillColor = 'white'
             if not self.delayed_feedback:
                 txt = visual.TextStim(self.win, reward_string(self.rewards[s]),
-                    pos=self.nodes[s].pos + np.array([.06, .06]),
-                    bold=True, height=.04, color=reward_color(self.rewards[s]))
+                                    pos=self.nodes[s].pos + np.array([.06, .06]),
+                                    bold=True, height=.04, color=reward_color(self.rewards[s]))
                 txt.setAutoDraw(True)
-                if self.node_images[s]:
+                if self.node_images[s]:  # Again, check before setting AutoDraw
                     self.node_images[s].setAutoDraw(True)
                 self.win.flip()
                 txt.setAutoDraw(False)
                 core.wait(1)
-                self.node_images[s].setAutoDraw(False)
+                if self.node_images[s]:  # Check again before setting AutoDraw
+                    self.node_images[s].setAutoDraw(False)
 
     def show_feedback(self):
         for s in self.path:
+            # Display feedback for the reward
             visual.TextStim(self.win, reward_string(self.rewards[s]),
-                pos=self.nodes[s].pos + np.array([.06, .06]),
-                bold=True, height=.04, color=reward_color(self.rewards[s])).draw()
-            self.node_images[s].setAutoDraw(True)
+                            pos=self.nodes[s].pos + np.array([.06, .06]),
+                            bold=True, height=.04, color=reward_color(self.rewards[s])).draw()
+            # Check if there is an image to auto draw
+            if self.node_images[s]:
+                self.node_images[s].setAutoDraw(True)
 
         self.win.flip()
         core.wait(self.feedback_duration)
         self.win.flip()
+
+        # After displaying, make sure to turn off autoDraw where applicable
+        for s in self.path:
+            if self.node_images[s]:
+                self.node_images[s].setAutoDraw(False)
+
 
     def fade_out(self):
         self.mask.setAutoDraw(False); self.mask.setAutoDraw(True)  # ensure on top

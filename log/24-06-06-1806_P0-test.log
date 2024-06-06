@@ -1,0 +1,23 @@
+2024-06-06 18:06:33,580 [INFO]  starting up 24-06-06-1806_P0-test at 1.5640553333505522
+2024-06-06 18:06:33,601 [INFO]  git SHA: 21879900953a97aeb95261e2181b175a270be34c
+2024-06-06 18:06:33,601 [INFO]  Configuration file: config/m2/0.json
+2024-06-06 18:06:33,602 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[-0.0, 0.5], [0.2938926261462365, 0.4045084971874737], [0.47552825814757677, 0.15450849718747373], [0.4755282581475768, -0.15450849718747361], [0.2938926261462366, -0.40450849718747367], [1.1102230246251565e-16, -0.5], [-0.29389262614623646, -0.4045084971874738], [-0.4755282581475768, -0.15450849718747384], [-0.4755282581475768, 0.15450849718747361], [-0.2938926261462367, 0.4045084971874736]]}
+2024-06-06 18:06:34,714 [INFO]  Created window with size [1300 1000]
+2024-06-06 18:06:34,861 [INFO]  Using dummy triggers
+2024-06-06 18:06:34,861 [INFO]  begin practice
+2024-06-06 18:06:34,861 [DEBUG]  message: Before we begin the main phase, we'll do a few practice rounds with all the images visible. (None)
+2024-06-06 18:06:35,568 [ERROR]  Caught exception in stage practice
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 38, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 262, in practice
+    gt = self.get_practice_trial()
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 144, in get_practice_trial
+    **self.trials['practice'][self.practice_i],
+KeyError: 0
+2024-06-06 18:06:56,825 [INFO]  starting up 24-06-06-1806_P0-test at 1.4986360416805837
+2024-06-06 18:06:56,842 [INFO]  git SHA: 21879900953a97aeb95261e2181b175a270be34c
+2024-06-06 18:06:56,842 [INFO]  Configuration file: config/m2/0.json
+2024-06-06 18:06:56,844 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[-0.0, 0.5], [0.2938926261462365, 0.4045084971874737], [0.47552825814757677, 0.15450849718747373], [0.4755282581475768, -0.15450849718747361], [0.2938926261462366, -0.40450849718747367], [1.1102230246251565e-16, -0.5], [-0.29389262614623646, -0.4045084971874738], [-0.4755282581475768, -0.15450849718747384], [-0.4755282581475768, 0.15450849718747361], [-0.2938926261462367, 0.4045084971874736]]}
+2024-06-06 18:06:57,943 [INFO]  Created window with size [1300 1000]
+2024-06-06 18:06:58,086 [INFO]  Using dummy triggers

@@ -67,7 +67,7 @@ output_dir = 'images/'
 filename_base = output_dir + 'pattern'
 
 # Generate the mesh grid
-x, y = np.meshgrid(np.linspace(-10, 10, 400), np.linspace(-10, 10, 400))
+x, y = np.meshgrid(np.linspace(-10, 10, 600), np.linspace(-10, 10, 600))
 if not os.path.isdir(output_dir ):
     os.makedirs(output_dir )
 

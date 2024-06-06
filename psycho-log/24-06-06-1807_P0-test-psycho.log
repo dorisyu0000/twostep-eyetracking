@@ -1,0 +1,41 @@
+1.4915 	WARNING 	The 'psychtoolbox' library cannot be loaded but is required for audio capture (use `pip install psychtoolbox` to get it). Microphone recording will be unavailable this session. Note that opening a microphone stream will raise an error.
+1.4946 	ERROR 	Support for the `sounddevice` audio backend is not available this session. Please install `psychopy-sounddevice` and restart the session to enable support.
+1.4948 	ERROR 	Support for the `pyo` audio backend is not available this session. Please install `psychopy-pyo` and restart the session to enable support.
+1.4950 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['PTB', 'sounddevice', 'pyo', 'pygame'] (in that order).
+1.5018 	INFO 	time is 2024-06-06 18:07:13,094497
+1.5207 	WARNING 	Monitor specification not found. Creating a temporary one...
+2.6022 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+2.6026 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x16bb53ac0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x16bb53a60>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x16bb538b0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x30cc8ee20>, multiSample=False, name='window1', numSamples=2, pos=(797, 415), screen=0, size=array([1300, 1000]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=False, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+2.6028 	EXP 	window1: mouseVisible = True
+2.6028 	EXP 	window1: backgroundImage = None
+2.6028 	EXP 	window1: backgroundFit = 'cover'
+2.6164 	INFO 	Mouse: using default window
+2.6165 	EXP 	window1: mouseVisible = True
+2.6181 	EXP 	window1: mouseVisible = False
+2.6182 	EXP 	window1: units = 'pix'
+2.6182 	INFO 	Mouse: using default window
+2.7519 	WARNING 	t of last frame was 135.55ms (=1/7)
+3.4172 	DATA 	Keypress: space
+3.4219 	WARNING 	t of last frame was 670.03ms (=1/1)
+3.6164 	DATA 	Keypress: space
+3.8027 	DATA 	Keypress: space
+4.1443 	DATA 	Keypress: space
+4.4723 	DATA 	Keypress: space
+4.7042 	DATA 	Keypress: space
+4.9122 	DATA 	Keypress: space
+7.7046 	DATA 	Keypress: f
+7.7064 	WARNING 	t of last frame was 4284.52ms (=1/0)
+15.0246 	DATA 	Keypress: space
+15.0290 	WARNING 	t of last frame was 7318.48ms (=1/0)
+16.2885 	DATA 	Keypress: space
+16.2919 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+18.7605 	DATA 	Keypress: space
+21.7605 	DATA 	Keypress: space
+22.2883 	DATA 	Keypress: space
+22.2895 	INFO 	Mouse: using default window
+23.2727 	DATA 	Keypress: f
+23.6965 	DATA 	Keypress: j
+24.3523 	DATA 	Keypress: j

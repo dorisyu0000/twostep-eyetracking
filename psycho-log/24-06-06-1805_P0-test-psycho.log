@@ -1,0 +1,39 @@
+1.5380 	WARNING 	The 'psychtoolbox' library cannot be loaded but is required for audio capture (use `pip install psychtoolbox` to get it). Microphone recording will be unavailable this session. Note that opening a microphone stream will raise an error.
+1.5413 	ERROR 	Support for the `sounddevice` audio backend is not available this session. Please install `psychopy-sounddevice` and restart the session to enable support.
+1.5415 	ERROR 	Support for the `pyo` audio backend is not available this session. Please install `psychopy-pyo` and restart the session to enable support.
+1.5417 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['PTB', 'sounddevice', 'pyo', 'pygame'] (in that order).
+1.5486 	INFO 	time is 2024-06-06 18:05:05,829243
+1.5672 	WARNING 	Monitor specification not found. Creating a temporary one...
+2.4070 	DATA 	Mouse: Left button down, pos=(433,117)
+2.5143 	DATA 	Mouse:  Left button up, pos=(433,117)
+2.6804 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+2.6807 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x16fed5be0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x16fed5b80>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x16fed59d0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x307f50f10>, multiSample=False, name='window1', numSamples=2, pos=(797, 415), screen=0, size=array([1300, 1000]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=False, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+2.6809 	EXP 	window1: mouseVisible = True
+2.6809 	EXP 	window1: backgroundImage = None
+2.6809 	EXP 	window1: backgroundFit = 'cover'
+2.6955 	INFO 	Mouse: using default window
+2.6957 	EXP 	window1: mouseVisible = True
+2.6973 	EXP 	window1: mouseVisible = False
+2.6973 	EXP 	window1: units = 'pix'
+2.6974 	INFO 	Mouse: using default window
+2.8349 	WARNING 	t of last frame was 139.45ms (=1/7)
+3.2476 	DATA 	Keypress: space
+3.2513 	WARNING 	t of last frame was 416.47ms (=1/2)
+3.5868 	DATA 	Keypress: space
+3.5904 	WARNING 	t of last frame was 339.04ms (=1/2)
+3.7363 	DATA 	Keypress: space
+3.7391 	WARNING 	t of last frame was 148.72ms (=1/6)
+3.8724 	DATA 	Keypress: space
+3.8744 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+4.3364 	DATA 	Keypress: space
+4.3378 	INFO 	Mouse: using default window
+5.9288 	DATA 	Keypress: f
+6.2564 	DATA 	Keypress: j
+6.4243 	DATA 	Keypress: j
+10.2480 	INFO 	Mouse: using default window
+12.5289 	DATA 	Keypress: f
+12.8007 	DATA 	Keypress: j
+12.9684 	DATA 	Keypress: j

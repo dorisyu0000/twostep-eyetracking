@@ -36,7 +36,7 @@ def main(pid=None, name=None, test=False, fast=False, full=False, mouse=False, h
     else:
         try:
             if not (skip_instruct or resume_block):
-                # exp.welcome()
+                exp.welcome()
                 # exp.setup_eyetracker(mouse)
                 # exp.show_gaze_demo()
                 # exp.intro_gaze()
