@@ -10,7 +10,7 @@ import numpy as np
 
 from time import sleep
 from util import jsonify
-from config import KEY_CONTINUE, KEY_SWITCH, LABEL_CONTINUE, LABEL_SWITCH, LABLE_SELECT
+from config import KEY_CONTINUE, KEY_SWITCH, LABEL_CONTINUE, LABEL_SWITCH, LABEL_SELECT,COLOR_ACT
 from trial import GraphTrial, AbortKeyPressed
 from graphics import Graphics
 from bonus import Bonus
@@ -208,20 +208,178 @@ class Experiment(object):
         if space:
             event.waitKeys(keyList=['space', KEY_CONTINUE])
 
+    
+    # @stage
+
+    # def welcome(self):
+    #     self.triggers.send(4)
+    #     self.message(
+    #         "Before we start, let's review the buttons. "
+    #         f"{LABEL_CONTINUE} is the blue one. It should be under your right index finger. "
+    #         f"You can press to confirm your choice", space=True
+    #     )
+    #     self.message(
+    #         f"{LABEL_SWITCH} is the yellow one. It should be under your left index finger. "
+    #         f"You can press to switch between the two options", 
+    #         tip_text = f'press {LABEL_SWITCH} to continue')
+    #     event.waitKeys(keyList=[KEY_SWITCH])
+
     @stage
-    def welcome(self):
-        self.triggers.send(4)
+    def intro(self):
+        # self.message('Welcome!', space=True)
+        gt = self.get_practice_trial(highlight_edges=False, hide_rewards_while_acting=False, initial_stage='acting')
+        gt.show()
+
+        gt.set_reward_display(False)
+        self.message("In this experiment, you will play a game on the board shown to the right.", space=True)
+
+        gt.set_state(gt.start)
+        self.message("Your current location on the board is highlighted in blue.", space=True)
+
+        gt.set_reward_display(True)
+        self.message("The goal of the game is to collect these diamonds.", space=True)
+
+        for (n, r) in zip(gt.nodes, gt.rewards):
+            if r > 0:
+                n.setLineColor('#1BD30C')
+        self.message("Specifically, you want the ones that point to the right. These earn you points.", space=True)
+
+        for (n, r) in zip(gt.nodes, gt.rewards):
+            if r < 0:
+                n.setLineColor('#E3000A')
+            else:
+                n.setLineColor('black')
+        self.message("The diamonds that point left are bad. They take away points!", space=True)
+
+        for (n, r) in zip(gt.nodes, gt.rewards):
+            n.setLineColor('black')
+
+        self.message("The further the diamond points to either side, the more points it is worth.", space=True)
+        self.message("Hover over each diamond to see its point value",
+                     tip_text='hover over every diamond to cotntinue', space=False)
+
+
+        seen = set()
+        n_reward = sum(l is not None for l in gt.reward_labels)
+        while len(seen) < n_reward:
+            pos = gt.mouse.getPos()
+            for (i, n) in enumerate(gt.nodes):
+                if gt.reward_labels[i]:
+                    hovered = n.contains(pos)
+                    if hovered:
+                        seen.add(i)
+                    gt.reward_labels[i].autoDraw = not hovered
+                    gt.reward_text[i].autoDraw = hovered
+            self.win.flip()
+        sleep(0.5)
+
+
+
+        
         self.message(
             "Before we start, let's review the buttons. "
-            f"{LABLE_SELECT} is the blue one. It should be under your index finger. "
-            f"It's like J from the online version", space=True
+            f"{LABEL_SELECT} is the blue one. It should be under your right index finger. "
+            f"You can press to confirm your choice", space=False
         )
         self.message(
-            f"{LABEL_SWITCH} is the yellow one. It should be under your middle finger. "
-            f"It's like K from the online version.",
-            tip_text = f'press {LABEL_SWITCH} to continue')
-        event.waitKeys(keyList=[KEY_SWITCH])
+            f"{LABEL_SWITCH} is the yellow one. It should be under your left index finger. "
+            f"You can press to switch between the two options", 
+            tip_text = f'try to press {LABEL_SWITCH} and {LABEL_SELECT} to continue',space=False)
+        
+        gt.run(one_step=True)
+        gt.start = gt.current_state
 
+        self.message("The round ends when you get to a location with no outgoing connections.",
+                     tip_text='click one of the highlighted locations', space=False)
+        gt.run(skip_planning=True)
+
+    @stage
+    def practice_start(self):
+        gt = self.get_practice_trial()
+        gt.show()
+        gt.set_state(gt.start)
+
+        self.message("At the beginning of each round, your initial location will be red.", space=True)
+
+        self.message("Before you can move, you have to click the red circle.", space=False,
+                     tip_text='click the red circle to continue')
+        gt.nodes[gt.start].setLineColor('#FFC910')
+        gt.run_planning()
+        gt.nodes[gt.start].setLineColor('black')
+
+        gt.nodes[gt.start].fillColor = COLOR_ACT
+        self.message("It will turn blue, indicating that you have entered the movement phase.", space=True)
+
+        gt.hide_rewards()
+        self.message("But be warned! The points will also disappear!", space=True)
+
+        gt.update_node_labels()
+        gt.nodes[gt.start].fillColor = COLOR_PLAN
+        self.message("So, you should only enter the movement phase after deciding on a full path.", space=True)
+        self.message("Give it a shot!", tip_text='click the red circle', space=False)
+
+        gt.start_time = gt.tick()
+        gt.run_planning()
+        self.message("Now you can select which locations to visit.",
+                     tip_text='complete the round to continue', space=False)
+        gt.run(skip_planning=True)
+
+
+
+    @stage
+    def practice_change(self):
+        gt = self.get_practice_trial()
+
+        self.message("Both the connections and points change on every round of the game.",
+                     tip_text='complete the round to continue', space=False)
+        gt.run()
+
+    @stage
+    def practice_timelimit(self):
+        gt = self.get_practice_trial(time_limit=3)
+        gt.disable_click = True
+
+        self.message("To make things more exciting, each round has a time limit.", space=True)
+        gt.show()
+        gt.timer.setLineColor('#FFC910')
+        gt.timer.setLineWidth(5)
+        gt.win.flip()
+
+        self.message("The time left is indicated by a bar on the right.", space=True)
+        gt.timer.setLineWidth(0)
+        self.message("Let's see what happens when it runs out...", space=False,
+            tip_text='wait for it')
+        gt.run()
+        self.message("If you run out of time, we'll make random decisions for you. Probably something to avoid.", space=True)
+
+    @stage
+    def practice(self, n):
+        intervened = False
+        for i in range(n):
+            self.message("Let's try a few more practice rounds.",
+                         space=False, tip_text=f'complete {n - i} practice rounds to continue')
+
+            gt = self.get_practice_trial()
+            for i in range(3):
+                gt.run()
+                if intervened or gt.score == gt.max_score:
+                    break
+                else:
+                    self.message(
+                        f"You got {int(gt.score)} points on that round, but you could have gotten {int(gt.max_score)}.\n"
+                        f"Let's try again. Try to make as many points as possible!"
+                    )
+                gt = self.get_practice_trial(repeat=True)
+            else:  # never succeeded
+                logging.warning(f"failed practice trial {i}")
+                if not intervened:
+                    intervened = True
+                    self.message("Please check in with the experimenter",
+                        tip_text="Wait for the experimenter (space)", space=True)
+                    self.get_practice_trial(repeat=True).run()
+
+
+        self.message("Great job!", space=True)
 
     @stage
     def setup_eyetracker(self, mouse=False):
