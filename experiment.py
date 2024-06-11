@@ -10,7 +10,7 @@ import numpy as np
 
 from time import sleep
 from util import jsonify
-from config import KEY_CONTINUE, KEY_SWITCH, LABEL_CONTINUE, LABEL_SWITCH, LABEL_SELECT,COLOR_ACT
+from config import KEY_CONTINUE, KEY_SWITCH,KEY_SELECT, LABEL_CONTINUE, LABEL_SWITCH,LABEL_SELECT, COLOR_ACT
 from trial import GraphTrial, AbortKeyPressed
 from graphics import Graphics
 from bonus import Bonus
@@ -73,7 +73,6 @@ def get_next_config_number():
         print("WARNING: USING RANDOM CONFIGURATION NUMBER")
         return np.random.choice(list(possible))
 
-
 def text_box(win, msg, pos, autoDraw=True, wrapWidth=.8, height=.035, alignText='left', **kwargs):
     stim = visual.TextStim(win, msg, pos=pos, color='white', wrapWidth=wrapWidth, height=height, alignText=alignText, anchorHoriz='left', **kwargs)
     stim.autoDraw = autoDraw
@@ -117,18 +116,89 @@ class Experiment(object):
         self.win._heldDraw = []  # see hackfix
         self.bonus = Bonus(1, 0)
         self.total_score = 0
-        # self.bonus = Bonus(self.parameters['points_per_cent'], 50)
         self.disable_gaze_contingency = False
 
-        self._message = text_box(self.win, '', pos=(-0.4, 0.1), autoDraw=True, height=.035)
-        self._tip = text_box(self.win, '', pos=(-0.4, -0.05), autoDraw=True, height=.025)
+        self._message = text_box(self.win, '', pos=(0, 0.45), autoDraw=True, wrapWidth=1.5, height=.035)  # Centered at the top
+        self._tip = text_box(self.win, '', pos=(0, 0.35), autoDraw=True, wrapWidth=1.5, height=.025)  # Centered slightly below the message
 
-        # self._practice_trials = iter(self.trials['practice'])
         self.main_trials = iter(self.trials['main'])
         self.practice_i = -1
         self.trial_data = []
         self.practice_data = []
         self.parameters['triggers'] = self.triggers = Triggers(**({'port': 'dummy'} if test_mode else {}))
+
+    def learn_reward(self, n_trials = 5):
+        correct_trials = 0
+        total_trials = len(self.trials['learn_rewards']['trial_sets'][0])
+        trial_index = 0
+        intervened = False
+
+        while correct_trials < n_trials:
+            if trial_index >= total_trials:
+                trial_index = 0  # Reset to the first trial if all trials have been exhausted
+
+            self.message("Let's try to learn the rewards for the following trials.",
+                        space=False, tip_text=f'Complete {n_trials - correct_trials} correct trials to continue')
+
+            trial = self.trials['learn_rewards']['trial_sets'][0][trial_index]
+            trial_index += 1
+
+            gt = self.run_learn_reward_trial(trial)
+            for attempt in range(3):
+                gt.run()
+                if gt.status == 'correct':
+                    self.message(f"Good job! Let's try another trial!")
+                    correct_trials += 1
+                    
+                    break
+                else:
+                    self.message(
+                        f"You did not get the correct reward. Try again to learn the rewards!"
+                    )
+                    gt = self.run_learn_reward_trial(trial)
+
+            if gt.status != 'correct':
+                logging.warning(f"Failed to learn reward trial after 3 attempts")
+                if not intervened:
+                    intervened = True
+                    self.message("Please check in with the experimenter",
+                        tip_text="Wait for the experimenter (space)", space=True)
+                    self.run_learn_reward_trial(trial).run()
+
+        self.message("Great job! You have learned the rewards.", space=True)
+
+
+    def run_learn_reward_trial(self, trial):
+    # Setup the trial
+        prm = {
+            'eyelink': self.eyelink,
+            **self.parameters,
+            'gaze_contingent': False,
+            **trial
+        }
+        
+        gt = GraphTrial(self.win, **prm)
+        max_reward = max([r for r in gt.rewards if r is not None])
+        gt.show()
+
+        # Display the rewards
+        for (n, r) in zip(gt.nodes, gt.rewards):
+            if r is not None:
+                reward_text = visual.TextStim(self.win, text=f'{r:+}', pos=n.pos, color='white', height=.05)
+                reward_text.draw()
+
+        self.win.flip()
+        # Log the score and set the status of the trial based on the chosen reward
+        logging.info(f"Score: {gt.score}, Max Reward: {max_reward}")
+        if gt.score == max_reward:
+            gt.status = 'correct'
+        else:
+            gt.status = 'incorrect'
+
+        return gt
+
+
+     
 
     def get_practice_trial(self, repeat=False,**kws):
         if not repeat:
@@ -240,15 +310,17 @@ class Experiment(object):
         self.message("The goal of the game is to collect these diamonds.", space=True)
 
         for (n, r) in zip(gt.nodes, gt.rewards):
-            if r > 0:
-                n.setLineColor('#1BD30C')
+            if r is not None:
+                if r > 0:
+                    n.setLineColor('#1BD30C')
         self.message("Specifically, you want the ones that point to the right. These earn you points.", space=True)
 
         for (n, r) in zip(gt.nodes, gt.rewards):
-            if r < 0:
-                n.setLineColor('#E3000A')
-            else:
-                n.setLineColor('black')
+            if r is not None:
+                if r < 0:
+                    n.setLineColor('#E3000A')
+                else:
+                    n.setLineColor('black')
         self.message("The diamonds that point left are bad. They take away points!", space=True)
 
         for (n, r) in zip(gt.nodes, gt.rewards):
@@ -269,11 +341,9 @@ class Experiment(object):
                     if hovered:
                         seen.add(i)
                     gt.reward_labels[i].autoDraw = not hovered
-                    gt.reward_text[i].autoDraw = hovered
+                    # gt.reward_text[i].autoDraw = hovered
             self.win.flip()
         sleep(0.5)
-
-
 
         
         self.message(
@@ -292,6 +362,9 @@ class Experiment(object):
         self.message("The round ends when you get to a location with no outgoing connections.",
                      tip_text='click one of the highlighted locations', space=False)
         gt.run(skip_planning=True)
+
+    # @stage
+    # def learn_reward(self):
 
     @stage
     def practice_start(self):

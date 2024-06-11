@@ -12,7 +12,7 @@ KEY_SWITCH = 'f'
 KEY_SELECT = 'j'
 KEY_ABORT = 'a'
 
-LABLE_SELECT = "Key J"
+LABEL_SELECT= "Key J"
 LABEL_CONTINUE = 'Space'
 LABEL_SWITCH = 'Key F'
 

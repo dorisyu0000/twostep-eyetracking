@@ -499,7 +499,7 @@ def make_trials():
 
     random.shuffle(main)
     learn_rewards = {'trial_sets': [trial_sets]}
-    practice = sample_practice(**kws)
+    practice = [sample_practice(**kws)]
     practice_revealed = [sample_problem(**kws)]
     intro_hover = sample_problem(**kws)
     practice_hover = [sample_problem(**kws)]
@@ -508,8 +508,8 @@ def make_trials():
     
 
     return {
-        'intro': intro,
-        'collect_all': collect_all,
+        # 'intro': intro,
+        # 'collect_all': collect_all,
         'learn_rewards': learn_rewards,
         'practice': practice,
         'main': main

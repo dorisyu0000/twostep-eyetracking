@@ -8,7 +8,7 @@ import random
 
 wait = core.wait
 
-from config import COLOR_PLAN, COLOR_ACT, COLOR_WIN, COLOR_LOSS, COLOR_NEUTRAL, COLOR_HIGHLIGHT, KEY_CONTINUE, KEY_SWITCH, KEY_SELECT, KEY_ABORT,LABLE_SELECT
+from config import COLOR_PLAN, COLOR_ACT, COLOR_WIN, COLOR_LOSS, COLOR_NEUTRAL, COLOR_HIGHLIGHT, KEY_CONTINUE, KEY_SWITCH, KEY_SELECT, KEY_ABORT,LABEL_SELECT
 
 from graphics import Graphics, FRAME_RATE
 
@@ -49,6 +49,7 @@ class GraphTrial(object):
         self.pos = pos
         self.start_mode = start_mode or ('drift_check' if eyelink else 'space')
         self.max_score = max_score
+        
 
         self.images = images
         self.reward_info = reward_info
@@ -135,11 +136,11 @@ class GraphTrial(object):
         self.log('show graph')
         self.gfx.rect((-.65, .45), .1, .1, fillColor='grey')
         
-        if hasattr(self, 'nodes'):
-            self.gfx.show()
-            for lab in self.reward_text:
-                lab.autoDraw = False
-            return
+        # if hasattr(self, 'nodes'):
+        #     self.gfx.show()
+        #     for lab in self.reward_info:
+        #         lab.autoDraw = False
+        #     return
 
         self.nodes = []
         self.node_images = []
