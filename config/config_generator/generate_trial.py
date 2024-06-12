@@ -478,6 +478,7 @@ def make_trials():
         trial_sets.append(problem)  
 
     main = [] 
+    practice = []
     trialNumber = 1
 
 
@@ -499,7 +500,9 @@ def make_trials():
 
     random.shuffle(main)
     learn_rewards = {'trial_sets': [trial_sets]}
-    practice = [sample_practice(**kws)]
+    for _ in range(3):
+        trial = [sample_practice(**kws)]
+        practice.append(trial)
     practice_revealed = [sample_problem(**kws)]
     intro_hover = sample_problem(**kws)
     practice_hover = [sample_problem(**kws)]

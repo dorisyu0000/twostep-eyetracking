@@ -1,67 +1,56 @@
 from experiment import Experiment
 from fire import Fire
 import logging
-import random
 
-def main(pid=None, name=None, test=False, fast=False, full=False, mouse=False, hotfix=False, skip_instruct=False, resume_block=None, **kws):
+def main(config_number=None, name=None, test=False, fast=False, full=False, mouse=False, hotfix=False, **kws):
     if test and name is None:
         name = 'test'
     if fast:
-        kws['n_practice'] = 2
-        kws['n_block'] = 2
-        kws['block_duration'] = 15/60
-
-    if pid is None:
-        if test:
-            pid = 0
-        else:
-            pid = int(input("\n Please enter the participant ID number: "))
-
-    exp = Experiment(pid, name, full_screen=(not test) or full, test_mode=bool(test), **kws)
-    if test == "save":
-        exp.save_data()
-        exit()
-    if test == "practice":
-        exp.practice()
-        exit()
-    if test == "main":
-        if not mouse:
-            exp.setup_eyetracker()
-        exp.main()
-        exit()
-    elif test == "practice":
-        exp.practice()
+        kws['score_limit'] = 10
+    exp = Experiment(config_number, name, full_screen=(not test) or full, **kws)
+    if test:
+        exp.intro()
+        # exp.practice_start()
+        exp.practice(2)
+        # exp.practice_timelimit()
+        exp.setup_eyetracker(mouse)
+        exp.show_gaze_demo()
+        exp.intro_gaze()
+        exp.calibrate_gaze_tolerance()
+        exp.intro_contingent()
         exp.intro_main()
-        exp.main()
+        exp.run_main()
+        # exp.save_data()
+        return
     else:
         try:
-            if not (skip_instruct or resume_block):
-                # exp.welcome()
-               
-                exp.learn_reward()
-                # exp.intro()
-                # exp.main()
-                # exp.setup_eyetracker(mouse)
-                # exp.show_gaze_demo()
-                # exp.intro_gaze()
-                # exp.practice()
+            if fast:
+                exp.intro()
+                exp.practice_start()
+                exp.practice(1)
+                exp.setup_eyetracker(mouse)
+                exp.show_gaze_demo()
+                exp.intro_gaze()
+                exp.calibrate_gaze_tolerance()
+                exp.intro_contingent()
                 exp.intro_main()
+                exp.run_main()
+            else:
+                exp.intro()
+                exp.practice_start()
+                exp.practice(2)
+                exp.setup_eyetracker(mouse)
+                exp.show_gaze_demo()
+                exp.intro_gaze()
+                exp.calibrate_gaze_tolerance()
+                exp.intro_contingent()
+                exp.intro_main()
+                exp.run_main()
 
-            if resume_block:
-                exp.message(
-                    f"Resuming experiment at Block {resume_block}.\n"
-                    "Note that the reported bonuses will not reflect the money you've already earned "
-                    "(but we still have that information!)",
-                    space=True
-                )
-                random.shuffle(exp.trials['main'])
-                exp.main_trials = iter(exp.trials['main'])
-
-            exp.main(resume_block)
             exp.save_data()
         except:
             if test:
-                raise
+                exit(1)
             logging.exception('Uncaught exception in main')
             exp.win.clearAutoDraw()
             exp.win.showMessage("Drat! The experiment has encountered an error.\nPlease inform the experimenter.")
