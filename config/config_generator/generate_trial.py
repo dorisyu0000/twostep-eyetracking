@@ -6,6 +6,7 @@ import os
 import matplotlib.pyplot as plt
 import scipy
 from scipy.stats import rv_discrete
+import math
 
 # Create a Python dictionary with None as a value
 data = {
@@ -121,6 +122,32 @@ def sample_requirement(rewards, graph, start, rdist, max_attempts=1000):
     # If max_attempts are reached without finding unique path rewards
     return None  # or raise an exception
 
+def calculate_max_score(graph, rewards, start):
+    visited = set()
+    max_score = 0
+
+    def dfs(node, current_score):
+        nonlocal max_score
+        visited.add(node)
+        
+        # Check if reward is None and replace it with 0
+        current_reward = 0 if rewards[node] is None else rewards[node]
+        current_score += current_reward
+
+        max_score = max(max_score, current_score)
+        
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                dfs(neighbor, current_score)
+        
+        visited.remove(node)
+
+    # Start DFS from the start node
+    dfs(start, 0)
+    return max_score
+
+
+
 # def sample_graph(n,base=None):
 #     if base is None:
 #         base = [[1, 2], [3, 4], [5, 6]]
@@ -192,8 +219,8 @@ def sample_problem_1(n, trialNumber=None, rewards = None, n_steps=-1, graph=None
 
     if trialNumber is None:
         trialNumber = 0
-
-    return {'graph': graph, 'rewards': shuffled_rewards, 'start': start, 'n_steps': n_steps, 'trialNumber': trialNumber, 'difficulty': difficulty_key}
+    max_score = calculate_max_score(graph, shuffled_rewards, start)
+    return {'graph': graph, 'rewards': shuffled_rewards, 'start': start, 'n_steps': n_steps, 'trialNumber': trialNumber, 'difficulty': difficulty_key,'max_score':max_score}
 
 def find_leaf_indices(graph):
     # Example implementation; adjust according to your graph structure
@@ -234,8 +261,10 @@ def sample_problem_2(n, trialNumber=None, n_steps=-1, graph=None, start=None, rd
 
     if trialNumber is None:
         trialNumber = 0
+    
+    max_score = calculate_max_score(graph, shuffled_rewards, start)
 
-    return {'graph': graph, 'rewards': shuffled_rewards, 'start': start, 'n_steps': n_steps, 'trialNumber': trialNumber,'difficulty': difficulty_key}
+    return {'graph': graph, 'rewards': shuffled_rewards, 'start': start, 'n_steps': n_steps, 'trialNumber': trialNumber,'difficulty': difficulty_key, 'max_score':max_score}
 
 
 
@@ -368,7 +397,9 @@ def sample_practice(n, trialNumber = None, n_steps=-1, rdist=None, rewards=None,
     # Distribute rewards among non-leaf, non-start nodes
     for rewards, node in zip(rewards, non_leaf_nodes):
         all_rewards[node] = rewards
-    return {'graph': graph, 'rewards': all_rewards, 'start': start, 'n_steps': n_steps, 'trialNumber': trialNumber}
+        
+    max_score = calculate_max_score(graph, all_rewards, start)
+    return {'graph': graph, 'rewards': all_rewards, 'start': start, 'n_steps': n_steps, 'trialNumber': trialNumber, 'max_score':max_score}
 
 
 def learn_reward(n, graph=None, start=None):
@@ -461,7 +492,7 @@ def intro_problem(n, n_steps=-1, rdist=None, rewards=None, graph=None, start=Non
     elif len(rewards) > n:
         rewards = rewards[:n]  
     random.shuffle(rewards)
-    return {'graph': graph, 'rewards': rewards, 'start': start if start is not None else 0, 'n_steps': n_steps}
+    return {'graph': graph, 'rewards': rewards, 'start': 0, 'n_steps': n_steps}
 
     
     
@@ -471,14 +502,10 @@ def make_trials():
     rewards = [1,2,3,4,-1,-2,-3,-4,0]
     rdist = IIDSampler(n, rewards) 
     kws = {'n': n, 'rdist': rdist}
-    trial_sets = []
-
-    for _ in range(10):
-        problem = learn_reward(n)
-        trial_sets.append(problem)  
-
+   
     main = [] 
     practice = []
+    learn_rewards = []
     trialNumber = 1
 
 
@@ -499,10 +526,17 @@ def make_trials():
 
 
     random.shuffle(main)
-    learn_rewards = {'trial_sets': [trial_sets]}
+    practice.append([intro_problem(**kws, rewards=[None] * n)])
+    practice.append([intro_problem(**kws, rewards= [1,2,4,3,0,-1,-2,-3,-4,0])])
     for _ in range(3):
         trial = [sample_practice(**kws)]
         practice.append(trial)
+    
+   
+    for _ in range(10):
+        problem = [learn_reward(n)]
+        learn_rewards.append(problem)  
+
     practice_revealed = [sample_problem(**kws)]
     intro_hover = sample_problem(**kws)
     practice_hover = [sample_problem(**kws)]
@@ -560,10 +594,13 @@ def reward_graphics(n = 9,rewards = [4,3,2,1,0,-1,-2,-3,-4]):
     return dict(zip(fixed_rewards, sample(emojis, n)))
 
 def circle_layout(N):
-    angles = np.pi/2 + np.arange(0, N) * 2 * np.pi / N  # calculate angles for each point
-    x = (np.cos(angles) + 1) / 2 - 0.5
-    y = (np.sin(angles) + 1) / 2 - 0.5
-    return [(-xi, yi) for xi, yi in zip(x, y)]
+    return [
+        (
+            (math.cos(math.pi/2 + s * 2 * math.pi / N) + 1) / 2 - 0.5,
+            (math.sin(math.pi/2 + s * 2 * math.pi / N) + 1) / 2 - 0.5
+        )
+        for s in range(N)
+    ]
 
 # Generate trials
 subj_trials = [make_trials() for _ in range(2)]
@@ -586,7 +623,7 @@ for i, trials in enumerate(subj_trials, start=0):
 
 n = 10
 rewards = [-1,-2 , 0, 1, 2]
-print(sample_problem_4(n=10))
+# print(sample_practice(**kws))
 
 
 # Example usage

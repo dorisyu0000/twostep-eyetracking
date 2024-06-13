@@ -1,0 +1,27 @@
+2024-06-13 15:59:25,588 [INFO]  starting up 24-06-13-1559_P1-test at 1.4949917500489391
+2024-06-13 15:59:25,613 [INFO]  git SHA: 0ae36dcce70ead316e2748c3c0b3d4f7728b0675
+2024-06-13 15:59:25,613 [INFO]  Configuration file: config/m2/1.json
+2024-06-13 15:59:25,614 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.2938926261462365, 0.4045084971874737], [-0.47552825814757677, 0.15450849718747373], [-0.4755282581475768, -0.15450849718747361], [-0.2938926261462366, -0.40450849718747367], [-1.1102230246251565e-16, -0.5], [0.29389262614623646, -0.4045084971874738], [0.4755282581475768, -0.15450849718747384], [0.4755282581475768, 0.15450849718747361], [0.2938926261462367, 0.4045084971874736]]}
+2024-06-13 15:59:26,798 [DEBUG]  message: Let's try a few round to see if you learn how to indentify the items or. (Get 8 practice rounds correct to continue.)
+2024-06-13 15:59:26,817 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [3, 2], [], [], [], [], []], "rewards": [null, null, 2, 0, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": true, "hide_edges_while_acting": false, "start": 4}
+2024-06-13 15:59:26,817 [DEBUG]  GraphTrial.log 2.723 initialize status = ok
+2024-06-13 15:59:26,817 [DEBUG]  GraphTrial.log 2.723 show graph 
+2024-06-13 15:59:26,834 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-13 15:59:26,834 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-13 15:59:26,846 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-13 15:59:26,846 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-13 15:59:26,855 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-13 15:59:26,855 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-13 15:59:26,863 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-13 15:59:26,863 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-13 15:59:26,875 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-13 15:59:26,875 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-13 15:59:26,883 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-13 15:59:26,883 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-13 15:59:26,891 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-13 15:59:26,891 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-13 15:59:26,898 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-13 15:59:26,898 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-13 15:59:26,926 [DEBUG]  GraphTrial.log 2.833 visit state = 4
+2024-06-13 15:59:26,932 [DEBUG]  GraphTrial.log 2.839 start flip_time = 2.838908125006128
+2024-06-13 15:59:26,932 [DEBUG]  GraphTrial.log 2.839 start planning 

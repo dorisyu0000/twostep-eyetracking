@@ -13,6 +13,7 @@ from trial import GraphTrial, CalibrationTrial, COLOR_ACT, COLOR_PLAN
 from graphics import Graphics
 from bonus import Bonus
 from eyetracking import EyeLink, MouseLink
+from config import COLOR_PLAN, COLOR_ACT, COLOR_WIN, COLOR_LOSS, COLOR_NEUTRAL, COLOR_HIGHLIGHT, KEY_CONTINUE, KEY_SWITCH, KEY_SELECT, KEY_ABORT,LABEL_SELECT, LABEL_SWITCH
 
 import subprocess
 from copy import deepcopy
@@ -115,19 +116,68 @@ class Experiment(object):
     def _reset_practice(self):
         self._practice_trials = iter(self.trials['practice'])
 
-    def get_practice_trial(self, repeat=False,**kws):
+    def get_practice_trial(self, repeat=False, **kws):
         if not repeat:
-            self.practice_i += 1
+            self.practice_i += 1  # Index to track which set of practice trials to use
+
+        # Make sure we don't go out of bounds
+        if self.practice_i >= len(self.trials['practice']):
+            logging.error("Practice index exceeds available trials.")
+            self.practice_i = 0  # Reset or handle as needed
+
+        # Accessing the specific trial set and then the individual trial within that set
+        trial_set = self.trials['practice'][self.practice_i]
+        if not isinstance(trial_set, list) or not all(isinstance(trial, dict) for trial in trial_set):
+            logging.error("Expected a list of dictionaries for trial_set.")
+            return None  # Handle this error as appropriate
+
+        # Assuming there's a mechanism or UI allowing selection of specific trials from a set
+        # For simplicity, let's take the first trial for now
+        trial_params = trial_set[0] if trial_set else {}
+        if not isinstance(trial_params, dict):
+            logging.error(f"Expected trial_params to be a dictionary, got {type(trial_params)} instead.")
+            return None
+
+        # Combine parameters
         prm = {
+            'eyelink': self.eyelink,
             **self.parameters,
-            'gaze_contingent': False,
-            'time_limit': None,
-            'pos': (.3, 0),
-            'start_mode': 'immediate',
-            'space_start': False,
-            **self.trials['practice'][self.practice_i],
+            **trial_params,
             **kws
         }
+
+        # Initialize and return GraphTrial object
+        gt = GraphTrial(self.win, **prm)
+        self.practice_data.append(gt.data)
+        return gt
+    
+    def get_learn_reward_trial(self, repeat=False, **kws):
+        if not repeat:
+            self.practice_i += 1  # Index to track which set of practice trials to use
+
+        if self.practice_i >= len(self.trials['learn_rewards']):
+            logging.error("Practice index exceeds available trials.")
+            self.practice_i = 0  # Reset or handle as needed
+
+        # Accessing the specific trial set and then the individual trial within that set
+        trial_set = self.trials['learn_rewards'][self.practice_i]
+        if not isinstance(trial_set, list) or not all(isinstance(trial, dict) for trial in trial_set):
+            logging.error("Expected a list of dictionaries for trial_set.")
+            return None 
+        
+        trial_params = trial_set[0] if trial_set else {}
+        if not isinstance(trial_params, dict):
+            logging.error(f"Expected trial_params to be a dictionary, got {type(trial_params)} instead.")
+            return None
+
+        # Combine parameters
+        prm = {
+            'eyelink': self.eyelink,
+            **self.parameters,
+            **trial_params,
+            **kws
+        }
+
         gt = GraphTrial(self.win, **prm)
         self.practice_data.append(gt.data)
         return gt
@@ -214,15 +264,75 @@ class Experiment(object):
             pass
             # self.message(f"", space=True)
 
-        self.message("You can move by clicking on a location that has an arrow pointing from your current location. Try it now!",
-                     tip_text='click one of the highlighted locations', space=False)
-        # gt.run(one_step=True)
+        self.message( "Before we start, let's learn all the buttons you need in this game . ", space = True)
+        
+        self.message(
+            f"{LABEL_SWITCH} should be under your left index finger which you can switch the line you select. ",
+            tip_text = f"Press {LABEL_SWITCH} to continue")
+        
+        event.waitKeys(keyList=[KEY_SWITCH])
+        
+        self.message(
+           
+            f"{LABEL_SELECT} should be under your right index finger which to confirm your choice. ",
+            tip_text = f"Press {LABEL_SELECT} to continue")
+        
+        event.waitKeys(keyList=[KEY_SELECT])
+        
+        self.message(
+            "Now, let's try to play one round"
+            f"Press {LABEL_SWITCH} and {LABEL_SELECT} to move. "
+        )
+        
+        gt.run(one_step=True) 
         # gt.start = gt.current_state
 
-        self.message("The round ends when you get to a location with no outgoing connections.",
-                     tip_text='click one of the highlighted locations', space=False)
-        # gt.run(skip_planning=True)
+        # self.message("The round ends when you get to a location with no outgoing connections.",
+        #              tip_text= f'press {LABEL_SELECT} and {LABEL_SWITCH} to continue ')
+       
+    @stage
+    def intro_reward(self):
+         # self.message('Welcome!', space=True)
+        gt = self.get_practice_trial(highlight_edges=False, hide_rewards_while_acting=False, initial_stage='acting')
+        gt.show()
 
+
+        for (n, r) in zip(gt.nodes, gt.rewards):
+             if r > 0:
+                 n.setLineColor('#1BD30C')
+        self.message("Specifically, you want the ones that point to the right. These earn you points.", space=True)
+
+        for (n, r) in zip(gt.nodes, gt.rewards):
+             if r < 0:
+                 n.setLineColor('#E3000A')
+             else:
+                 n.setLineColor('black')
+        self.message("The diamonds that point left are bad. They take away points!", space=True)
+         
+        for (n, r) in zip(gt.nodes, gt.rewards):
+             if r == 0:
+                 n.setLineColor('yellow')
+             else:
+                 n.setLineColor('black')
+        self.message("The diamonds that point left are natual. You won't gain or loss any point!", space=True)
+        gt.show_description()
+        
+        
+
+
+        for (n, r) in zip(gt.nodes, gt.rewards):
+             n.setLineColor('black')
+             
+        
+
+    
+    
+
+
+
+        
+
+    
     @stage
     def practice_start(self):
         gt = self.get_practice_trial()
@@ -282,6 +392,24 @@ class Experiment(object):
         gt.run()
         self.message("If you run out of time, we'll make random decisions for you. Probably something to avoid.", space=True)
 
+    def learn(self, n): 
+        intervened = False
+        for i in range(n):
+            self.message("Let's try a few round to see if you learn how to indentify the items or.",
+                         space=False, tip_text=f'Get {n - i} practice rounds correct to continue.')
+            gt = self.get_learn_reward_trial()
+            for i in range(3):
+                gt.run()
+                gt = self.get_learn_reward_trial(repeat=True)
+            else:  # never succeeded
+                logging.warning(f"failed practice trial {i}")
+                if not intervened:
+                    intervened = True
+                    self.message("Please check in with the experimenter",
+                        tip_text="Wait for the experimenter (space)", space=True)
+                    self.get_learn_reward_trial(repeat=True).run()
+        self.message("Great job!", space=True)
+
     @stage
     def practice(self, n):
         intervened = False
@@ -295,9 +423,10 @@ class Experiment(object):
                 if intervened or gt.score == gt.max_score:
                     break
                 else:
+                    max_score_msg = f"but you could have gotten {int(gt.max_score)}." 
                     self.message(
-                        f"You got {int(gt.score)} points on that round, but you could have gotten {int(gt.max_score)}.\n"
-                        f"Let's try again. Try to make as many points as possible!"
+                        f"You got {gt.score} points on that round, {max_score_msg}\n"
+                        "Let's try again. Try to make as many points as possible!"
                     )
                 gt = self.get_practice_trial(repeat=True)
             else:  # never succeeded
@@ -307,8 +436,6 @@ class Experiment(object):
                     self.message("Please check in with the experimenter",
                         tip_text="Wait for the experimenter (space)", space=True)
                     self.get_practice_trial(repeat=True).run()
-
-
         self.message("Great job!", space=True)
 
     @stage

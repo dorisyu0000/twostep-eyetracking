@@ -1,0 +1,26 @@
+2024-06-13 16:15:09,288 [INFO]  starting up 24-06-13-1615_P1-test at 1.516421916661784
+2024-06-13 16:15:09,307 [INFO]  git SHA: 0ae36dcce70ead316e2748c3c0b3d4f7728b0675
+2024-06-13 16:15:09,307 [INFO]  Configuration file: config/m2/1.json
+2024-06-13 16:15:09,307 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.2938926261462365, 0.4045084971874737], [-0.47552825814757677, 0.15450849718747373], [-0.4755282581475768, -0.15450849718747361], [-0.2938926261462366, -0.40450849718747367], [-1.1102230246251565e-16, -0.5], [0.29389262614623646, -0.4045084971874738], [0.4755282581475768, -0.15450849718747384], [0.4755282581475768, 0.15450849718747361], [0.2938926261462367, 0.4045084971874736]]}
+2024-06-13 16:15:10,477 [INFO]  begin intro
+2024-06-13 16:15:10,477 [DEBUG]  message: Welcome! (None)
+2024-06-13 16:15:10,886 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[1, 3], [2, 4], [3, 5], [4, 6], [5, 7], [6, 8], [7, 9], [8, 0], [9, 1], [0, 2]], "rewards": [null, null, null, null, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "acting", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-13 16:15:10,887 [DEBUG]  GraphTrial.log 3.115 show graph 
+2024-06-13 16:15:10,936 [DEBUG]  message: In this experiment, you will play a game on the board shown to the right. (None)
+2024-06-13 16:15:11,328 [DEBUG]  GraphTrial.log 3.556 visit state = 0
+2024-06-13 16:15:11,328 [DEBUG]  message: Your current location on the board is highlighted in blue. (None)
+2024-06-13 16:15:12,200 [DEBUG]  message: The goal of the game is to collect as many points as you can. (None)
+2024-06-13 16:15:12,768 [DEBUG]  message: Before we start, let's learn all the buttons you need in this game .  (None)
+2024-06-13 16:15:13,458 [DEBUG]  message: Key F should be under your left index finger which you can switch the line you select.  (Press Key F to continue)
+2024-06-13 16:15:15,078 [DEBUG]  message: Key J should be under your right index finger which to confirm your choice.  (Press Key J to continue)
+2024-06-13 16:15:15,393 [DEBUG]  message: Now, let's try to play one roundPress Key F and Key J to move.  (None)
+2024-06-13 16:15:15,399 [DEBUG]  GraphTrial.log 7.628 initialize status = ok
+2024-06-13 16:15:15,399 [DEBUG]  GraphTrial.log 7.628 show graph 
+2024-06-13 16:15:15,456 [DEBUG]  GraphTrial.log 7.684 start flip_time = 7.68435183330439
+2024-06-13 16:15:15,456 [DEBUG]  GraphTrial.log 7.685 start acting 
+2024-06-13 16:15:15,466 [DEBUG]  GraphTrial.log 7.694 get move selected = 1
+2024-06-13 16:15:17,239 [DEBUG]  GraphTrial.log 9.467 switch selected = 3
+2024-06-13 16:15:17,914 [DEBUG]  GraphTrial.log 10.142 switch selected = 1
+2024-06-13 16:15:18,678 [DEBUG]  GraphTrial.log 10.906 switch selected = 3
+2024-06-13 16:15:19,218 [DEBUG]  GraphTrial.log 11.446 select selected = 3
+2024-06-13 16:15:19,218 [DEBUG]  GraphTrial.log 11.446 visit state = 3

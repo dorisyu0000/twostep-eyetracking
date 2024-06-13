@@ -1,0 +1,29 @@
+2024-06-13 13:00:01,721 [INFO]  starting up 24-06-13-1300_P1-test at 3.5665357083198614
+2024-06-13 13:00:01,744 [INFO]  git SHA: 0ae36dcce70ead316e2748c3c0b3d4f7728b0675
+2024-06-13 13:00:01,744 [INFO]  Configuration file: config/m2/1.json
+2024-06-13 13:00:01,745 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[-0.0, 0.5], [0.2938926261462365, 0.4045084971874737], [0.47552825814757677, 0.15450849718747373], [0.4755282581475768, -0.15450849718747361], [0.2938926261462366, -0.40450849718747367], [1.1102230246251565e-16, -0.5], [-0.29389262614623646, -0.4045084971874738], [-0.4755282581475768, -0.15450849718747384], [-0.4755282581475768, 0.15450849718747361], [-0.2938926261462367, 0.4045084971874736]]}
+2024-06-13 13:00:02,985 [INFO]  begin intro
+2024-06-13 13:00:02,985 [DEBUG]  message: Welcome! (None)
+2024-06-13 13:00:03,731 [ERROR]  Caught exception in stage intro
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 35, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 197, in intro
+    gt = self.get_practice_trial(highlight_edges=True, hide_rewards_while_acting=False, initial_stage='acting')
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 121, in get_practice_trial
+    prm = {
+TypeError: 'list' object is not a mapping
+2024-06-13 13:00:32,717 [INFO]  starting up 24-06-13-1300_P1-test at 1.861632666666992
+2024-06-13 13:00:32,738 [INFO]  git SHA: 0ae36dcce70ead316e2748c3c0b3d4f7728b0675
+2024-06-13 13:00:32,738 [INFO]  Configuration file: config/m2/1.json
+2024-06-13 13:00:32,739 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[-0.0, 0.5], [0.2938926261462365, 0.4045084971874737], [0.47552825814757677, 0.15450849718747373], [0.4755282581475768, -0.15450849718747361], [0.2938926261462366, -0.40450849718747367], [1.1102230246251565e-16, -0.5], [-0.29389262614623646, -0.4045084971874738], [-0.4755282581475768, -0.15450849718747384], [-0.4755282581475768, 0.15450849718747361], [-0.2938926261462367, 0.4045084971874736]]}
+2024-06-13 13:00:33,901 [INFO]  begin intro
+2024-06-13 13:00:33,901 [DEBUG]  message: Welcome! (None)
+2024-06-13 13:00:34,327 [ERROR]  Expected trial_params to be a dictionary, got <class 'list'> instead.
+2024-06-13 13:00:34,328 [ERROR]  Caught exception in stage intro
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 35, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 211, in intro
+    gt.show()
+AttributeError: 'NoneType' object has no attribute 'show'

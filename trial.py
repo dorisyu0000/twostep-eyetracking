@@ -121,13 +121,6 @@ class GraphTrial(object):
         if self.eyelink:
             self.eyelink.message(jsonify(datum), log=False)
 
-    # def reward_descriptions(self):
-    #     def fmt(x):
-    #         val, desc, targets = x["val"], x["desc"], x["targets"]
-    #         val *= self.reward_multiplier
-    #         return f'{val:+d} for {desc}'
-
-    #     return [fmt(x) for x in self.reward_info]
 
     
     
@@ -147,6 +140,7 @@ class GraphTrial(object):
         for i, (x, y) in enumerate(self.layout):
             pos = 0.7 * np.array([x, y])
             node = self.gfx.circle(pos, name=f'node{i}', r=.05)
+           
             self.nodes.append(node)
             
             # Fetch the reward for the current node
@@ -376,19 +370,18 @@ class GraphTrial(object):
 
     def show_description(self):
         self.log('show description')
-        descs = self.reward_descriptions()
+        descs = self.reward_info()
         xs = (.25, -.25)
         y = 0
         for i, x in enumerate(xs):
             visual.TextStim(self.win, descs[i], pos=(x, y), color='white', height=.05).draw()
-            # if not self.hide_states:
-            #     targets = self.reward_info[i]["targets"]
-            #     xs = np.arange(len(targets)) * .1
-            #     xs -= xs.mean()
-            #     xs += x
-            #     for x, t in zip(xs, targets):
-            #         self.gfx.image((x, y-.1), self.images[t], size=.08, autoDraw=False).draw()
-
+            if not self.hide_states:
+                targets = self.reward_info[i]["targets"]
+                xs = np.arange(len(targets)) * .1
+                xs -= xs.mean()
+                xs += x
+                for x, t in zip(xs, targets):
+                    self.gfx.image((x, y-.1), self.images[t], size=.08, autoDraw=False).draw()
         self.win.flip()
         self.wait_keys([KEY_CONTINUE])
 

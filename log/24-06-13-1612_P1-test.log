@@ -1,0 +1,150 @@
+2024-06-13 16:12:44,417 [INFO]  starting up 24-06-13-1612_P1-test at 1.5240202500135638
+2024-06-13 16:12:44,436 [INFO]  git SHA: 0ae36dcce70ead316e2748c3c0b3d4f7728b0675
+2024-06-13 16:12:44,436 [INFO]  Configuration file: config/m2/1.json
+2024-06-13 16:12:44,437 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.2938926261462365, 0.4045084971874737], [-0.47552825814757677, 0.15450849718747373], [-0.4755282581475768, -0.15450849718747361], [-0.2938926261462366, -0.40450849718747367], [-1.1102230246251565e-16, -0.5], [0.29389262614623646, -0.4045084971874738], [0.4755282581475768, -0.15450849718747384], [0.4755282581475768, 0.15450849718747361], [0.2938926261462367, 0.4045084971874736]]}
+2024-06-13 16:12:45,611 [INFO]  begin intro
+2024-06-13 16:12:45,612 [DEBUG]  message: Welcome! (None)
+2024-06-13 16:12:47,091 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[1, 3], [2, 4], [3, 5], [4, 6], [5, 7], [6, 8], [7, 9], [8, 0], [9, 1], [0, 2]], "rewards": [null, null, null, null, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "acting", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-13 16:12:47,092 [DEBUG]  GraphTrial.log 4.199 show graph 
+2024-06-13 16:12:47,141 [DEBUG]  message: In this experiment, you will play a game on the board shown to the right. (None)
+2024-06-13 16:12:50,208 [DEBUG]  GraphTrial.log 7.315 visit state = 0
+2024-06-13 16:12:50,208 [DEBUG]  message: Your current location on the board is highlighted in blue. (None)
+2024-06-13 16:12:52,275 [DEBUG]  message: The goal of the game is to collect as many points as you can. (None)
+2024-06-13 16:12:54,675 [DEBUG]  message: Before we start, let's learn all the buttons you need in this game .  (None)
+2024-06-13 16:12:56,070 [DEBUG]  message: Key F should be under your left index finger which you can switch the line you select.  (Press Key F to continue)
+2024-06-13 16:12:59,415 [DEBUG]  message: Key J should be under your right index finger which to confirm your choice.  (Press Key J to continue)
+2024-06-13 16:13:00,675 [DEBUG]  message: Now, let's try to play one roundPress Key F and Key J to move.  (None)
+2024-06-13 16:13:00,686 [DEBUG]  GraphTrial.log 17.794 initialize status = ok
+2024-06-13 16:13:00,687 [DEBUG]  GraphTrial.log 17.794 show graph 
+2024-06-13 16:13:00,743 [DEBUG]  GraphTrial.log 17.851 start flip_time = 17.85055366664892
+2024-06-13 16:13:00,743 [DEBUG]  GraphTrial.log 17.851 start acting 
+2024-06-13 16:13:00,752 [DEBUG]  GraphTrial.log 17.859 get move selected = 1
+2024-06-13 16:13:03,226 [DEBUG]  GraphTrial.log 20.333 switch selected = 3
+2024-06-13 16:13:03,766 [DEBUG]  GraphTrial.log 20.873 switch selected = 1
+2024-06-13 16:13:04,006 [DEBUG]  GraphTrial.log 21.113 switch selected = 3
+2024-06-13 16:13:04,216 [DEBUG]  GraphTrial.log 21.323 switch selected = 1
+2024-06-13 16:13:04,427 [DEBUG]  GraphTrial.log 21.534 switch selected = 3
+2024-06-13 16:13:04,906 [DEBUG]  GraphTrial.log 22.013 switch selected = 1
+2024-06-13 16:13:07,365 [DEBUG]  GraphTrial.log 24.472 select selected = 1
+2024-06-13 16:13:07,365 [DEBUG]  GraphTrial.log 24.472 visit state = 1
+2024-06-13 16:13:07,365 [DEBUG]  message: The round ends when you get to a location with no outgoing connections. (press Key J and Key F to continue )
+2024-06-13 16:13:07,373 [DEBUG]  GraphTrial.log 24.481 initialize status = ok
+2024-06-13 16:13:07,373 [DEBUG]  GraphTrial.log 24.481 show graph 
+2024-06-13 16:13:07,434 [DEBUG]  GraphTrial.log 24.542 start flip_time = 24.541492374963127
+2024-06-13 16:13:07,434 [DEBUG]  GraphTrial.log 24.542 start acting 
+2024-06-13 16:13:07,447 [DEBUG]  GraphTrial.log 24.554 get move selected = 2
+2024-06-13 16:13:08,535 [DEBUG]  GraphTrial.log 25.643 select selected = 2
+2024-06-13 16:13:08,535 [DEBUG]  GraphTrial.log 25.643 visit state = 2
+2024-06-13 16:13:08,551 [DEBUG]  GraphTrial.log 25.658 get move selected = 3
+2024-06-13 16:13:09,045 [DEBUG]  GraphTrial.log 26.153 select selected = 3
+2024-06-13 16:13:09,045 [DEBUG]  GraphTrial.log 26.153 visit state = 3
+2024-06-13 16:13:09,064 [DEBUG]  GraphTrial.log 26.171 get move selected = 6
+2024-06-13 16:13:09,375 [DEBUG]  GraphTrial.log 26.482 select selected = 6
+2024-06-13 16:13:09,375 [DEBUG]  GraphTrial.log 26.482 visit state = 6
+2024-06-13 16:13:09,397 [DEBUG]  GraphTrial.log 26.505 get move selected = 7
+2024-06-13 16:13:09,840 [DEBUG]  GraphTrial.log 26.947 select selected = 7
+2024-06-13 16:13:09,840 [DEBUG]  GraphTrial.log 26.947 visit state = 7
+2024-06-13 16:13:09,855 [DEBUG]  GraphTrial.log 26.963 get move selected = 0
+2024-06-13 16:13:10,365 [DEBUG]  GraphTrial.log 27.472 select selected = 0
+2024-06-13 16:13:10,365 [DEBUG]  GraphTrial.log 27.472 visit state = 0
+2024-06-13 16:13:10,381 [DEBUG]  GraphTrial.log 27.488 get move selected = 1
+2024-06-13 16:13:10,785 [DEBUG]  GraphTrial.log 27.893 select selected = 1
+2024-06-13 16:13:10,785 [DEBUG]  GraphTrial.log 27.893 visit state = 1
+2024-06-13 16:13:10,800 [DEBUG]  GraphTrial.log 27.908 get move selected = 4
+2024-06-13 16:13:10,980 [DEBUG]  GraphTrial.log 28.087 select selected = 4
+2024-06-13 16:13:10,980 [DEBUG]  GraphTrial.log 28.087 visit state = 4
+2024-06-13 16:13:10,995 [DEBUG]  GraphTrial.log 28.103 get move selected = 7
+2024-06-13 16:13:11,205 [DEBUG]  GraphTrial.log 28.312 select selected = 7
+2024-06-13 16:13:11,205 [DEBUG]  GraphTrial.log 28.312 visit state = 7
+2024-06-13 16:13:11,221 [DEBUG]  GraphTrial.log 28.328 get move selected = 0
+2024-06-13 16:13:11,655 [DEBUG]  GraphTrial.log 28.763 select selected = 0
+2024-06-13 16:13:11,655 [DEBUG]  GraphTrial.log 28.763 visit state = 0
+2024-06-13 16:13:11,671 [DEBUG]  GraphTrial.log 28.778 get move selected = 1
+2024-06-13 16:13:11,850 [DEBUG]  GraphTrial.log 28.957 select selected = 1
+2024-06-13 16:13:11,850 [DEBUG]  GraphTrial.log 28.957 visit state = 1
+2024-06-13 16:13:11,867 [DEBUG]  GraphTrial.log 28.974 get move selected = 4
+2024-06-13 16:13:12,465 [DEBUG]  GraphTrial.log 29.573 select selected = 4
+2024-06-13 16:13:12,465 [DEBUG]  GraphTrial.log 29.573 visit state = 4
+2024-06-13 16:13:12,481 [DEBUG]  GraphTrial.log 29.588 get move selected = 7
+2024-06-13 16:13:13,034 [DEBUG]  GraphTrial.log 30.142 select selected = 7
+2024-06-13 16:13:13,034 [DEBUG]  GraphTrial.log 30.142 visit state = 7
+2024-06-13 16:13:13,052 [DEBUG]  GraphTrial.log 30.159 get move selected = 8
+2024-06-13 16:13:13,575 [DEBUG]  GraphTrial.log 30.682 select selected = 8
+2024-06-13 16:13:13,575 [DEBUG]  GraphTrial.log 30.682 visit state = 8
+2024-06-13 16:13:13,590 [DEBUG]  GraphTrial.log 30.697 get move selected = 9
+2024-06-13 16:13:14,205 [DEBUG]  GraphTrial.log 31.313 select selected = 9
+2024-06-13 16:13:14,205 [DEBUG]  GraphTrial.log 31.313 visit state = 9
+2024-06-13 16:13:14,221 [DEBUG]  GraphTrial.log 31.328 get move selected = 0
+2024-06-13 16:13:14,774 [DEBUG]  GraphTrial.log 31.882 select selected = 0
+2024-06-13 16:13:14,775 [DEBUG]  GraphTrial.log 31.882 visit state = 0
+2024-06-13 16:13:14,790 [DEBUG]  GraphTrial.log 31.897 get move selected = 1
+2024-06-13 16:13:15,315 [DEBUG]  GraphTrial.log 32.423 select selected = 1
+2024-06-13 16:13:15,315 [DEBUG]  GraphTrial.log 32.423 visit state = 1
+2024-06-13 16:13:15,331 [DEBUG]  GraphTrial.log 32.438 get move selected = 4
+2024-06-13 16:13:16,845 [DEBUG]  GraphTrial.log 33.953 select selected = 4
+2024-06-13 16:13:16,846 [DEBUG]  GraphTrial.log 33.953 visit state = 4
+2024-06-13 16:13:16,864 [DEBUG]  GraphTrial.log 33.971 get move selected = 7
+2024-06-13 16:13:17,476 [DEBUG]  GraphTrial.log 34.583 switch selected = 5
+2024-06-13 16:13:18,196 [DEBUG]  GraphTrial.log 35.303 select selected = 5
+2024-06-13 16:13:18,196 [DEBUG]  GraphTrial.log 35.303 visit state = 5
+2024-06-13 16:13:18,214 [DEBUG]  GraphTrial.log 35.321 get move selected = 6
+2024-06-13 16:13:18,706 [DEBUG]  GraphTrial.log 35.813 select selected = 6
+2024-06-13 16:13:18,706 [DEBUG]  GraphTrial.log 35.813 visit state = 6
+2024-06-13 16:13:18,722 [DEBUG]  GraphTrial.log 35.829 get move selected = 7
+2024-06-13 16:13:18,945 [DEBUG]  GraphTrial.log 36.053 select selected = 7
+2024-06-13 16:13:18,945 [DEBUG]  GraphTrial.log 36.053 visit state = 7
+2024-06-13 16:13:18,964 [DEBUG]  GraphTrial.log 36.071 get move selected = 8
+2024-06-13 16:13:19,307 [DEBUG]  GraphTrial.log 36.414 select selected = 8
+2024-06-13 16:13:19,307 [DEBUG]  GraphTrial.log 36.415 visit state = 8
+2024-06-13 16:13:19,322 [DEBUG]  GraphTrial.log 36.430 get move selected = 9
+2024-06-13 16:13:19,545 [DEBUG]  GraphTrial.log 36.653 select selected = 9
+2024-06-13 16:13:19,545 [DEBUG]  GraphTrial.log 36.653 visit state = 9
+2024-06-13 16:13:19,564 [DEBUG]  GraphTrial.log 36.671 get move selected = 2
+2024-06-13 16:13:19,726 [DEBUG]  GraphTrial.log 36.833 select selected = 2
+2024-06-13 16:13:19,726 [DEBUG]  GraphTrial.log 36.833 visit state = 2
+2024-06-13 16:13:19,747 [DEBUG]  GraphTrial.log 36.854 get move selected = 3
+2024-06-13 16:13:19,936 [DEBUG]  GraphTrial.log 37.043 select selected = 3
+2024-06-13 16:13:19,936 [DEBUG]  GraphTrial.log 37.043 visit state = 3
+2024-06-13 16:13:19,952 [DEBUG]  GraphTrial.log 37.059 get move selected = 4
+2024-06-13 16:13:20,145 [DEBUG]  GraphTrial.log 37.253 select selected = 4
+2024-06-13 16:13:20,145 [DEBUG]  GraphTrial.log 37.253 visit state = 4
+2024-06-13 16:13:20,164 [DEBUG]  GraphTrial.log 37.271 get move selected = 7
+2024-06-13 16:13:20,355 [DEBUG]  GraphTrial.log 37.462 select selected = 7
+2024-06-13 16:13:20,355 [DEBUG]  GraphTrial.log 37.463 visit state = 7
+2024-06-13 16:13:20,370 [DEBUG]  GraphTrial.log 37.478 get move selected = 8
+2024-06-13 16:13:20,550 [DEBUG]  GraphTrial.log 37.657 select selected = 8
+2024-06-13 16:13:20,550 [DEBUG]  GraphTrial.log 37.657 visit state = 8
+2024-06-13 16:13:20,567 [DEBUG]  GraphTrial.log 37.674 get move selected = 1
+2024-06-13 16:13:20,714 [DEBUG]  GraphTrial.log 37.822 select selected = 1
+2024-06-13 16:13:20,714 [DEBUG]  GraphTrial.log 37.822 visit state = 1
+2024-06-13 16:13:20,730 [DEBUG]  GraphTrial.log 37.837 get move selected = 2
+2024-06-13 16:13:20,880 [DEBUG]  GraphTrial.log 37.988 select selected = 2
+2024-06-13 16:13:20,880 [DEBUG]  GraphTrial.log 37.988 visit state = 2
+2024-06-13 16:13:20,896 [DEBUG]  GraphTrial.log 38.003 get move selected = 5
+2024-06-13 16:13:21,075 [DEBUG]  GraphTrial.log 38.183 select selected = 5
+2024-06-13 16:13:21,075 [DEBUG]  GraphTrial.log 38.183 visit state = 5
+2024-06-13 16:13:21,097 [DEBUG]  GraphTrial.log 38.205 get move selected = 6
+2024-06-13 16:13:21,240 [DEBUG]  GraphTrial.log 38.348 select selected = 6
+2024-06-13 16:13:21,243 [DEBUG]  GraphTrial.log 38.350 visit state = 6
+2024-06-13 16:13:21,264 [DEBUG]  GraphTrial.log 38.371 get move selected = 7
+2024-06-13 16:13:21,451 [DEBUG]  GraphTrial.log 38.558 select selected = 7
+2024-06-13 16:13:21,451 [DEBUG]  GraphTrial.log 38.558 visit state = 7
+2024-06-13 16:13:21,470 [DEBUG]  GraphTrial.log 38.578 get move selected = 8
+2024-06-13 16:13:21,631 [DEBUG]  GraphTrial.log 38.738 select selected = 8
+2024-06-13 16:13:21,631 [DEBUG]  GraphTrial.log 38.738 visit state = 8
+2024-06-13 16:13:21,647 [DEBUG]  GraphTrial.log 38.754 get move selected = 1
+2024-06-13 16:13:21,811 [DEBUG]  GraphTrial.log 38.918 select selected = 1
+2024-06-13 16:13:21,811 [DEBUG]  GraphTrial.log 38.918 visit state = 1
+2024-06-13 16:13:21,830 [DEBUG]  GraphTrial.log 38.938 get move selected = 4
+2024-06-13 16:13:22,005 [DEBUG]  GraphTrial.log 39.113 select selected = 4
+2024-06-13 16:13:22,005 [DEBUG]  GraphTrial.log 39.113 visit state = 4
+2024-06-13 16:13:22,021 [DEBUG]  GraphTrial.log 39.128 get move selected = 7
+2024-06-13 16:13:22,185 [DEBUG]  GraphTrial.log 39.293 select selected = 7
+2024-06-13 16:13:22,185 [DEBUG]  GraphTrial.log 39.293 visit state = 7
+2024-06-13 16:13:22,200 [DEBUG]  GraphTrial.log 39.308 get move selected = 8
+2024-06-13 16:13:22,635 [DEBUG]  GraphTrial.log 39.743 select selected = 8
+2024-06-13 16:13:22,635 [DEBUG]  GraphTrial.log 39.743 visit state = 8
+2024-06-13 16:13:22,651 [DEBUG]  GraphTrial.log 39.758 get move selected = 9
+2024-06-13 16:13:22,906 [DEBUG]  GraphTrial.log 40.013 select selected = 9
+2024-06-13 16:13:22,906 [DEBUG]  GraphTrial.log 40.013 visit state = 9
+2024-06-13 16:13:22,921 [DEBUG]  GraphTrial.log 40.028 get move selected = 0

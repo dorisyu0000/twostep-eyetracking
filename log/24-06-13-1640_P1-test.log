@@ -1,0 +1,56 @@
+2024-06-13 16:40:18,702 [INFO]  starting up 24-06-13-1640_P1-test at 1.8275243749958463
+2024-06-13 16:40:18,721 [INFO]  git SHA: 0ae36dcce70ead316e2748c3c0b3d4f7728b0675
+2024-06-13 16:40:18,721 [INFO]  Configuration file: config/m2/1.json
+2024-06-13 16:40:18,722 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.2938926261462365, 0.4045084971874737], [-0.47552825814757677, 0.15450849718747373], [-0.4755282581475768, -0.15450849718747361], [-0.2938926261462366, -0.40450849718747367], [-1.1102230246251565e-16, -0.5], [0.29389262614623646, -0.4045084971874738], [0.4755282581475768, -0.15450849718747384], [0.4755282581475768, 0.15450849718747361], [0.2938926261462367, 0.4045084971874736]]}
+2024-06-13 16:40:19,868 [INFO]  begin intro
+2024-06-13 16:40:19,868 [DEBUG]  message: Welcome! (None)
+2024-06-13 16:40:20,040 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[1, 3], [2, 4], [3, 5], [4, 6], [5, 7], [6, 8], [7, 9], [8, 0], [9, 1], [0, 2]], "rewards": [null, null, null, null, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "acting", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-13 16:40:20,040 [DEBUG]  GraphTrial.log 3.166 show graph 
+2024-06-13 16:40:20,093 [DEBUG]  message: In this experiment, you will play a game on the board shown to the right. (None)
+2024-06-13 16:40:20,193 [DEBUG]  GraphTrial.log 3.318 visit state = 0
+2024-06-13 16:40:20,193 [DEBUG]  message: Your current location on the board is highlighted in blue. (None)
+2024-06-13 16:40:20,355 [DEBUG]  message: The goal of the game is to collect as many points as you can. (None)
+2024-06-13 16:40:20,535 [DEBUG]  message: Before we start, let's learn all the buttons you need in this game .  (None)
+2024-06-13 16:40:20,655 [DEBUG]  message: Key F should be under your left index finger which you can switch the line you select.  (Press Key F to continue)
+2024-06-13 16:40:21,737 [DEBUG]  message: Key J should be under your right index finger which to confirm your choice.  (Press Key J to continue)
+2024-06-13 16:40:22,110 [DEBUG]  message: Now, let's try to play one roundPress Key F and Key J to move.  (None)
+2024-06-13 16:40:22,117 [DEBUG]  GraphTrial.log 5.242 initialize status = ok
+2024-06-13 16:40:22,117 [DEBUG]  GraphTrial.log 5.242 show graph 
+2024-06-13 16:40:22,174 [DEBUG]  GraphTrial.log 5.299 start flip_time = 5.298992625030223
+2024-06-13 16:40:22,174 [DEBUG]  GraphTrial.log 5.299 start acting 
+2024-06-13 16:40:22,189 [DEBUG]  GraphTrial.log 5.315 get move selected = 1
+2024-06-13 16:40:23,222 [DEBUG]  GraphTrial.log 6.347 switch selected = 3
+2024-06-13 16:40:23,490 [DEBUG]  GraphTrial.log 6.615 select selected = 3
+2024-06-13 16:40:23,490 [DEBUG]  GraphTrial.log 6.615 visit state = 3
+2024-06-13 16:40:47,903 [INFO]  starting up 24-06-13-1640_P1-test at 1.9573301666532643
+2024-06-13 16:40:47,923 [INFO]  git SHA: 0ae36dcce70ead316e2748c3c0b3d4f7728b0675
+2024-06-13 16:40:47,923 [INFO]  Configuration file: config/m2/1.json
+2024-06-13 16:40:47,924 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.2938926261462365, 0.4045084971874737], [-0.47552825814757677, 0.15450849718747373], [-0.4755282581475768, -0.15450849718747361], [-0.2938926261462366, -0.40450849718747367], [-1.1102230246251565e-16, -0.5], [0.29389262614623646, -0.4045084971874738], [0.4755282581475768, -0.15450849718747384], [0.4755282581475768, 0.15450849718747361], [0.2938926261462367, 0.4045084971874736]]}
+2024-06-13 16:40:49,101 [INFO]  begin intro
+2024-06-13 16:40:49,102 [DEBUG]  message: Welcome! (None)
+2024-06-13 16:40:49,388 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[1, 3], [2, 4], [3, 5], [4, 6], [5, 7], [6, 8], [7, 9], [8, 0], [9, 1], [0, 2]], "rewards": [null, null, null, null, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "acting", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-13 16:40:49,388 [DEBUG]  GraphTrial.log 3.442 show graph 
+2024-06-13 16:40:49,438 [DEBUG]  message: In this experiment, you will play a game on the board shown to the right. (None)
+2024-06-13 16:40:49,549 [DEBUG]  GraphTrial.log 3.603 visit state = 0
+2024-06-13 16:40:49,549 [DEBUG]  message: Your current location on the board is highlighted in blue. (None)
+2024-06-13 16:40:49,696 [DEBUG]  message: The goal of the game is to collect as many points as you can. (None)
+2024-06-13 16:40:49,861 [DEBUG]  message: Before we start, let's learn all the buttons you need in this game .  (None)
+2024-06-13 16:40:50,161 [DEBUG]  message: Key F should be under your left index finger which you can switch the line you select.  (Press Key F to continue)
+2024-06-13 16:40:51,061 [DEBUG]  message: Key J should be under your right index finger which to confirm your choice.  (Press Key J to continue)
+2024-06-13 16:40:51,301 [DEBUG]  message: Now, let's try to play one roundPress Key F and Key J to move.  (None)
+2024-06-13 16:40:51,310 [DEBUG]  GraphTrial.log 5.364 initialize status = ok
+2024-06-13 16:40:51,310 [DEBUG]  GraphTrial.log 5.364 show graph 
+2024-06-13 16:40:51,367 [DEBUG]  GraphTrial.log 5.421 start flip_time = 5.421072416647803
+2024-06-13 16:40:51,367 [DEBUG]  GraphTrial.log 5.421 start acting 
+2024-06-13 16:40:51,376 [DEBUG]  GraphTrial.log 5.430 get move selected = 3
+2024-06-13 16:40:51,992 [DEBUG]  GraphTrial.log 6.046 switch selected = 1
+2024-06-13 16:40:52,156 [DEBUG]  GraphTrial.log 6.210 select selected = 1
+2024-06-13 16:40:52,156 [DEBUG]  GraphTrial.log 6.210 visit state = 1
+2024-06-13 16:40:52,157 [INFO]  begin intro_reward
+2024-06-13 16:40:52,157 [ERROR]  Caught exception in stage intro_reward
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 36, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 296, in intro_reward
+    gt = this.get_practice_trial(highlight_edges=False, hide_rewards_while_acting=False, initial_stage='acting')
+NameError: name 'this' is not defined
