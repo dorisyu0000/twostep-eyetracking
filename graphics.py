@@ -115,3 +115,11 @@ class Graphics(object):
     def shift(self, x=0, y=0):
         for o in self.objects:
             shift(o, x, y)
+            
+    def display_reward(self):
+        """ Displays the reward next to the node. """
+        if self.reward is not None:
+            reward_text = visual.TextStim(self.win, text=str(self.reward),
+                                          pos=self.pos + np.array([0.1, 0]),  # Adjust position as needed
+                                          color=reward_color(self.reward), height=0.05)
+            reward_text.draw()

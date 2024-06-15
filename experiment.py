@@ -291,37 +291,61 @@ class Experiment(object):
         #              tip_text= f'press {LABEL_SELECT} and {LABEL_SWITCH} to continue ')
        
     @stage
+
+    @stage
     def intro_reward(self):
          # self.message('Welcome!', space=True)
-        gt = self.get_practice_trial(highlight_edges=False, hide_rewards_while_acting=False, initial_stage='acting')
-        gt.show()
+         gt = self.get_practice_trial(highlight_edges=False, hide_rewards_while_acting=False, initial_stage='acting')
+         gt.show()
 
+         gt.set_reward_display(False)
+         self.message("In this experiment, you will play a game on the board shown to the right.", space=True)
 
-        for (n, r) in zip(gt.nodes, gt.rewards):
+         gt.set_state(gt.start)
+         self.message("Your current location on the board is highlighted in blue.", space=True)
+
+         gt.set_reward_display(True)
+         self.message("The goal of the game is to collect these diamonds.", space=True)
+
+         for (n, r) in zip(gt.nodes, gt.rewards):
              if r > 0:
                  n.setLineColor('#1BD30C')
-        self.message("Specifically, you want the ones that point to the right. These earn you points.", space=True)
+         self.message("Specifically, you want the ones that look lik those. These earn you points.", space=True)
 
-        for (n, r) in zip(gt.nodes, gt.rewards):
+         for (n, r) in zip(gt.nodes, gt.rewards):
              if r < 0:
                  n.setLineColor('#E3000A')
              else:
                  n.setLineColor('black')
-        self.message("The diamonds that point left are bad. They take away points!", space=True)
+         self.message("The diamonds look like those are bad. They take away points!", space=True)
          
-        for (n, r) in zip(gt.nodes, gt.rewards):
+         for (n, r) in zip(gt.nodes, gt.rewards):
              if r == 0:
                  n.setLineColor('yellow')
              else:
                  n.setLineColor('black')
-        self.message("The diamonds that point left are natual. You won't gain or loss any point!", space=True)
-        gt.show_description()
-        
-        
+         self.message("The diamonds that with four edges are natual. You won't gain or loss any point!", space=True)
 
-
-        for (n, r) in zip(gt.nodes, gt.rewards):
+         for (n, r) in zip(gt.nodes, gt.rewards):
              n.setLineColor('black')
+
+         self.message( f"Press {LABEL_SWITCH} and {LABEL_SELECT} to move to each diamond to see its point value",
+                      tip_text='hover over every diamond to cotntinue', space=False)
+
+
+         seen = set()
+         n_reward = sum(l is not None for l in gt.reward_labels)
+         while len(seen) < n_reward:
+             pos = gt.mouse.getPos()
+             for (i, n) in enumerate(gt.nodes):
+                 if gt.reward_labels[i]:
+                     hovered = n.contains(pos)
+                     if hovered:
+                         seen.add(i)
+                     gt.reward_labels[i].autoDraw = not hovered
+                     gt.reward_text[i].autoDraw = hovered
+             self.win.flip()
+        #  sleep(0.5)
              
         
 

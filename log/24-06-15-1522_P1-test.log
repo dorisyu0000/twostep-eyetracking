@@ -1,0 +1,114 @@
+2024-06-15 15:22:10,462 [INFO]  starting up 24-06-15-1522_P1-test at 1.9742492916993797
+2024-06-15 15:22:10,483 [INFO]  git SHA: 3ec75299daffbaaebd309b6a79acdf63ae1397b0
+2024-06-15 15:22:10,483 [INFO]  Configuration file: config/m2/1.json
+2024-06-15 15:22:10,484 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.2938926261462365, 0.4045084971874737], [-0.47552825814757677, 0.15450849718747373], [-0.4755282581475768, -0.15450849718747361], [-0.2938926261462366, -0.40450849718747367], [-1.1102230246251565e-16, -0.5], [0.29389262614623646, -0.4045084971874738], [0.4755282581475768, -0.15450849718747384], [0.4755282581475768, 0.15450849718747361], [0.2938926261462367, 0.4045084971874736]]}
+2024-06-15 15:22:11,696 [INFO]  begin intro
+2024-06-15 15:22:11,697 [DEBUG]  message: Welcome! (None)
+2024-06-15 15:22:12,018 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[1, 3], [2, 4], [3, 5], [4, 6], [5, 7], [6, 8], [7, 9], [8, 0], [9, 1], [0, 2]], "rewards": [null, null, null, null, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "acting", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-15 15:22:12,018 [DEBUG]  GraphTrial.log 3.531 show graph 
+2024-06-15 15:22:12,068 [DEBUG]  message: In this experiment, you will play a game on the board shown to the right. (None)
+2024-06-15 15:22:12,313 [DEBUG]  GraphTrial.log 3.825 visit state = 0
+2024-06-15 15:22:12,313 [DEBUG]  message: Your current location on the board is highlighted in blue. (None)
+2024-06-15 15:22:12,475 [DEBUG]  message: The goal of the game is to collect as many points as you can. (None)
+2024-06-15 15:22:12,655 [DEBUG]  message: Before we start, let's learn all the buttons you need in this game .  (None)
+2024-06-15 15:22:13,000 [DEBUG]  message: Key F should be under your left index finger which you can switch the line you select.  (Press Key F to continue)
+2024-06-15 15:22:13,960 [DEBUG]  message: Key J should be under your right index finger which to confirm your choice.  (Press Key J to continue)
+2024-06-15 15:22:14,290 [DEBUG]  message: Now, let's try to play one roundPress Key F and Key J to move.  (None)
+2024-06-15 15:22:14,297 [DEBUG]  GraphTrial.log 5.810 initialize status = ok
+2024-06-15 15:22:14,297 [DEBUG]  GraphTrial.log 5.810 show graph 
+2024-06-15 15:22:14,354 [DEBUG]  GraphTrial.log 5.867 start flip_time = 5.866521666699555
+2024-06-15 15:22:14,354 [DEBUG]  GraphTrial.log 5.867 start acting 
+2024-06-15 15:22:14,367 [DEBUG]  GraphTrial.log 5.879 get move selected = 1
+2024-06-15 15:22:15,161 [DEBUG]  GraphTrial.log 6.673 switch selected = 3
+2024-06-15 15:22:15,369 [DEBUG]  GraphTrial.log 6.882 select selected = 3
+2024-06-15 15:22:15,369 [DEBUG]  GraphTrial.log 6.882 visit state = 3
+2024-06-15 15:22:15,371 [INFO]  begin intro_reward
+2024-06-15 15:22:15,371 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[1, 3], [2, 4], [3, 5], [4, 6], [5, 7], [6, 8], [7, 9], [8, 0], [9, 1], [0, 2]], "rewards": [-1, 4, -4, 0, 3, 0, 2, -2, 1, -3], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "acting", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-15 15:22:15,371 [DEBUG]  GraphTrial.log 6.884 show graph 
+2024-06-15 15:22:15,379 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,380 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,390 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,390 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,398 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,398 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,406 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,406 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,418 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,418 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,427 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,427 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,436 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,436 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,444 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,444 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,456 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,456 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,464 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,464 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,472 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,472 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,480 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,480 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,491 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,491 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,499 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,499 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,507 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,507 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,515 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,515 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,526 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,526 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,535 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,535 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,543 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,543 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,551 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,551 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,563 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,563 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,571 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,571 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,578 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,578 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,586 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,586 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,598 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,598 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,606 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,606 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,614 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,614 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,622 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,622 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,634 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,634 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,642 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,642 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,649 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,649 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,657 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,657 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,668 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,668 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,676 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,676 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,683 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,683 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,691 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,691 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,702 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,702 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,710 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,710 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,718 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,718 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,725 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-15 15:22:15,725 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-15 15:22:15,751 [ERROR]  Caught exception in stage intro_reward
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 36, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 304, in intro_reward
+    node.node.setLineColor('#1BD30C')
+NameError: name 'node' is not defined

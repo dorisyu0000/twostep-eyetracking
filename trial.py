@@ -8,7 +8,7 @@ import random
 
 wait = core.wait
 
-from config import COLOR_PLAN, COLOR_ACT, COLOR_WIN, COLOR_LOSS, COLOR_NEUTRAL, COLOR_HIGHLIGHT, KEY_CONTINUE, KEY_SWITCH, KEY_SELECT, KEY_ABORT,LABEL_SELECT
+from config import COLOR_PLAN, COLOR_ACT, COLOR_WIN, COLOR_LOSS, COLOR_NEUTRAL, COLOR_HIGHLIGHT, KEY_CONTINUE, KEY_SWITCH, KEY_SELECT, KEY_ABORT,LABEL_SELECT,LABEL_CONTINUE,LABEL_SWITCH
 
 from graphics import Graphics, FRAME_RATE
 
@@ -39,7 +39,7 @@ class GraphTrial(object):
     def __init__(self, win, graph, rewards, start, layout, pos=(0, 0), start_mode=None, max_score=None,
                  images=None, reward_info=None, 
                  delayed_feedback=True, feedback_duration=3, action_time=float('inf'),
-                 initial_stage='planning', hide_states=False, hide_rewards_while_acting=True, hide_edges_while_acting= False,
+                 initial_stage='planning', hide_states=False, hide_rewards_while_acting=False, hide_edges_while_acting= False,
                  eyelink=None, triggers=None, **kws):
         self.win = win
         self.graph = graph
@@ -165,6 +165,8 @@ class GraphTrial(object):
         self.data["trial"]["node_positions"] = [height2pix(self.win, n.pos) for n in self.nodes]
 
         self.arrows = {}
+        
+        
         for i, js in enumerate(self.graph):
             for j in js:
                 self.arrows[(i, j)] = self.gfx.arrow(self.nodes[i], self.nodes[j])
@@ -192,9 +194,9 @@ class GraphTrial(object):
             self.done = True
 
         if prev is None:  # Initial state, no previous node to unset
-            if self.node_images[s]:  # Check if there is an image at index s
+            if self.node_images[s]:  
                 self.node_images[s].setAutoDraw(False)
-        else:  # Not initial state, handle previous node
+        else: 
             self.path.append(s)
             self.nodes[prev].fillColor = 'white'
             if not self.delayed_feedback:
@@ -256,16 +258,6 @@ class GraphTrial(object):
         for l in self.reward_labels:
             if l:
                 l.setAutoDraw(on)
-
-    def highlight_current_edges(self):
-        for (i, j), arrow in self.arrows.items():
-            if i == self.current_state:
-                arrow.setAutoDraw(False); arrow.setAutoDraw(True)  # on top
-                arrow.setColor(COLOR_HIGHLIGHT)
-                self.nodes[j].setLineColor(COLOR_HIGHLIGHT)
-            else:
-                arrow.setColor('black')
-                self.nodes[j].setLineColor('black')
 
     def get_move(self):
         choices = []
@@ -368,22 +360,7 @@ class GraphTrial(object):
                 return
             self.win.flip()
 
-    def show_description(self):
-        self.log('show description')
-        descs = self.reward_info()
-        xs = (.25, -.25)
-        y = 0
-        for i, x in enumerate(xs):
-            visual.TextStim(self.win, descs[i], pos=(x, y), color='white', height=.05).draw()
-            if not self.hide_states:
-                targets = self.reward_info[i]["targets"]
-                xs = np.arange(len(targets)) * .1
-                xs -= xs.mean()
-                xs += x
-                for x, t in zip(xs, targets):
-                    self.gfx.image((x, y-.1), self.images[t], size=.08, autoDraw=False).draw()
-        self.win.flip()
-        self.wait_keys([KEY_CONTINUE])
+    
 
     def fixation_cross(self):
         visual.TextStim(self.win, "+", pos=self.pos, color='black', height=.05).draw()
@@ -391,17 +368,18 @@ class GraphTrial(object):
         self.wait_keys([KEY_CONTINUE])
 
     def run(self, one_step=False, skip_planning=False):
-            # if self.start_mode == 'drift_check':
-            #     self.log('begin drift_check')
-            #     self.status = self.eyelink.drift_check(self.pos)
-            # elif self.start_mode == 'fixation':
-            #     self.log('begin fixation')
-            #     self.status = self.eyelink.fake_drift_check(self.pos)
-            # elif self.start_mode == 'space':
-            #     self.log('begin space')
-            #     visual.TextStim(self.win, f'press {KEY_CONTINUE.upper()} to start', pos=self.pos, color='white', height=.035).draw()
-            #     self.win.flip()
-            #     self.wait_keys(['space', KEY_CONTINUE])
+        
+        if self.start_mode == 'drift_check':
+            self.log('begin drift_check')
+            self.status = self.eyelink.drift_check(self.pos)
+        elif self.start_mode == 'fixation':
+            self.log('begin fixation')
+            self.status = self.eyelink.fake_drift_check(self.pos)
+        elif self.start_mode == 'space':
+            self.log('begin space')
+            visual.TextStim(self.win, f'press {LABEL_CONTINUE} to start', pos=self.pos, color='white', height=.035).draw()
+            self.win.flip()
+            self.wait_keys(['space', KEY_CONTINUE])
 
         self.log('initialize', {'status': self.status})
 
@@ -428,8 +406,9 @@ class GraphTrial(object):
 
         self.log('start', {'flip_time': self.win.flip()})
 
-        if not (one_step or skip_planning):
-            self.run_planning()
+        # if not (one_step or skip_planning):
+        #     self.run_planning()
+        
         if self.status == 'abort':
             return 'abort'
 
@@ -593,3 +572,4 @@ class CalibrationTrial(GraphTrial):
         self.win.mouseVisible = True
 
         return self.result
+
