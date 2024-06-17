@@ -9,6 +9,8 @@ import logging
 import numpy as np
 import hashlib
 
+from config import KEY_CONTINUE
+
 from EyeLinkCoreGraphicsPsychoPy import EyeLinkCoreGraphicsPsychoPy
 from psychopy import visual, core, event, monitors, gui
 
@@ -217,7 +219,7 @@ class EyeLink(object):
         self.win.mouseVisible = True
 
     def save_data(self):
-        self.tracker.closeDataFile()
+        # self.tracker.closeDataFile()
 
         # Set up a folder to store the EDF data files and the associated resources
         # e.g., files defining the interest areas used in each trial
