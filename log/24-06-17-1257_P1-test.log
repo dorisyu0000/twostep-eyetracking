@@ -1,0 +1,90 @@
+2024-06-17 12:57:14,441 [INFO]  starting up 24-06-17-1257_P1-test at 1.8474767916486599
+2024-06-17 12:57:14,460 [INFO]  git SHA: dc6e0c15150cc2db1667ec15431faef8e3cd16d2
+2024-06-17 12:57:14,460 [INFO]  Configuration file: config/m2/1.json
+2024-06-17 12:57:14,461 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-06-17 12:57:15,662 [INFO]  begin setup_eyetracker
+2024-06-17 12:57:15,662 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-17 12:57:15,952 [INFO]  New EyeLink object
+2024-06-17 12:57:15,952 [INFO]  Initializing new tracker
+2024-06-17 12:57:16,237 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 12:57:16,396 [INFO]  Tracker initialized
+2024-06-17 12:57:16,397 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 12:57:16,413 [INFO]  doTrackerSetup
+2024-06-17 12:57:21,781 [INFO]  done doTrackerSetup
+2024-06-17 12:57:21,816 [INFO]  begin calibrate_gaze_tolerance
+2024-06-17 12:57:21,816 [DEBUG]  message: We're going to check how well the eyetracker is working. (None)
+2024-06-17 12:57:22,994 [DEBUG]  message: When the board comes up, just look at the O's as they appear. They should disappear. If it's not working, press X. (None)
+2024-06-17 12:57:23,716 [ERROR]  Expected a list with a dictionary for trial data, got: [[], [], [], [], [], [], [], [], [], [], []]
+2024-06-17 12:57:23,716 [INFO]  begin trial {"kind": "CalibrationTrial", "graph": [[], [], [], [], [], [], [], [], [], [], []], "rewards": [1, null, null, 2, 3, 3, null, null, 0, -4, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "gaze_contingent": true, "gaze_tolerance": 1.5, "fixation_lag": 0.1, "start": 6}
+2024-06-17 12:57:23,716 [DEBUG]  CalibrationTrial.log 11.122 start recording 
+2024-06-17 12:57:23,716 [DEBUG]  CalibrationTrial.log 11.122 show graph 
+2024-06-17 12:57:23,723 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,723 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,732 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,732 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,741 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,741 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,748 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,749 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,760 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,760 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,769 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,769 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,777 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,777 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,785 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,785 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,794 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,794 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,803 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,803 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,811 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,811 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,820 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,820 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,829 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,829 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,838 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,838 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,846 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,846 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,854 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,854 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,867 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,867 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,875 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,875 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,883 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,883 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,890 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,890 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,899 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,899 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,907 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,907 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,915 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,915 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,923 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:57:23,923 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:57:23,934 [DEBUG]  Changing reward_label[0] from images/pattern_6.png to O
+2024-06-17 12:57:23,935 [ERROR]  Caught exception in stage calibrate_gaze_tolerance
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 36, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 530, in calibrate_gaze_tolerance
+    result = gt.run()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 593, in run
+    self.new_target()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 577, in new_target
+    self.update_node_labels()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 509, in update_node_labels
+    self.set_node_label(i, self.node_label(i))
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 516, in set_node_label
+    self.node_images[i].image = new
+  File "/Users/labadmin/miniconda3/lib/python3.8/site-packages/psychopy/tools/attributetools.py", line 27, in __set__
+    newValue = self.func(obj, value)
+  File "/Users/labadmin/miniconda3/lib/python3.8/site-packages/psychopy/visual/image.py", line 389, in image
+    self.isLumImage = self._createTexture(
+  File "/Users/labadmin/miniconda3/lib/python3.8/site-packages/psychopy/visual/basevisual.py", line 1063, in _createTexture
+    raise IOError(msg % (tex, os.path.abspath(tex)))
+OSError: Couldn't find image O; check path? (tried: /Users/labadmin/twostep-eyetracking/O)

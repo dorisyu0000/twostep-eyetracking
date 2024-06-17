@@ -1,0 +1,73 @@
+1.5216 	WARNING 	The 'psychtoolbox' library cannot be loaded but is required for audio capture (use `pip install psychtoolbox` to get it). Microphone recording will be unavailable this session. Note that opening a microphone stream will raise an error.
+1.5250 	ERROR 	Support for the `sounddevice` audio backend is not available this session. Please install `psychopy-sounddevice` and restart the session to enable support.
+1.5252 	ERROR 	Support for the `pyo` audio backend is not available this session. Please install `psychopy-pyo` and restart the session to enable support.
+1.5253 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['PTB', 'sounddevice', 'pyo', 'pygame'] (in that order).
+1.5324 	INFO 	time is 2024-06-17 13:35:06,946073
+1.5518 	WARNING 	Monitor specification not found. Creating a temporary one...
+2.6547 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+2.6552 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x16d144cd0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x16d144c70>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x16d144ac0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x309165790>, multiSample=False, name='window1', numSamples=2, pos=(735, 415), screen=0, size=array([1800, 1000]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=False, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+2.6554 	EXP 	window1: mouseVisible = True
+2.6554 	EXP 	window1: backgroundImage = None
+2.6554 	EXP 	window1: backgroundFit = 'cover'
+2.6577 	EXP 	window1: mouseVisible = True
+2.6580 	EXP 	window1: mouseVisible = True
+2.6587 	EXP 	window1: mouseVisible = True
+2.6593 	EXP 	window1: mouseVisible = True
+2.6677 	EXP 	window1: mouseVisible = True
+2.6679 	EXP 	window1: mouseVisible = True
+2.6684 	EXP 	window1: mouseVisible = True
+2.6689 	EXP 	window1: mouseVisible = True
+2.6840 	EXP 	window1: mouseVisible = True
+2.6841 	EXP 	window1: mouseVisible = True
+2.6845 	EXP 	window1: mouseVisible = True
+2.6848 	EXP 	window1: mouseVisible = True
+2.6889 	EXP 	window1: mouseVisible = True
+2.6890 	EXP 	window1: mouseVisible = True
+2.6894 	EXP 	window1: mouseVisible = True
+2.6897 	EXP 	window1: mouseVisible = True
+2.7206 	WARNING 	t of last frame was 63.43ms (=1/15)
+3.0684 	DATA 	Keypress: space
+3.0699 	WARNING 	t of last frame was 349.30ms (=1/2)
+3.3618 	EXP 	window1: mouseVisible = False
+3.3619 	EXP 	window1: units = 'pix'
+3.3619 	INFO 	Mouse: using default window
+3.5055 	INFO 	Mouse: using default window
+3.5165 	WARNING 	t of last frame was 446.55ms (=1/2)
+5.9188 	DATA 	Keypress: space
+7.0566 	DATA 	Keypress: lcommand
+7.9879 	DATA 	Keypress: return
+8.1184 	WARNING 	t of last frame was 4601.90ms (=1/0)
+8.1565 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+10.5106 	EXP 	window1: units = 'pix'
+10.5127 	EXP 	window1: units = 'pix'
+11.1009 	DATA 	Keypress: space
+11.5238 	DATA 	Keypress: space
+11.9407 	DATA 	Keypress: space
+12.2706 	DATA 	Keypress: space
+12.6607 	DATA 	Keypress: space
+13.2009 	DATA 	Keypress: space
+14.5208 	DATA 	Keypress: space
+14.5214 	INFO 	Mouse: using default window
+19.3383 	DATA 	Mouse: Left button down, pos=(443,312)
+19.3384 	DATA 	Mouse:  Left button up, pos=(443,312)
+19.3384 	DATA 	Mouse: Left button down, pos=(443,312)
+19.4473 	DATA 	Mouse:  Left button up, pos=(443,312)
+19.9774 	DATA 	Mouse: Left button down, pos=(453,253)
+19.9774 	DATA 	Mouse:  Left button up, pos=(453,253)
+19.9775 	DATA 	Mouse: Left button down, pos=(453,253)
+20.0953 	DATA 	Mouse:  Left button up, pos=(453,253)
+20.7010 	DATA 	Keypress: space
+26.8515 	DATA 	Keypress: f
+27.3912 	DATA 	Keypress: f
+27.8413 	DATA 	Keypress: f
+28.1112 	DATA 	Keypress: f
+28.3511 	DATA 	Keypress: f
+28.6211 	DATA 	Keypress: f
+28.9211 	DATA 	Keypress: f
+29.2511 	DATA 	Keypress: f
+30.0014 	DATA 	Keypress: f
+30.4205 	DATA 	Keypress: j
+30.7214 	DATA 	Keypress: j

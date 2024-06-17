@@ -1,0 +1,28 @@
+2024-06-17 13:34:46,480 [INFO]  starting up 24-06-17-1334_P1-test at 1.538304291665554
+2024-06-17 13:34:46,501 [INFO]  git SHA: dc6e0c15150cc2db1667ec15431faef8e3cd16d2
+2024-06-17 13:34:46,501 [INFO]  Configuration file: config/m2/1.json
+2024-06-17 13:34:46,502 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-06-17 13:34:47,680 [INFO]  begin setup_eyetracker
+2024-06-17 13:34:47,681 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-17 13:34:47,810 [INFO]  New EyeLink object
+2024-06-17 13:34:47,810 [INFO]  Initializing new tracker
+2024-06-17 13:34:48,098 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 13:34:48,243 [INFO]  Tracker initialized
+2024-06-17 13:34:48,243 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 13:34:48,258 [INFO]  doTrackerSetup
+2024-06-17 13:34:51,843 [INFO]  done doTrackerSetup
+2024-06-17 13:34:51,846 [INFO]  begin intro_main
+2024-06-17 13:34:51,846 [DEBUG]  message: Alright! We're ready to begin the main phase of the experiment. (None)
+2024-06-17 13:34:52,787 [DEBUG]  message: But first, you might be asking "What's in it for me?" ...Well, we thought of that! (None)
+2024-06-17 13:34:53,055 [DEBUG]  message: Unlike other experiments you might have done, we don't have a fixed number of rounds. (None)
+2024-06-17 13:34:53,203 [DEBUG]  message: Instead, you will do as as many rounds as it takes to earn 400 points. (None)
+2024-06-17 13:34:53,384 [DEBUG]  message: To finish the study as quickly as possible, you'll have to balance making fast choices and selecting the best possible path. (None)
+2024-06-17 13:34:53,774 [DEBUG]  message: Good luck! (None)
+2024-06-17 13:34:54,195 [INFO]  begin run_main
+2024-06-17 13:34:54,195 [INFO]  Trial 1 of 200
+2024-06-17 13:34:54,704 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[9], [6, 2], [10], [8, 0], [], [], [], [1, 6], [5, 4], [], []], "rewards": [4, -3, 4, null, 2, 0, 1, -1, -2, 0, 2], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "gaze_contingent": false, "gaze_tolerance": 1.5, "fixation_lag": 0.5, "start": 3}
+2024-06-17 13:34:54,704 [ERROR]  Caught exception in run_main
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 659, in run_main
+    logging.info(eyelink)
+NameError: name 'eyelink' is not defined

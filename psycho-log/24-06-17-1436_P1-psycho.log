@@ -1,0 +1,85 @@
+1.4667 	WARNING 	The 'psychtoolbox' library cannot be loaded but is required for audio capture (use `pip install psychtoolbox` to get it). Microphone recording will be unavailable this session. Note that opening a microphone stream will raise an error.
+1.4700 	ERROR 	Support for the `sounddevice` audio backend is not available this session. Please install `psychopy-sounddevice` and restart the session to enable support.
+1.4701 	ERROR 	Support for the `pyo` audio backend is not available this session. Please install `psychopy-pyo` and restart the session to enable support.
+1.4703 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['PTB', 'sounddevice', 'pyo', 'pygame'] (in that order).
+1.4794 	INFO 	time is 2024-06-17 14:36:06,594002
+1.5005 	WARNING 	Monitor specification not found. Creating a temporary one...
+1.5043 	WARNING 	User requested fullscreen with size [1350  750], but screen is actually [1920, 1080]. Using actual size
+2.6612 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+2.6616 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x16bce0ac0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x16bce0a60>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x16bce08b0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x30c75a5b0>, multiSample=False, name='window1', numSamples=2, pos=[480.0, 270.0], screen=0, size=array([3840, 2160]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=False, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+2.6617 	EXP 	window1: mouseVisible = True
+2.6618 	EXP 	window1: backgroundImage = None
+2.6618 	EXP 	window1: backgroundFit = 'cover'
+2.6655 	EXP 	window1: mouseVisible = True
+2.6659 	EXP 	window1: mouseVisible = True
+2.6670 	EXP 	window1: mouseVisible = True
+2.6678 	EXP 	window1: mouseVisible = True
+2.6766 	EXP 	window1: mouseVisible = True
+2.6769 	EXP 	window1: mouseVisible = True
+2.6776 	EXP 	window1: mouseVisible = True
+2.6785 	EXP 	window1: mouseVisible = True
+2.7002 	EXP 	window1: mouseVisible = True
+2.7003 	EXP 	window1: mouseVisible = True
+2.7007 	EXP 	window1: mouseVisible = True
+2.7009 	EXP 	window1: mouseVisible = True
+2.7047 	EXP 	window1: mouseVisible = True
+2.7048 	EXP 	window1: mouseVisible = True
+2.7051 	EXP 	window1: mouseVisible = True
+2.7054 	EXP 	window1: mouseVisible = True
+2.7438 	WARNING 	t of last frame was 78.83ms (=1/12)
+6.8537 	DATA 	Keypress: space
+6.8586 	WARNING 	t of last frame was 4114.81ms (=1/0)
+7.1642 	EXP 	window1: mouseVisible = False
+7.1643 	EXP 	window1: units = 'pix'
+7.1644 	INFO 	Mouse: using default window
+7.3160 	INFO 	Mouse: using default window
+7.3301 	WARNING 	t of last frame was 471.52ms (=1/2)
+9.1315 	DATA 	Keypress: backslash
+9.1582 	DATA 	Keypress: return
+9.2713 	WARNING 	t of last frame was 1941.23ms (=1/0)
+9.3127 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+34.2892 	EXP 	window1: units = 'pix'
+47.6869 	EXP 	window1: units = 'pix'
+67.0817 	EXP 	window1: units = 'pix'
+68.3866 	EXP 	window1: units = 'pix'
+68.3898 	EXP 	window1: units = 'pix'
+71.2142 	DATA 	Keypress: space
+74.9219 	DATA 	Keypress: space
+77.6793 	DATA 	Keypress: space
+80.0794 	DATA 	Keypress: space
+82.4195 	DATA 	Keypress: space
+82.9893 	DATA 	Keypress: space
+84.9098 	DATA 	Keypress: space
+84.9105 	INFO 	Mouse: using default window
+87.1998 	DATA 	Keypress: space
+89.5970 	DATA 	Keypress: space
+91.7260 	DATA 	Keypress: space
+91.7792 	EXP 	window1: units = 'pix'
+93.1602 	DATA 	Keypress: f
+99.9403 	DATA 	Keypress: j
+100.4201 	DATA 	Keypress: j
+104.2606 	DATA 	Keypress: space
+104.2612 	INFO 	Mouse: using default window
+107.5938 	DATA 	Keypress: space
+107.6469 	EXP 	window1: units = 'pix'
+120.8511 	DATA 	Keypress: f
+121.2407 	DATA 	Keypress: f
+121.6008 	DATA 	Keypress: j
+122.0806 	DATA 	Keypress: j
+124.6310 	DATA 	Keypress: space
+124.6315 	INFO 	Mouse: using default window
+125.1826 	DATA 	Keypress: space
+125.2626 	EXP 	window1: units = 'pix'
+131.4866 	DATA 	Keypress: j
+131.9211 	DATA 	Keypress: j
+134.9522 	DATA 	Keypress: space
+134.9528 	INFO 	Mouse: using default window
+136.8186 	DATA 	Keypress: space
+137.8075 	DATA 	Keypress: space
+137.9150 	EXP 	window1: units = 'pix'
+142.7817 	DATA 	Keypress: j
+143.6515 	DATA 	Keypress: f
+143.9514 	DATA 	Keypress: j

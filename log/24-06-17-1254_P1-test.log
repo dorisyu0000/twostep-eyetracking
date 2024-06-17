@@ -1,0 +1,39 @@
+2024-06-17 12:54:42,511 [INFO]  starting up 24-06-17-1254_P1-test at 2.1024702499853447
+2024-06-17 12:54:42,530 [INFO]  git SHA: dc6e0c15150cc2db1667ec15431faef8e3cd16d2
+2024-06-17 12:54:42,530 [INFO]  Configuration file: config/m2/1.json
+2024-06-17 12:54:42,531 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-06-17 12:54:43,729 [INFO]  begin setup_eyetracker
+2024-06-17 12:54:43,729 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-17 12:54:44,300 [INFO]  New EyeLink object
+2024-06-17 12:54:44,300 [INFO]  Initializing new tracker
+2024-06-17 12:54:44,600 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 12:54:44,770 [INFO]  Tracker initialized
+2024-06-17 12:54:44,771 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 12:54:44,787 [INFO]  doTrackerSetup
+2024-06-17 12:54:51,269 [INFO]  done doTrackerSetup
+2024-06-17 12:54:51,300 [INFO]  begin calibrate_gaze_tolerance
+2024-06-17 12:54:51,300 [DEBUG]  message: We're going to check how well the eyetracker is working. (None)
+2024-06-17 12:54:52,481 [DEBUG]  message: When the board comes up, just look at the O's as they appear. They should disappear. If it's not working, press X. (None)
+2024-06-17 12:54:52,871 [ERROR]  Expected a list with a dictionary for trial data, got: [[], [], [], [], [], [], [], [], [], [], []]
+2024-06-17 12:54:52,871 [INFO]  begin trial {"kind": "CalibrationTrial", "graph": [[], [], [], [], [], [], [], [], [], [], []], "rewards": [1, null, null, 2, 3, 3, null, null, 0, -4, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "gaze_contingent": true, "gaze_tolerance": 1.5, "fixation_lag": 0.1, "start": 6}
+2024-06-17 12:54:52,871 [DEBUG]  CalibrationTrial.log 12.462 start recording 
+2024-06-17 12:54:52,871 [DEBUG]  CalibrationTrial.log 12.463 show graph 
+2024-06-17 12:54:52,878 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:54:52,878 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:54:52,888 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:54:52,888 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:54:52,895 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:54:52,895 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:54:52,903 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 12:54:52,903 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 12:54:52,911 [ERROR]  Caught exception in stage calibrate_gaze_tolerance
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 36, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 530, in calibrate_gaze_tolerance
+    result = gt.run()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 590, in run
+    self.show()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 166, in show
+    self.reward_labels = images
+NameError: name 'images' is not defined

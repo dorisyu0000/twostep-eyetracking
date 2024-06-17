@@ -1,0 +1,116 @@
+2024-06-17 11:54:30,516 [INFO]  starting up 24-06-17-1154_P1-test at 2.085064999992028
+2024-06-17 11:54:30,534 [INFO]  git SHA: dc6e0c15150cc2db1667ec15431faef8e3cd16d2
+2024-06-17 11:54:30,535 [INFO]  Configuration file: config/m2/1.json
+2024-06-17 11:54:30,536 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-06-17 11:54:31,659 [INFO]  begin setup_eyetracker
+2024-06-17 11:54:31,659 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-17 11:54:55,198 [INFO]  starting up 24-06-17-1154_P1-test at 1.511025833315216
+2024-06-17 11:54:55,216 [INFO]  git SHA: dc6e0c15150cc2db1667ec15431faef8e3cd16d2
+2024-06-17 11:54:55,216 [INFO]  Configuration file: config/m2/1.json
+2024-06-17 11:54:55,217 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-06-17 11:54:56,372 [INFO]  begin setup_eyetracker
+2024-06-17 11:54:56,373 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-17 11:54:57,023 [INFO]  New EyeLink object
+2024-06-17 11:54:57,023 [INFO]  Initializing new tracker
+2024-06-17 11:54:57,308 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 11:54:57,460 [INFO]  Tracker initialized
+2024-06-17 11:54:57,460 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 11:54:57,473 [INFO]  doTrackerSetup
+2024-06-17 11:55:03,404 [INFO]  done doTrackerSetup
+2024-06-17 11:55:03,430 [INFO]  begin run_main
+2024-06-17 11:55:03,430 [INFO]  Trial 1 of 200
+2024-06-17 11:55:06,989 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[9], [6, 2], [10], [8, 0], [], [], [], [1, 6], [5, 4], [], []], "rewards": [4, -3, 4, null, 2, 0, 1, -1, -2, 0, 2], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "gaze_contingent": false, "gaze_tolerance": 1.5, "fixation_lag": 0.5, "start": 3}
+2024-06-17 11:55:06,989 [DEBUG]  GraphTrial.log 13.302 begin drift_check 
+2024-06-17 11:55:08,732 [DEBUG]  GraphTrial.log 15.044 initialize status status = ok
+2024-06-17 11:55:08,732 [DEBUG]  GraphTrial.log 15.045 start recording 
+2024-06-17 11:55:08,732 [DEBUG]  GraphTrial.log 15.045 show graph 
+2024-06-17 11:55:08,739 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,739 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,748 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,748 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,757 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,757 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,765 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,765 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,775 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,775 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,784 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,784 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,792 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,792 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,800 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,800 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,809 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,809 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,818 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,818 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,826 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,826 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,835 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,835 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,846 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,846 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,855 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,855 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,863 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,863 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,871 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,871 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,880 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,880 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,888 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,888 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,896 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,896 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,903 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,903 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,912 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,912 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,920 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,920 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,928 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,928 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,935 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,935 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,944 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,944 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,952 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,952 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,960 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,960 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,967 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,968 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,977 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,977 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,985 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,985 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:08,992 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:08,992 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:09,000 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:09,000 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:09,009 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:09,009 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:09,017 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:09,017 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:09,024 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:09,024 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:09,032 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:09,032 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:09,041 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:09,041 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:09,049 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:09,049 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:09,057 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:09,057 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:09,065 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 11:55:09,065 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 11:55:09,078 [DEBUG]  GraphTrial.log 15.391 visit state = 3
+2024-06-17 11:55:09,078 [ERROR]  Caught exception in run_main
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 659, in run_main
+    gt.run()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 460, in run
+    self.start_time = self.tick()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 397, in tick
+    if self.end_time is not None: # TODO
+AttributeError: 'GraphTrial' object has no attribute 'end_time'

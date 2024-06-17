@@ -496,7 +496,7 @@ def intro_problem(n, n_steps=-1, rdist=None, rewards=None, graph=None, start=Non
         rewards.extend([None] * (n - len(rewards)))
     elif len(rewards) > n:
         rewards = rewards[:n]  
-    random.shuffle(rewards)
+    # random.shuffle(rewards)
     return {'graph': graph, 'rewards': rewards, 'start': 0, 'n_steps': n_steps}
 
     
@@ -525,15 +525,24 @@ def make_trials():
         #     problem_4 = sample_problem_3(**kws, trialNumber=trialNumber)
         #     main.append(problem_4)
         # elif trialNumber % 4 == 3:
+        
         #     problem_5 = sample_problem_4(**kws, trialNumber=trialNumber)
         #     main.append(problem_5)
         trialNumber += 1
-
+    
+    for _ in range(200):  
+        if trialNumber % 2 == 0:
+            problem_1 = sample_problem_1(**kws, trialNumber=trialNumber)
+            main.append(problem_1)
+        elif trialNumber % 2 == 1:
+            problem_2 = sample_problem_2(**kws, trialNumber=trialNumber)
+            main.append(problem_2)
+        trialNumber += 1
 
     random.shuffle(main)
     practice.append([intro_problem(**kws, rewards=[None] * n)])
-    practice.append([intro_problem(**kws, rewards= [1,2,4,3,0,-1,-2,-3,-4,0])])
-    for _ in range(3):
+    practice.append([intro_problem(**kws, graph = []*n, rewards= [1,2,3,4, -1,-2,-3,-4,0,0,0])])
+    for _ in range(5):
         trial = [sample_practice(**kws)]
         practice.append(trial)
     
@@ -546,7 +555,7 @@ def make_trials():
     intro_hover = sample_problem(**kws)
     practice_hover = [sample_problem(**kws)]
     intro = intro_problem(**kws, rewards=[None] * n)
-    collect_all = intro_problem(**kws, rewards= [1,2,4,3,0,-1,-2,-3,-4,0])
+    collect_all = intro_problem(**kws, rewards= [1,2,4,3,-1,-2,-3,-4,])
     
 
     return {

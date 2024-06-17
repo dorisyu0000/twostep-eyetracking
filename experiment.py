@@ -70,7 +70,7 @@ def get_next_config_number():
 
 
 class Experiment(object):
-    def __init__(self, config_number, name=None, full_screen=False, score_limit=400, **kws):
+    def __init__(self, config_number, name=None, full_screen=False, score_limit=800, **kws):
         if config_number is None:
             config_number = get_next_config_number()
         self.config_number = config_number
@@ -105,8 +105,8 @@ class Experiment(object):
         self.eyelink = None
         self.disable_gaze_contingency = False
 
-        self._message = visual.TextBox2(self.win, '', pos=(-.83, 0), color='white', autoDraw=True, size=(0.65, None), letterHeight=.035, anchor='left')
-        self._tip = visual.TextBox2(self.win, '', pos=(-.83, -0.2), color='white', autoDraw=True, size=(0.65, None), letterHeight=.025, anchor='left')
+        self._message = visual.TextBox2(self.win, '', pos=(-.85, 0), color='white', autoDraw=True, size=(0.5, None), letterHeight=.035, anchor='left')
+        self._tip = visual.TextBox2(self.win, '', pos=(-.85, -0.2), color='white', autoDraw=True, size=(0.5, None), letterHeight=.025, anchor='left')
 
         # self._practice_trials = iter(self.trials['practice'])
         self.practice_i = -1
@@ -213,9 +213,15 @@ class Experiment(object):
         win = visual.Window(size, allowGUI=True, units='height', fullscr=self.full_screen)
         # framerate = win.getActualFrameRate(threshold=1, nMaxFrames=1000)
         # assert abs(framerate - 60) < 2
+        logging.info(f'Setting up window with size: {size} and full_screen: {self.full_screen}')
+        logging.info(f'Created window with size {win.size}')
         win.flip()
         # win.callOnFlip(self.on_flip)
         return win
+ 
+       
+
+
 
     def on_flip(self):
         if 'q' in event.getKeys():
@@ -314,7 +320,7 @@ class Experiment(object):
                 node.setLineColor('black')
 
             
-        self.message("Specifically, you want the ones that look lik those. These earn you points. ",
+        self.message("Specifically, you want the ones that look like those. These earn you points. ",
                       space=True)
         
         for i, (node, reward) in enumerate(zip(gt.nodes, gt.rewards)):
@@ -414,8 +420,8 @@ class Experiment(object):
         max_attempts = 3
         successes_needed = 8
 
-        self.message("Now, let's see if you can identify the items and their value."
-                     f"You have {max_attempts} attempts to get {successes_needed} trials correct out of {total_trials} before you can start the main tasks.", space=True)
+        self.message("Now, let's see if you can identify which item have higher value.", space = True)
+        self.message(f"You need to get {successes_needed} trials correct out of {total_trials} before you can start the main tasks.", space=True)
         
         for attempt in range(max_attempts):
             successes = 0
@@ -427,7 +433,7 @@ class Experiment(object):
                     successes += 1
                     self.message(f"You've successfully passed {successes} out of {total_trials} trials.")
                 else:
-                    self.message(f"Incorrect, let's try anothe trial!")
+                    self.message(f"Incorrect, let's try another trial!")
 
                 if successes >= successes_needed:
                     self.message(f"Congratulations! You've achieved the required {successes_needed} correct trials.", space=True)
@@ -514,8 +520,11 @@ class Experiment(object):
             space=True)
         self.hide_message()
 
-        t = deepcopy(self.trials['practice'][3])
+        trial = deepcopy(self.trials['practice'][3])
+        t = trial[0]
         t['graph'] = [[] for edges in t['graph']]
+        logging.error("Expected a list with a dictionary for trial data, got: %s", t['graph'])
+
 
         result = None
         attempt = 0
@@ -653,6 +662,7 @@ class Experiment(object):
 
 
                 gt = GraphTrial(self.win, **prm, eyelink=self.eyelink)
+                logging.info(self.eyelink)
                 gt.run()
                 psychopy.logging.flush()
                 self.trial_data.append(gt.data)

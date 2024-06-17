@@ -1,0 +1,83 @@
+2024-06-17 13:04:23,728 [INFO]  starting up 24-06-17-1304_P1-test at 2.0589433750137687
+2024-06-17 13:04:23,747 [INFO]  git SHA: dc6e0c15150cc2db1667ec15431faef8e3cd16d2
+2024-06-17 13:04:23,748 [INFO]  Configuration file: config/m2/1.json
+2024-06-17 13:04:23,749 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-06-17 13:04:24,927 [INFO]  begin setup_eyetracker
+2024-06-17 13:04:24,928 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-17 13:04:26,194 [INFO]  New EyeLink object
+2024-06-17 13:04:26,194 [INFO]  Initializing new tracker
+2024-06-17 13:04:26,486 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 13:04:26,626 [INFO]  Tracker initialized
+2024-06-17 13:04:26,626 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 13:04:26,645 [INFO]  doTrackerSetup
+2024-06-17 13:04:31,626 [INFO]  done doTrackerSetup
+2024-06-17 13:04:31,646 [INFO]  begin calibrate_gaze_tolerance
+2024-06-17 13:04:31,646 [DEBUG]  message: We're going to check how well the eyetracker is working. (None)
+2024-06-17 13:04:32,516 [DEBUG]  message: When the board comes up, just look at the O's as they appear. They should disappear. If it's not working, press X. (None)
+2024-06-17 13:04:33,026 [ERROR]  Expected a list with a dictionary for trial data, got: [[], [], [], [], [], [], [], [], [], [], []]
+2024-06-17 13:04:33,026 [INFO]  begin trial {"kind": "CalibrationTrial", "graph": [[], [], [], [], [], [], [], [], [], [], []], "rewards": [1, null, null, 2, 3, 3, null, null, 0, -4, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "gaze_contingent": true, "gaze_tolerance": 1.5, "fixation_lag": 0.1, "start": 6}
+2024-06-17 13:04:33,026 [DEBUG]  CalibrationTrial.log 11.357 start recording 
+2024-06-17 13:04:33,026 [DEBUG]  CalibrationTrial.log 11.357 show graph 
+2024-06-17 13:04:33,033 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,033 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,042 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,043 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,051 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,051 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,059 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,059 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,071 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,071 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,080 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,080 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,088 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,088 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,096 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,096 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,106 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,106 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,115 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,115 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,123 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,123 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,131 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,131 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,141 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,141 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,150 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,150 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,158 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,158 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,166 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,166 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,179 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,179 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,187 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,187 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,195 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,195 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,203 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,203 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,212 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,212 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,220 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,220 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,228 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,228 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,236 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-17 13:04:33,236 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-17 13:04:33,247 [ERROR]  Caught exception in stage calibrate_gaze_tolerance
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 36, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 530, in calibrate_gaze_tolerance
+    result = gt.run()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 612, in run
+    self.new_target()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 596, in new_target
+    self.update_node_labels()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 528, in update_node_labels
+    self.set_node_label(i, self.node_label(i))
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 532, in set_node_label
+    old = self.reward_labels[i].text
+IndexError: list index out of range

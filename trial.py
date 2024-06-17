@@ -128,6 +128,25 @@ class GraphTrial(object):
             self.triggers.send(TRIGGERS[event])
         if self.eyelink:
             self.eyelink.message(jsonify(datum), log=False)
+    
+    def set_node_label(self, i, new):
+        if i >= len(self.node_images) or i >= len(self.reward_labels):
+            logging.error(f"Index {i} is out of range for node images or labels.")
+            return
+
+        # Assuming `new` is the reward value as a string
+        reward_info = self.reward[self.reward_labels.index(new)]
+        image_info = self.reward_info.get(str(reward_info), None)
+        
+        if image_info:
+            image_path = image_info["image"]
+            if not os.path.isfile(image_path):
+                logging.error(f"Image file not found: {image_path}")
+            else:
+                self.node_images[i].setImage(image_path)
+        else:
+            logging.error(f"No image info available for reward: {reward_info}")
+
 
 
     
@@ -163,6 +182,7 @@ class GraphTrial(object):
 
                 if actual_image_path:  # Check if there's a valid image path
                     image = self.gfx.image(pos, actual_image_path, size=.12, autoDraw=not self.hide_states)
+
                     self.node_images.append(image)
                 else:
                     self.node_images.append(None)
@@ -190,6 +210,36 @@ class GraphTrial(object):
     def shift(self, x, y):
         self.gfx.shift(x, y)
         self.pos = np.array(self.pos) + [x, y]
+        
+    def update_fixation(self):
+        if not self.eyelink:
+            return
+        gaze = self.eyelink.gaze_position()
+
+        if self.last_gaze is not None:
+            gaze_distance = distance(gaze, self.last_gaze)
+        self.last_gaze = gaze
+
+        if self.show_gaze:
+            self.gaze_dot.setPos(gaze)
+        self.last_fixated = self.fixated
+
+        for i in range(len(self.nodes)):
+            if distance(gaze, self.nodes[i].pos) < self.gaze_tolerance * self.nodes[i].radius:
+
+
+                if self.fixated != i:
+                    self.log('fixate state', {'state': i})
+                self.fixated = i
+                self.fix_verified = core.getTime()
+                break
+
+        if self.fixated is not None and core.getTime() - self.fix_verified > self.fixation_lag:
+            self.log('unfixate state', {'state': self.fixated})
+            self.fixated = None
+
+        if self.gaze_contingent and self.last_fixated != self.fixated:
+            self.update_node_labels()
 
     def set_state(self, s):
         self.log('visit', {'state': s})
@@ -355,7 +405,9 @@ class GraphTrial(object):
 
     def run_acting(self, one_step):
         self.nodes[self.current_state].fillColor = COLOR_ACT
-        self.log('start acting')
+        # keys = self.wait_keys([KEY_SWITCH,KEY_SELECT, KEY_ABORT])
+        # if KEY_SWITCH or KEY_SELECT in keys:
+        #     self.log('start acting')
         if self.hide_rewards_while_acting:
             self.hide_rewards()
         if self.hide_edges_while_acting:
@@ -470,16 +522,21 @@ class CalibrationTrial(GraphTrial):
             # self.fixated: '',
             self.target: 'O',
         }.get(i, '')
+        
     def update_node_labels(self):
         for i in range(len(self.nodes)):
             self.set_node_label(i, self.node_label(i))
-        logging.debug('update_node_labels %s', [lab.text for lab in self.reward_labels])
+        logging.debug('update_node_labels %s', [lab.labels for lab in self.reward_labels])
 
     def set_node_label(self, i, new):
-        old = self.reward_labels[i].text
-        if old != new:
-            logging.debug(f'Changing reward_label[%s] from %s to %s', i, old, new)
-            self.reward_labels[i].text = new
+        if 0 <= i < len(self.reward_labels):
+            old = self.reward_labels[i].text
+            if old != new:
+                logging.debug(f'Changing reward_label[%s] from %s to %s', i, old, new)
+                self.reward_labels[i].text = new
+        else:
+            logging.error(f'Index %s is out of range for reward_labels', i)
+
 
 
     def update_fixation(self):
@@ -544,10 +601,11 @@ class CalibrationTrial(GraphTrial):
         self.log('new target', {"state": self.target})
 
     def tick(self):
-        t = super().tick()
+        t = time.time()
         if self.target_time == 'flip':
             self.target_time = t
-
+        return t
+    
     def run(self, timeout=15):
         assert self.eyelink
         # self.eyelink.drift_check(self.pos)
@@ -619,7 +677,7 @@ class CalibrationTrial(GraphTrial):
         self.log('done')
         self.eyelink.stop_recording()
         wait(.3)
+        self.fade_out()
         self.win.mouseVisible = True
 
         return self.result
-

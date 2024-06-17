@@ -1,0 +1,66 @@
+2024-06-17 11:37:16,576 [INFO]  starting up 24-06-17-1137_P1-test at 1.5581893333001062
+2024-06-17 11:37:16,595 [INFO]  git SHA: dc6e0c15150cc2db1667ec15431faef8e3cd16d2
+2024-06-17 11:37:16,595 [INFO]  Configuration file: config/m2/1.json
+2024-06-17 11:37:16,595 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-06-17 11:37:17,760 [INFO]  begin practice
+2024-06-17 11:37:17,760 [DEBUG]  message: Let's try a few harder practice rounds. (complete 2 practice rounds to continue)
+2024-06-17 11:37:17,779 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[1, 3], [2, 4], [3, 5], [4, 6], [5, 7], [6, 8], [7, 9], [8, 10], [], [], []], "rewards": [null, null, null, null, null, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "gaze_contingent": false, "gaze_tolerance": 1.5, "fixation_lag": 0.5, "start": 0}
+2024-06-17 11:37:17,779 [DEBUG]  GraphTrial.log 2.761 begin space 
+2024-06-17 11:37:17,976 [DEBUG]  GraphTrial.log 2.958 initialize status = ok
+2024-06-17 11:37:17,976 [DEBUG]  GraphTrial.log 2.958 show graph 
+2024-06-17 11:37:18,025 [DEBUG]  GraphTrial.log 3.007 visit state = 0
+2024-06-17 11:37:18,032 [DEBUG]  GraphTrial.log 3.014 start flip_time = 3.0141688750009052
+2024-06-17 11:37:18,032 [DEBUG]  GraphTrial.log 3.014 start planning 
+2024-06-17 11:37:30,975 [INFO]  starting up 24-06-17-1137_P1-test at 1.5392107082880102
+2024-06-17 11:37:30,994 [INFO]  git SHA: dc6e0c15150cc2db1667ec15431faef8e3cd16d2
+2024-06-17 11:37:30,994 [INFO]  Configuration file: config/m2/1.json
+2024-06-17 11:37:30,995 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-06-17 11:37:32,175 [INFO]  begin setup_eyetracker
+2024-06-17 11:37:32,176 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-17 11:37:32,543 [INFO]  New EyeLink object
+2024-06-17 11:37:32,543 [INFO]  Initializing new tracker
+2024-06-17 11:37:39,662 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 11:37:39,816 [INFO]  Tracker initialized
+2024-06-17 11:37:39,816 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 11:37:39,839 [INFO]  doTrackerSetup
+2024-06-17 11:37:45,163 [INFO]  done doTrackerSetup
+2024-06-17 11:37:45,190 [INFO]  begin intro_contingent
+2024-06-17 11:37:45,191 [DEBUG]  message: There's just one more thing... (None)
+2024-06-17 11:37:49,443 [DEBUG]  message: For the rest of the experiment, the points will only be visible when you're looking at them. (None)
+2024-06-17 11:37:49,787 [DEBUG]  message: Try it out! (select a path to continue
+press X if it's not working)
+2024-06-17 11:37:49,795 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[1, 3], [2, 4], [3, 5], [4, 6], [5, 7], [6, 8], [7, 9], [8, 10], [], [], []], "rewards": [null, null, null, null, null, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "gaze_contingent": true, "gaze_tolerance": 1.5, "fixation_lag": 0.5, "start": 0}
+2024-06-17 11:37:49,795 [DEBUG]  GraphTrial.log 20.359 initialize status = ok
+2024-06-17 11:37:49,795 [DEBUG]  GraphTrial.log 20.359 start recording 
+2024-06-17 11:37:49,796 [DEBUG]  GraphTrial.log 20.359 show graph 
+2024-06-17 11:37:49,820 [DEBUG]  GraphTrial.log 20.384 visit state = 0
+2024-06-17 11:37:49,827 [DEBUG]  GraphTrial.log 20.390 start flip_time = 20.39047083328478
+2024-06-17 11:37:49,827 [DEBUG]  GraphTrial.log 20.391 start planning 
+2024-06-17 11:37:51,917 [DEBUG]  GraphTrial.log 22.481 end planning 
+2024-06-17 11:37:51,917 [DEBUG]  GraphTrial.log 22.481 start acting 
+2024-06-17 11:37:51,924 [DEBUG]  GraphTrial.log 22.488 get move selected = 3
+2024-06-17 11:37:52,457 [DEBUG]  GraphTrial.log 23.021 switch selected = 1
+2024-06-17 11:37:55,847 [DEBUG]  GraphTrial.log 26.411 select selected = 1
+2024-06-17 11:37:55,847 [DEBUG]  GraphTrial.log 26.411 visit state = 1
+2024-06-17 11:37:55,857 [DEBUG]  GraphTrial.log 26.420 get move selected = 4
+2024-06-17 11:37:56,042 [DEBUG]  GraphTrial.log 26.606 select selected = 4
+2024-06-17 11:37:56,042 [DEBUG]  GraphTrial.log 26.606 visit state = 4
+2024-06-17 11:37:56,050 [DEBUG]  GraphTrial.log 26.614 get move selected = 7
+2024-06-17 11:37:56,312 [DEBUG]  GraphTrial.log 26.876 select selected = 7
+2024-06-17 11:37:56,312 [DEBUG]  GraphTrial.log 26.876 visit state = 7
+2024-06-17 11:37:56,320 [DEBUG]  GraphTrial.log 26.884 get move selected = 10
+2024-06-17 11:37:56,957 [DEBUG]  GraphTrial.log 27.521 select selected = 10
+2024-06-17 11:37:56,957 [DEBUG]  GraphTrial.log 27.521 visit state = 10
+2024-06-17 11:37:57,660 [ERROR]  Caught exception in stage intro_contingent
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 36, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 581, in intro_contingent
+    gt.run()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 432, in run
+    self.show_feedback()
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 225, in show_feedback
+    visual.TextStim(self.win, reward_string(self.rewards[s]),
+  File "/Users/labadmin/twostep-eyetracking/trial.py", line 19, in reward_string
+    return f'{int(r):+}'
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'

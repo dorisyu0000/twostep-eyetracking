@@ -1,0 +1,62 @@
+1.6817 	WARNING 	The 'psychtoolbox' library cannot be loaded but is required for audio capture (use `pip install psychtoolbox` to get it). Microphone recording will be unavailable this session. Note that opening a microphone stream will raise an error.
+1.6850 	ERROR 	Support for the `sounddevice` audio backend is not available this session. Please install `psychopy-sounddevice` and restart the session to enable support.
+1.6853 	ERROR 	Support for the `pyo` audio backend is not available this session. Please install `psychopy-pyo` and restart the session to enable support.
+1.6855 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['PTB', 'sounddevice', 'pyo', 'pygame'] (in that order).
+1.6960 	INFO 	time is 2024-06-17 12:00:35,716475
+1.7205 	WARNING 	Monitor specification not found. Creating a temporary one...
+2.8480 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+2.8483 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x16b80daf0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x16b80da90>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x16b80d8e0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x30cdbb610>, multiSample=False, name='window1', numSamples=2, pos=(735, 415), screen=0, size=array([1800, 1000]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=False, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+2.8485 	EXP 	window1: mouseVisible = True
+2.8485 	EXP 	window1: backgroundImage = None
+2.8485 	EXP 	window1: backgroundFit = 'cover'
+2.8614 	EXP 	window1: mouseVisible = True
+2.8618 	EXP 	window1: mouseVisible = True
+2.8630 	EXP 	window1: mouseVisible = True
+2.8638 	EXP 	window1: mouseVisible = True
+2.8723 	EXP 	window1: mouseVisible = True
+2.8725 	EXP 	window1: mouseVisible = True
+2.8731 	EXP 	window1: mouseVisible = True
+2.8736 	EXP 	window1: mouseVisible = True
+2.8896 	EXP 	window1: mouseVisible = True
+2.8897 	EXP 	window1: mouseVisible = True
+2.8901 	EXP 	window1: mouseVisible = True
+2.8904 	EXP 	window1: mouseVisible = True
+2.8944 	EXP 	window1: mouseVisible = True
+2.8945 	EXP 	window1: mouseVisible = True
+2.8949 	EXP 	window1: mouseVisible = True
+2.8952 	EXP 	window1: mouseVisible = True
+2.9264 	WARNING 	t of last frame was 65.55ms (=1/15)
+3.1042 	DATA 	Keypress: space
+3.1058 	WARNING 	t of last frame was 179.34ms (=1/5)
+3.3946 	EXP 	window1: mouseVisible = False
+3.3947 	EXP 	window1: units = 'pix'
+3.3947 	INFO 	Mouse: using default window
+3.5386 	INFO 	Mouse: using default window
+3.5515 	DATA 	Keypress: space
+3.5529 	WARNING 	t of last frame was 447.14ms (=1/2)
+5.9863 	DATA 	Keypress: space
+6.5636 	DATA 	Mouse: Left button down, pos=(515,213)
+6.6874 	DATA 	Mouse:  Left button up, pos=(517,213)
+8.3197 	DATA 	Mouse: Left button down, pos=(326,169)
+8.4106 	DATA 	Mouse:  Left button up, pos=(326,169)
+8.8294 	DATA 	Mouse: Left button down, pos=(520,201)
+8.8603 	DATA 	Keypress: space
+8.9149 	DATA 	Mouse:  Left button up, pos=(520,201)
+10.2419 	DATA 	Keypress: return
+10.2672 	DATA 	Keypress: backslash
+10.3603 	WARNING 	t of last frame was 6807.36ms (=1/0)
+10.4357 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+13.9479 	EXP 	window1: units = 'pix'
+13.9502 	EXP 	window1: units = 'pix'
+17.9037 	DATA 	Keypress: space
+17.9044 	INFO 	Mouse: using default window
+18.8326 	DATA 	Keypress: space
+20.8886 	DATA 	Keypress: f
+21.3535 	DATA 	Keypress: f
+21.5784 	DATA 	Keypress: f
+21.9234 	DATA 	Keypress: f
+22.2684 	DATA 	Keypress: j
+22.5833 	DATA 	Keypress: j

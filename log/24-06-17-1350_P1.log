@@ -1,0 +1,12 @@
+2024-06-17 13:50:06,173 [INFO]  starting up 24-06-17-1350_P1 at 2.051952041685581
+2024-06-17 13:50:06,193 [INFO]  git SHA: dc6e0c15150cc2db1667ec15431faef8e3cd16d2
+2024-06-17 13:50:06,193 [INFO]  Configuration file: config/m2/1.json
+2024-06-17 13:50:06,194 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-06-17 13:50:07,428 [INFO]  begin setup_eyetracker
+2024-06-17 13:50:07,429 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-17 13:50:09,263 [INFO]  New EyeLink object
+2024-06-17 13:50:09,263 [INFO]  Initializing new tracker
+2024-06-17 13:50:09,565 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 13:50:09,703 [INFO]  Tracker initialized
+2024-06-17 13:50:09,704 [DEBUG]  EyeLink.message Set up calibration
+2024-06-17 13:50:09,717 [INFO]  doTrackerSetup
