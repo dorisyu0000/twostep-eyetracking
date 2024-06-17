@@ -1,0 +1,591 @@
+1.9840 	WARNING 	The 'psychtoolbox' library cannot be loaded but is required for audio capture (use `pip install psychtoolbox` to get it). Microphone recording will be unavailable this session. Note that opening a microphone stream will raise an error.
+1.9873 	ERROR 	Support for the `sounddevice` audio backend is not available this session. Please install `psychopy-sounddevice` and restart the session to enable support.
+1.9876 	ERROR 	Support for the `pyo` audio backend is not available this session. Please install `psychopy-pyo` and restart the session to enable support.
+1.9878 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['PTB', 'sounddevice', 'pyo', 'pygame'] (in that order).
+1.9982 	INFO 	time is 2024-06-16 20:14:12,539517
+2.0231 	WARNING 	Monitor specification not found. Creating a temporary one...
+3.1524 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+3.1527 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x16dbe4cd0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x16dbe4c70>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x16dbe4ac0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x30abcd700>, multiSample=False, name='window1', numSamples=2, pos=(735, 415), screen=0, size=array([1800, 1000]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=False, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+3.1528 	EXP 	window1: mouseVisible = True
+3.1529 	EXP 	window1: backgroundImage = None
+3.1529 	EXP 	window1: backgroundFit = 'cover'
+3.1654 	EXP 	window1: mouseVisible = True
+3.1657 	EXP 	window1: mouseVisible = True
+3.1665 	EXP 	window1: mouseVisible = True
+3.1671 	EXP 	window1: mouseVisible = True
+3.1734 	EXP 	window1: mouseVisible = True
+3.1736 	EXP 	window1: mouseVisible = True
+3.1741 	EXP 	window1: mouseVisible = True
+3.1746 	EXP 	window1: mouseVisible = True
+3.1890 	EXP 	window1: mouseVisible = True
+3.1892 	EXP 	window1: mouseVisible = True
+3.1895 	EXP 	window1: mouseVisible = True
+3.1898 	EXP 	window1: mouseVisible = True
+3.1937 	EXP 	window1: mouseVisible = True
+3.1938 	EXP 	window1: mouseVisible = True
+3.1941 	EXP 	window1: mouseVisible = True
+3.1944 	EXP 	window1: mouseVisible = True
+3.2200 	WARNING 	t of last frame was 55.02ms (=1/18)
+3.7253 	DATA 	Mouse: Left button down, pos=(546,124)
+3.8122 	DATA 	Mouse:  Left button up, pos=(546,124)
+4.0219 	DATA 	Keypress: space
+4.0227 	INFO 	Mouse: using default window
+4.0227 	EXP 	window1: mouseVisible = True
+4.0228 	EXP 	window1: mouseVisible = True
+4.0234 	EXP 	Created unnamed Rect = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([0.00392157, 0.00392157, 0.00392157]), fillColorSpace='rgb', fillRGB=array([0.00392157, 0.00392157, 0.00392157]), interpolate=True, lineColor=array([0, 0, 0]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=0, name='unnamed Rect', opacity=0.5, ori=0.0, pos=array([-0.65,  0.45]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...))
+4.0254 	EXP 	window1: mouseVisible = True
+4.0275 	EXP 	Created node0 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node0', opacity=1.0, ori=0.0, pos=array([0.  , 0.35]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+4.0285 	EXP 	window1: mouseVisible = True
+4.0306 	EXP 	Created node1 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node1', opacity=1.0, ori=0.0, pos=array([-0.18922429,  0.29443874]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+4.0317 	EXP 	window1: mouseVisible = True
+4.0338 	EXP 	Created node2 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node2', opacity=1.0, ori=0.0, pos=array([-0.3183712 ,  0.14539525]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+4.0349 	EXP 	window1: mouseVisible = True
+4.0369 	EXP 	Created node3 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node3', opacity=1.0, ori=0.0, pos=array([-0.3464375 , -0.04981019]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+4.0379 	EXP 	window1: mouseVisible = True
+4.0398 	EXP 	Created node4 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node4', opacity=1.0, ori=0.0, pos=array([-0.26451235, -0.22920126]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+4.0409 	EXP 	window1: mouseVisible = True
+4.0428 	EXP 	Created node5 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node5', opacity=1.0, ori=0.0, pos=array([-0.09860639, -0.33582254]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+4.0439 	EXP 	window1: mouseVisible = True
+4.0458 	EXP 	Created node6 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node6', opacity=1.0, ori=0.0, pos=array([ 0.09860639, -0.33582254]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+4.0469 	EXP 	window1: mouseVisible = True
+4.0488 	EXP 	Created node7 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node7', opacity=1.0, ori=0.0, pos=array([ 0.26451235, -0.22920126]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+4.0498 	EXP 	window1: mouseVisible = True
+4.0519 	EXP 	Created node8 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node8', opacity=1.0, ori=0.0, pos=array([ 0.3464375 , -0.04981019]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+4.0529 	EXP 	window1: mouseVisible = True
+4.0549 	EXP 	Created node9 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node9', opacity=1.0, ori=0.0, pos=array([0.3183712 , 0.14539525]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+4.0559 	EXP 	window1: mouseVisible = True
+4.0578 	EXP 	Created node10 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node10', opacity=1.0, ori=0.0, pos=array([0.18922429, 0.29443874]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+4.0579 	EXP 	window1: mouseVisible = True
+4.0584 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0585 	EXP 	window1: mouseVisible = True
+4.0589 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=253.63636363636365, pos=array([-0.14124964,  0.30852536]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0589 	EXP 	window1: mouseVisible = True
+4.0593 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0594 	EXP 	window1: mouseVisible = True
+4.0598 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=220.9090909090909, pos=array([-0.31369447, -0.01202271]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0598 	EXP 	window1: mouseVisible = True
+4.0602 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0603 	EXP 	window1: mouseVisible = True
+4.0607 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=220.9090909090909, pos=array([-0.28562816,  0.18318273]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0607 	EXP 	window1: mouseVisible = True
+4.0611 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0611 	EXP 	window1: mouseVisible = True
+4.0615 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=188.1818181818182, pos=array([-0.25739661, -0.17971018]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0616 	EXP 	window1: mouseVisible = True
+4.0620 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0620 	EXP 	window1: mouseVisible = True
+4.0624 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=188.1818181818182, pos=array([-3.39321763e-01, -3.19121302e-04]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0625 	EXP 	window1: mouseVisible = True
+4.0628 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0629 	EXP 	window1: mouseVisible = True
+4.0633 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=155.45454545454544, pos=array([-0.11937715, -0.29034094]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0633 	EXP 	window1: mouseVisible = True
+4.0637 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0638 	EXP 	window1: mouseVisible = True
+4.0641 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=155.45454545454544, pos=array([-0.2852831 , -0.18371966]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0642 	EXP 	window1: mouseVisible = True
+4.0645 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0646 	EXP 	window1: mouseVisible = True
+4.0650 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=122.72727272727275, pos=array([ 0.05654372, -0.3087905 ]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0650 	EXP 	window1: mouseVisible = True
+4.0654 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0654 	EXP 	window1: mouseVisible = True
+4.0658 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=122.72727272727273, pos=array([-0.14066907, -0.3087905 ]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0659 	EXP 	window1: mouseVisible = True
+4.0663 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0663 	EXP 	window1: mouseVisible = True
+4.0667 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=90.00000000000003, pos=array([ 0.21451235, -0.22920126]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0668 	EXP 	window1: mouseVisible = True
+4.0672 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0672 	EXP 	window1: mouseVisible = True
+4.0676 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=90.00000000000001, pos=array([ 0.04860639, -0.33582254]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0677 	EXP 	window1: mouseVisible = True
+4.0680 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0681 	EXP 	window1: mouseVisible = True
+4.0685 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=57.27272727272728, pos=array([ 0.30437483, -0.07684223]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0685 	EXP 	window1: mouseVisible = True
+4.0689 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0689 	EXP 	window1: mouseVisible = True
+4.0693 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=57.2727272727273, pos=array([ 0.22244967, -0.2562333 ]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0694 	EXP 	window1: mouseVisible = True
+4.0697 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0698 	EXP 	window1: mouseVisible = True
+4.0702 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=24.545454545454575, pos=array([0.29760045, 0.09991365]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0702 	EXP 	window1: mouseVisible = True
+4.0706 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0707 	EXP 	window1: mouseVisible = True
+4.0711 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=24.54545454545459, pos=array([ 0.32566675, -0.09529179]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0712 	EXP 	window1: mouseVisible = True
+4.0715 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0716 	EXP 	window1: mouseVisible = True
+4.0720 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=-8.181818181818159, pos=array([0.19634003, 0.24494766]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.0720 	EXP 	window1: mouseVisible = True
+4.0723 	EXP 	Created unnamed Rect = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([0.00392157, 0.00392157, 0.00392157]), fillColorSpace='rgb', fillRGB=array([0.00392157, 0.00392157, 0.00392157]), interpolate=True, lineColor=array([0, 0, 0]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=0, name='unnamed Rect', opacity=0.0, ori=0.0, pos=array([0.1, 0. ]), size=array([1.1, 1. ]), units='height', vertices=ndarray(...), win=Window(...))
+4.0886 	WARNING 	t of last frame was 868.61ms (=1/1)
+4.0886 	EXP 	unnamed Rect: autoDraw = True
+4.0886 	EXP 	node0: autoDraw = True
+4.0886 	EXP 	node1: autoDraw = True
+4.0886 	EXP 	node2: autoDraw = True
+4.0886 	EXP 	node3: autoDraw = True
+4.0886 	EXP 	node4: autoDraw = True
+4.0886 	EXP 	node5: autoDraw = True
+4.0886 	EXP 	node6: autoDraw = True
+4.0886 	EXP 	node7: autoDraw = True
+4.0886 	EXP 	node8: autoDraw = True
+4.0886 	EXP 	node9: autoDraw = True
+4.0886 	EXP 	node10: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed Line: autoDraw = True
+4.0886 	EXP 	unnamed ShapeStim: autoDraw = True
+4.0886 	EXP 	unnamed Rect: autoDraw = True
+5.8476 	DATA 	Keypress: space
+5.8560 	WARNING 	t of last frame was 1767.39ms (=1/0)
+5.8560 	EXP 	node0: fillColor = '#126DEF'
+8.6650 	DATA 	Keypress: space
+8.6722 	WARNING 	t of last frame was 2816.25ms (=1/0)
+9.4748 	DATA 	Keypress: space
+9.4826 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+9.9845 	DATA 	Keypress: space
+10.4346 	DATA 	Keypress: space
+11.4846 	DATA 	Keypress: f
+12.7447 	DATA 	Keypress: j
+12.7539 	EXP 	window1: mouseVisible = True
+12.7707 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.035, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='press Space to start', units='height', win=Window(...), wrapWidth=1)
+13.2844 	DATA 	Keypress: space
+13.2849 	EXP 	window1: mouseVisible = True
+13.2854 	EXP 	Created unnamed Rect = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([0.00392157, 0.00392157, 0.00392157]), fillColorSpace='rgb', fillRGB=array([0.00392157, 0.00392157, 0.00392157]), interpolate=True, lineColor=array([0, 0, 0]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=0, name='unnamed Rect', opacity=0.5, ori=0.0, pos=array([-0.65,  0.45]), size=array([0.1, 0.1]), units='height', vertices=ndarray(...), win=Window(...))
+13.2866 	EXP 	window1: mouseVisible = True
+13.2891 	EXP 	Created node0 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node0', opacity=1.0, ori=0.0, pos=array([0.  , 0.35]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+13.2902 	EXP 	window1: mouseVisible = True
+13.2922 	EXP 	Created node1 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node1', opacity=1.0, ori=0.0, pos=array([-0.18922429,  0.29443874]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+13.2933 	EXP 	window1: mouseVisible = True
+13.2953 	EXP 	Created node2 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node2', opacity=1.0, ori=0.0, pos=array([-0.3183712 ,  0.14539525]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+13.2964 	EXP 	window1: mouseVisible = True
+13.2983 	EXP 	Created node3 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node3', opacity=1.0, ori=0.0, pos=array([-0.3464375 , -0.04981019]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+13.2994 	EXP 	window1: mouseVisible = True
+13.3014 	EXP 	Created node4 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node4', opacity=1.0, ori=0.0, pos=array([-0.26451235, -0.22920126]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+13.3025 	EXP 	window1: mouseVisible = True
+13.3044 	EXP 	Created node5 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node5', opacity=1.0, ori=0.0, pos=array([-0.09860639, -0.33582254]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+13.3055 	EXP 	window1: mouseVisible = True
+13.3074 	EXP 	Created node6 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node6', opacity=1.0, ori=0.0, pos=array([ 0.09860639, -0.33582254]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+13.3085 	EXP 	window1: mouseVisible = True
+13.3104 	EXP 	Created node7 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node7', opacity=1.0, ori=0.0, pos=array([ 0.26451235, -0.22920126]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+13.3115 	EXP 	window1: mouseVisible = True
+13.3134 	EXP 	Created node8 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node8', opacity=1.0, ori=0.0, pos=array([ 0.3464375 , -0.04981019]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+13.3145 	EXP 	window1: mouseVisible = True
+13.3163 	EXP 	Created node9 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node9', opacity=1.0, ori=0.0, pos=array([0.3183712 , 0.14539525]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+13.3174 	EXP 	window1: mouseVisible = True
+13.3193 	EXP 	Created node10 = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=2, name='node10', opacity=1.0, ori=0.0, pos=array([0.18922429, 0.29443874]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...))
+13.3194 	EXP 	window1: mouseVisible = True
+13.3198 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3199 	EXP 	window1: mouseVisible = True
+13.3203 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=253.63636363636365, pos=array([-0.14124964,  0.30852536]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3203 	EXP 	window1: mouseVisible = True
+13.3207 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3207 	EXP 	window1: mouseVisible = True
+13.3211 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=220.9090909090909, pos=array([-0.31369447, -0.01202271]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3212 	EXP 	window1: mouseVisible = True
+13.3215 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3216 	EXP 	window1: mouseVisible = True
+13.3220 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=220.9090909090909, pos=array([-0.28562816,  0.18318273]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3220 	EXP 	window1: mouseVisible = True
+13.3224 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3224 	EXP 	window1: mouseVisible = True
+13.3228 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=188.1818181818182, pos=array([-0.25739661, -0.17971018]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3229 	EXP 	window1: mouseVisible = True
+13.3233 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3233 	EXP 	window1: mouseVisible = True
+13.3237 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=188.1818181818182, pos=array([-3.39321763e-01, -3.19121302e-04]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3238 	EXP 	window1: mouseVisible = True
+13.3241 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3242 	EXP 	window1: mouseVisible = True
+13.3246 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=155.45454545454544, pos=array([-0.11937715, -0.29034094]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3246 	EXP 	window1: mouseVisible = True
+13.3250 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3251 	EXP 	window1: mouseVisible = True
+13.3255 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=155.45454545454544, pos=array([-0.2852831 , -0.18371966]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3255 	EXP 	window1: mouseVisible = True
+13.3259 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3259 	EXP 	window1: mouseVisible = True
+13.3264 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=122.72727272727275, pos=array([ 0.05654372, -0.3087905 ]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3264 	EXP 	window1: mouseVisible = True
+13.3268 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3268 	EXP 	window1: mouseVisible = True
+13.3272 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=122.72727272727273, pos=array([-0.14066907, -0.3087905 ]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3273 	EXP 	window1: mouseVisible = True
+13.3276 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3277 	EXP 	window1: mouseVisible = True
+13.3281 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=90.00000000000003, pos=array([ 0.21451235, -0.22920126]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3282 	EXP 	window1: mouseVisible = True
+13.3285 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3286 	EXP 	window1: mouseVisible = True
+13.3290 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=90.00000000000001, pos=array([ 0.04860639, -0.33582254]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3290 	EXP 	window1: mouseVisible = True
+13.3294 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3294 	EXP 	window1: mouseVisible = True
+13.3298 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=57.27272727272728, pos=array([ 0.30437483, -0.07684223]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3298 	EXP 	window1: mouseVisible = True
+13.3302 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3303 	EXP 	window1: mouseVisible = True
+13.3306 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=57.2727272727273, pos=array([ 0.22244967, -0.2562333 ]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3307 	EXP 	window1: mouseVisible = True
+13.3310 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3311 	EXP 	window1: mouseVisible = True
+13.3315 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=24.545454545454575, pos=array([0.29760045, 0.09991365]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3315 	EXP 	window1: mouseVisible = True
+13.3319 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3319 	EXP 	window1: mouseVisible = True
+13.3324 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=24.54545454545459, pos=array([ 0.32566675, -0.09529179]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3325 	EXP 	window1: mouseVisible = True
+13.3328 	EXP 	Created unnamed Line = Line(__class__=<class 'psychopy.visual.line.Line'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=False, color=array([-1, -1, -1]), colorSpace='rgb', contrast=None, depth=2, draggable=False, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=4, name='unnamed Line', opacity=0.5, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3329 	EXP 	window1: mouseVisible = True
+13.3333 	EXP 	Created unnamed ShapeStim = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1, -1, -1]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed ShapeStim', opacity=1.0, ori=-8.181818181818159, pos=array([0.19634003, 0.24494766]), size=array([1., 1.]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+13.3333 	EXP 	window1: mouseVisible = True
+13.3336 	EXP 	Created unnamed Rect = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, draggable=False, fillColor=array([0.00392157, 0.00392157, 0.00392157]), fillColorSpace='rgb', fillRGB=array([0.00392157, 0.00392157, 0.00392157]), interpolate=True, lineColor=array([0, 0, 0]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=0, name='unnamed Rect', opacity=0.0, ori=0.0, pos=array([0.1, 0. ]), size=array([1.1, 1. ]), units='height', vertices=ndarray(...), win=Window(...))
+13.3435 	EXP 	unnamed Rect: autoDraw = True
+13.3435 	EXP 	node0: autoDraw = True
+13.3435 	EXP 	node1: autoDraw = True
+13.3435 	EXP 	node2: autoDraw = True
+13.3435 	EXP 	node3: autoDraw = True
+13.3435 	EXP 	node4: autoDraw = True
+13.3435 	EXP 	node5: autoDraw = True
+13.3435 	EXP 	node6: autoDraw = True
+13.3435 	EXP 	node7: autoDraw = True
+13.3435 	EXP 	node8: autoDraw = True
+13.3435 	EXP 	node9: autoDraw = True
+13.3435 	EXP 	node10: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed Line: autoDraw = True
+13.3435 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3435 	EXP 	unnamed Rect: autoDraw = True
+13.3515 	EXP 	node0: fillColor = '#126DEF'
+13.3515 	EXP 	unnamed Line: autoDraw = False
+13.3515 	EXP 	unnamed ShapeStim: autoDraw = False
+13.3515 	EXP 	unnamed Line: autoDraw = True
+13.3515 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3515 	EXP 	unnamed Line: autoDraw = False
+13.3515 	EXP 	unnamed ShapeStim: autoDraw = False
+13.3515 	EXP 	unnamed Line: autoDraw = True
+13.3515 	EXP 	unnamed ShapeStim: autoDraw = True
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.3515 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: (1.0, 0.58, -0.87, 1.0)>
+13.3515 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: (1.0, 0.58, -0.87, 1.0)>
+13.3515 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: (1.0, 0.58, -0.87, 1.0)>
+13.3515 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: (1.0, 0.58, -0.87, 1.0)>
+13.3515 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: (1.0, 0.58, -0.87, 1.0)>
+13.3515 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: (1.0, 0.58, -0.87, 1.0)>
+13.7347 	DATA 	Keypress: f
+13.7403 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.7403 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.7403 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.7403 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: black, alpha=1.0>
+13.7403 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: black, alpha=1.0>
+13.7403 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: black, alpha=1.0>
+13.7403 	EXP 	unnamed Line: foreColor = <psychopy.colors.Color: (1.0, 0.58, -0.87, 1.0)>
+13.7403 	EXP 	unnamed Line: borderColor = <psychopy.colors.Color: (1.0, 0.58, -0.87, 1.0)>
+13.7403 	EXP 	unnamed Line: fillColor = <psychopy.colors.Color: (1.0, 0.58, -0.87, 1.0)>
+13.7403 	EXP 	unnamed ShapeStim: foreColor = <psychopy.colors.Color: (1.0, 0.58, -0.87, 1.0)>
+13.7403 	EXP 	unnamed ShapeStim: borderColor = <psychopy.colors.Color: (1.0, 0.58, -0.87, 1.0)>
+13.7403 	EXP 	unnamed ShapeStim: fillColor = <psychopy.colors.Color: (1.0, 0.58, -0.87, 1.0)>
+14.1847 	DATA 	Keypress: j
+14.1863 	EXP 	node1: fillColor = '#126DEF'
+14.1863 	EXP 	node0: fillColor = 'white'
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Line: autoDraw = False
+14.1863 	EXP 	unnamed Rect: autoDraw = False
+14.1863 	EXP 	node0: autoDraw = False
+14.1863 	EXP 	node1: autoDraw = False
+14.1863 	EXP 	node2: autoDraw = False
+14.1863 	EXP 	node3: autoDraw = False
+14.1863 	EXP 	node4: autoDraw = False
+14.1863 	EXP 	node5: autoDraw = False
+14.1863 	EXP 	node6: autoDraw = False
+14.1863 	EXP 	node7: autoDraw = False
+14.1863 	EXP 	node8: autoDraw = False
+14.1863 	EXP 	node9: autoDraw = False
+14.1863 	EXP 	node10: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed Rect: autoDraw = False
+14.1863 	EXP 	unnamed Rect: autoDraw = False
+14.1863 	EXP 	node0: autoDraw = False
+14.1863 	EXP 	node1: autoDraw = False
+14.1863 	EXP 	node2: autoDraw = False
+14.1863 	EXP 	node3: autoDraw = False
+14.1863 	EXP 	node4: autoDraw = False
+14.1863 	EXP 	node5: autoDraw = False
+14.1863 	EXP 	node6: autoDraw = False
+14.1863 	EXP 	node7: autoDraw = False
+14.1863 	EXP 	node8: autoDraw = False
+14.1863 	EXP 	node9: autoDraw = False
+14.1863 	EXP 	node10: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed Rect: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+14.1863 	EXP 	unnamed ShapeStim: autoDraw = False
+15.0548 	DATA 	Keypress: space
+23.9380 	EXP 	window1: mouseVisible = False
+23.9381 	EXP 	window1: units = 'pix'
+23.9382 	INFO 	Mouse: using default window
+24.0864 	INFO 	Mouse: using default window
+24.0975 	DATA 	Keypress: return
+25.8796 	EXP 	window1: units = 'pix'
+25.8880 	EXP 	window1: units = 'pix'
+28.8005 	DATA 	Keypress: space
+30.1756 	DATA 	Keypress: space
+30.7453 	DATA 	Keypress: space
+31.3747 	DATA 	Keypress: space
+31.8555 	DATA 	Keypress: space
+31.8619 	INFO 	Mouse: using default window
+34.1655 	DATA 	Keypress: f
+34.4350 	DATA 	Keypress: f
+34.7057 	DATA 	Keypress: f
+35.1852 	DATA 	Keypress: j
+35.6054 	DATA 	Keypress: j
+36.1759 	DATA 	Keypress: j
+43.2858 	DATA 	Keypress: space
+44.3356 	DATA 	Keypress: space
+45.5057 	DATA 	Keypress: space
+47.7558 	DATA 	Keypress: space
+48.8662 	DATA 	Keypress: space
+50.1258 	DATA 	Keypress: space
+50.6657 	DATA 	Keypress: space
+51.5957 	DATA 	Keypress: space
+51.5962 	INFO 	Mouse: using default window
+52.7359 	DATA 	Keypress: space
+54.3561 	DATA 	Keypress: f
+55.1375 	DATA 	Keypress: j
+55.9159 	DATA 	Keypress: j

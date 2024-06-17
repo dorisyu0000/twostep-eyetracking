@@ -38,9 +38,10 @@ class GraphTrial(object):
     """Graph navigation interface"""
     def __init__(self, win, graph, rewards, start, layout, pos=(0, 0), start_mode=None, max_score=None,
                  images=None, reward_info=None, 
-                 delayed_feedback=True, feedback_duration=3, action_time=float('inf'),
+                 delayed_feedback=True, feedback_duration=1, action_time=float('inf'),
                  initial_stage='planning', hide_states=False, hide_rewards_while_acting=False, hide_edges_while_acting= False,
-                 eyelink=None, triggers=None, **kws):
+                 eyelink=None, triggers=None,  gaze_contingent=False, gaze_tolerance=1.2, fixation_lag = .5, show_gaze=False,
+                 space_start=True, **kws):
         self.win = win
         self.graph = graph
         self.rewards = list(rewards)
@@ -66,6 +67,11 @@ class GraphTrial(object):
         self.reward_labels = []
 
         self.eyelink = eyelink
+        self.gaze_contingent = gaze_contingent
+        self.gaze_tolerance = gaze_tolerance
+        self.fixation_lag = fixation_lag
+        self.show_gaze = show_gaze
+        self.last_gaze = None
         self.triggers = triggers
         
         self.status = 'ok'
@@ -86,7 +92,9 @@ class GraphTrial(object):
                 "hide_states": hide_states,
                 "hide_rewards_while_acting": hide_rewards_while_acting,
                 "hide_edges_while_acting": hide_edges_while_acting,
-
+                "gaze_contingent": gaze_contingent,
+                "gaze_tolerance": gaze_tolerance,
+                "fixation_lag": fixation_lag,
                 "start": start,
             },
             "events": [],
@@ -129,11 +137,11 @@ class GraphTrial(object):
         self.log('show graph')
         self.gfx.rect((-.65, .45), .1, .1, fillColor='grey')
         
-        # if hasattr(self, 'nodes'):
-        #     self.gfx.show()
-        #     for lab in self.reward_info:
-        #         lab.autoDraw = False
-        #     return
+        if hasattr(self, 'nodes'):
+            self.gfx.show()
+            if self.gaze_contingent:
+                self.update_fixation()
+            return
 
         self.nodes = []
         self.node_images = []
@@ -143,7 +151,6 @@ class GraphTrial(object):
            
             self.nodes.append(node)
             
-            # Fetch the reward for the current node
             reward = self.rewards[i] if i < len(self.rewards) and self.rewards[i] is not None else None
             if reward is not None and str(reward) in self.reward_info:
                 image_path = self.reward_info[str(reward)]["image"]  # Get the image path from reward_info
@@ -165,7 +172,9 @@ class GraphTrial(object):
         self.data["trial"]["node_positions"] = [height2pix(self.win, n.pos) for n in self.nodes]
 
         self.arrows = {}
-        
+
+        if self.show_gaze:
+            self.gaze_dot = self.gfx.circle((0,0), .005, color='red', lineWidth=1, lineColor="red")
         
         for i, js in enumerate(self.graph):
             for j in js:
@@ -461,7 +470,48 @@ class CalibrationTrial(GraphTrial):
             # self.fixated: '',
             self.target: 'O',
         }.get(i, '')
+    def update_node_labels(self):
+        for i in range(len(self.nodes)):
+            self.set_node_label(i, self.node_label(i))
+        logging.debug('update_node_labels %s', [lab.text for lab in self.reward_labels])
 
+    def set_node_label(self, i, new):
+        old = self.reward_labels[i].text
+        if old != new:
+            logging.debug(f'Changing reward_label[%s] from %s to %s', i, old, new)
+            self.reward_labels[i].text = new
+
+
+    def update_fixation(self):
+        if not self.eyelink:
+            return
+        gaze = self.eyelink.gaze_position()
+
+        if self.last_gaze is not None:
+            gaze_distance = distance(gaze, self.last_gaze)
+        self.last_gaze = gaze
+
+        if self.show_gaze:
+            self.gaze_dot.setPos(gaze)
+        self.last_fixated = self.fixated
+
+        for i in range(len(self.nodes)):
+            if distance(gaze, self.nodes[i].pos) < self.gaze_tolerance * self.nodes[i].radius:
+
+
+                if self.fixated != i:
+                    self.log('fixate state', {'state': i})
+                self.fixated = i
+                self.fix_verified = core.getTime()
+                break
+
+        if self.fixated is not None and core.getTime() - self.fix_verified > self.fixation_lag:
+            self.log('unfixate state', {'state': self.fixated})
+            self.fixated = None
+
+        if self.gaze_contingent and self.last_fixated != self.fixated:
+            self.update_node_labels()
+            
     def do_timeout(self):
         self.log('timeout')
         logging.info('timeout')

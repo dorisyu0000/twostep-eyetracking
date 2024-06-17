@@ -1,0 +1,900 @@
+2024-06-16 19:24:32,817 [INFO]  starting up 24-06-16-1924_P1-test at 1.5502376250224188
+2024-06-16 19:24:32,835 [INFO]  git SHA: 6f600602567f36d6fed1ee549fc9878f3980d90a
+2024-06-16 19:24:32,835 [INFO]  Configuration file: config/m2/1.json
+2024-06-16 19:24:32,836 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.2938926261462365, 0.4045084971874737], [-0.47552825814757677, 0.15450849718747373], [-0.4755282581475768, -0.15450849718747361], [-0.2938926261462366, -0.40450849718747367], [-1.1102230246251565e-16, -0.5], [0.29389262614623646, -0.4045084971874738], [0.4755282581475768, -0.15450849718747384], [0.4755282581475768, 0.15450849718747361], [0.2938926261462367, 0.4045084971874736]]}
+2024-06-16 19:24:34,019 [INFO]  begin learn
+2024-06-16 19:24:34,020 [DEBUG]  message: Now, let's see if you can identify the items and their value.You have 3 attempts to get 8 trials correct out of 10 before you can start the main tasks. (None)
+2024-06-16 19:26:47,869 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [], [], [9, 0], [], [], []], "rewards": [2, null, null, null, null, null, null, null, null, 4], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 6}
+2024-06-16 19:26:47,869 [DEBUG]  GraphTrial.log 136.602 begin space 
+2024-06-16 19:26:48,916 [DEBUG]  GraphTrial.log 137.649 initialize status = ok
+2024-06-16 19:26:48,916 [DEBUG]  GraphTrial.log 137.649 show graph 
+2024-06-16 19:26:48,925 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:48,925 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:48,935 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:48,935 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:48,943 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:48,943 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:48,951 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:48,951 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:48,988 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:48,988 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:48,997 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:48,997 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:49,006 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:49,006 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:49,014 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:49,014 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:49,026 [DEBUG]  GraphTrial.log 137.759 visit state = 6
+2024-06-16 19:26:49,032 [DEBUG]  GraphTrial.log 137.765 start flip_time = 137.76483241666574
+2024-06-16 19:26:49,032 [DEBUG]  GraphTrial.log 137.765 start acting 
+2024-06-16 19:26:49,035 [DEBUG]  GraphTrial.log 137.768 get move selected = 0
+2024-06-16 19:26:53,745 [DEBUG]  GraphTrial.log 142.478 switch selected = 9
+2024-06-16 19:26:54,164 [DEBUG]  GraphTrial.log 142.897 select selected = 9
+2024-06-16 19:26:54,164 [DEBUG]  GraphTrial.log 142.897 visit state = 9
+2024-06-16 19:26:58,026 [DEBUG]  GraphTrial.log 146.759 done 
+2024-06-16 19:26:58,026 [INFO]  end trial [{"time": 136.60218304168666, "event": "begin space"}, {"time": 137.64899779169355, "event": "initialize", "status": "ok"}, {"time": 137.6491022083792, "event": "show graph"}, {"time": 137.758832624997, "event": "visit", "state": 6}, {"time": 137.7648747083731, "event": "start", "flip_time": 137.76483241666574}, {"time": 137.76498866669135, "event": "start acting"}, {"time": 137.7679388333927, "event": "get move", "selected": 0}, {"time": 142.47787570836954, "event": "switch", "selected": 9}, {"time": 142.8966474166955, "event": "select", "selected": 9}, {"time": 142.89669133338612, "event": "visit", "state": 9}, {"time": 146.759147291712, "event": "done"}]
+2024-06-16 19:26:58,026 [DEBUG]  message: Great job! You've successfully passed 1 out of 10 trials. (None)
+2024-06-16 19:26:58,041 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [5, 0], [], [], [], [], [], [], []], "rewards": [-4, null, null, null, null, 1, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 2}
+2024-06-16 19:26:58,041 [DEBUG]  GraphTrial.log 146.774 begin space 
+2024-06-16 19:26:58,394 [DEBUG]  GraphTrial.log 147.127 initialize status = ok
+2024-06-16 19:26:58,395 [DEBUG]  GraphTrial.log 147.128 show graph 
+2024-06-16 19:26:58,399 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:58,399 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:58,408 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:58,408 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:58,416 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:58,416 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:58,424 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:58,424 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:58,447 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:58,447 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:58,455 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:58,455 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:58,463 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:58,463 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:58,470 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:26:58,470 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:26:58,492 [DEBUG]  GraphTrial.log 147.225 visit state = 2
+2024-06-16 19:26:58,496 [DEBUG]  GraphTrial.log 147.229 start flip_time = 147.2286030416726
+2024-06-16 19:26:58,496 [DEBUG]  GraphTrial.log 147.229 start acting 
+2024-06-16 19:26:58,499 [DEBUG]  GraphTrial.log 147.232 get move selected = 0
+2024-06-16 19:26:58,964 [DEBUG]  GraphTrial.log 147.697 select selected = 0
+2024-06-16 19:26:58,964 [DEBUG]  GraphTrial.log 147.697 visit state = 0
+2024-06-16 19:27:02,776 [DEBUG]  GraphTrial.log 151.509 done 
+2024-06-16 19:27:02,776 [INFO]  end trial [{"time": 146.7739231666783, "event": "begin space"}, {"time": 147.1274765834096, "event": "initialize", "status": "ok"}, {"time": 147.12755525001558, "event": "show graph"}, {"time": 147.22546691668686, "event": "visit", "state": 2}, {"time": 147.22864229168044, "event": "start", "flip_time": 147.2286030416726}, {"time": 147.228739708371, "event": "start acting"}, {"time": 147.2316227083793, "event": "get move", "selected": 0}, {"time": 147.69693545839982, "event": "select", "selected": 0}, {"time": 147.69697595835896, "event": "visit", "state": 0}, {"time": 151.50931554171257, "event": "done"}]
+2024-06-16 19:27:02,776 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:27:02,791 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[2, 9], [], [], [], [], [], [], [], [], []], "rewards": [null, null, 0, null, null, null, null, null, null, -3], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-16 19:27:02,791 [DEBUG]  GraphTrial.log 151.524 begin space 
+2024-06-16 19:27:02,984 [DEBUG]  GraphTrial.log 151.717 initialize status = ok
+2024-06-16 19:27:02,984 [DEBUG]  GraphTrial.log 151.717 show graph 
+2024-06-16 19:27:02,994 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:02,994 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:03,002 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:03,002 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:03,010 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:03,010 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:03,017 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:03,017 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:03,047 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:03,047 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:03,055 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:03,055 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:03,063 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:03,063 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:03,071 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:03,071 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:03,081 [DEBUG]  GraphTrial.log 151.814 visit state = 0
+2024-06-16 19:27:03,085 [DEBUG]  GraphTrial.log 151.818 start flip_time = 151.81757037498755
+2024-06-16 19:27:03,085 [DEBUG]  GraphTrial.log 151.818 start acting 
+2024-06-16 19:27:03,087 [DEBUG]  GraphTrial.log 151.820 get move selected = 2
+2024-06-16 19:27:03,734 [DEBUG]  GraphTrial.log 152.467 select selected = 2
+2024-06-16 19:27:03,734 [DEBUG]  GraphTrial.log 152.467 visit state = 2
+2024-06-16 19:27:07,557 [DEBUG]  GraphTrial.log 156.290 done 
+2024-06-16 19:27:07,557 [INFO]  end trial [{"time": 151.52373887499562, "event": "begin space"}, {"time": 151.7167381250183, "event": "initialize", "status": "ok"}, {"time": 151.7168243333581, "event": "show graph"}, {"time": 151.8144215416978, "event": "visit", "state": 0}, {"time": 151.8176160416915, "event": "start", "flip_time": 151.81757037498755}, {"time": 151.81773025001166, "event": "start acting"}, {"time": 151.82031970837852, "event": "get move", "selected": 2}, {"time": 152.4671117917169, "event": "select", "selected": 2}, {"time": 152.46715224999934, "event": "visit", "state": 2}, {"time": 156.29031454172218, "event": "done"}]
+2024-06-16 19:27:07,558 [DEBUG]  message: Great job! You've successfully passed 2 out of 10 trials. (None)
+2024-06-16 19:27:07,563 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [6, 2], [], [], [], [], []], "rewards": [null, null, 2, null, null, null, -1, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 4}
+2024-06-16 19:27:07,564 [DEBUG]  GraphTrial.log 156.297 begin space 
+2024-06-16 19:27:07,965 [DEBUG]  GraphTrial.log 156.698 initialize status = ok
+2024-06-16 19:27:07,965 [DEBUG]  GraphTrial.log 156.698 show graph 
+2024-06-16 19:27:07,975 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:07,975 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:07,983 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:07,983 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:07,991 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:07,991 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:07,999 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:07,999 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:08,019 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:08,019 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:08,027 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:08,027 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:08,035 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:08,035 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:08,042 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:08,043 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:08,062 [DEBUG]  GraphTrial.log 156.795 visit state = 4
+2024-06-16 19:27:08,065 [DEBUG]  GraphTrial.log 156.798 start flip_time = 156.7978095000144
+2024-06-16 19:27:08,065 [DEBUG]  GraphTrial.log 156.798 start acting 
+2024-06-16 19:27:08,068 [DEBUG]  GraphTrial.log 156.801 get move selected = 2
+2024-06-16 19:27:08,399 [DEBUG]  GraphTrial.log 157.132 select selected = 2
+2024-06-16 19:27:08,399 [DEBUG]  GraphTrial.log 157.132 visit state = 2
+2024-06-16 19:27:12,209 [DEBUG]  GraphTrial.log 160.942 done 
+2024-06-16 19:27:12,209 [INFO]  end trial [{"time": 156.2965130833909, "event": "begin space"}, {"time": 156.69763991667423, "event": "initialize", "status": "ok"}, {"time": 156.69772391667357, "event": "show graph"}, {"time": 156.79469054169022, "event": "visit", "state": 4}, {"time": 156.79785191669362, "event": "start", "flip_time": 156.7978095000144}, {"time": 156.79794775001938, "event": "start acting"}, {"time": 156.80062079167692, "event": "get move", "selected": 2}, {"time": 157.1322440833901, "event": "select", "selected": 2}, {"time": 157.1322828750126, "event": "visit", "state": 2}, {"time": 160.94220562500414, "event": "done"}]
+2024-06-16 19:27:12,209 [DEBUG]  message: Great job! You've successfully passed 3 out of 10 trials. (None)
+2024-06-16 19:27:12,224 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [9, 8], [], [], [], [], [], []], "rewards": [null, null, null, null, null, null, null, null, -4, 1], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 3}
+2024-06-16 19:27:12,224 [DEBUG]  GraphTrial.log 160.957 begin space 
+2024-06-16 19:27:12,705 [DEBUG]  GraphTrial.log 161.438 initialize status = ok
+2024-06-16 19:27:12,705 [DEBUG]  GraphTrial.log 161.438 show graph 
+2024-06-16 19:27:12,733 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:12,733 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:12,741 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:12,741 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:12,749 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:12,749 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:12,757 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:12,757 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:12,768 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:12,768 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:12,776 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:12,776 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:12,784 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:12,784 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:12,792 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:12,792 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:12,802 [DEBUG]  GraphTrial.log 161.535 visit state = 3
+2024-06-16 19:27:12,805 [DEBUG]  GraphTrial.log 161.538 start flip_time = 161.53798033337807
+2024-06-16 19:27:12,805 [DEBUG]  GraphTrial.log 161.538 start acting 
+2024-06-16 19:27:12,810 [DEBUG]  GraphTrial.log 161.543 get move selected = 9
+2024-06-16 19:27:13,035 [DEBUG]  GraphTrial.log 161.768 select selected = 9
+2024-06-16 19:27:13,035 [DEBUG]  GraphTrial.log 161.768 visit state = 9
+2024-06-16 19:27:16,857 [DEBUG]  GraphTrial.log 165.590 done 
+2024-06-16 19:27:16,857 [INFO]  end trial [{"time": 160.9572283750167, "event": "begin space"}, {"time": 161.43781654170016, "event": "initialize", "status": "ok"}, {"time": 161.43789470836055, "event": "show graph"}, {"time": 161.5348804583773, "event": "visit", "state": 3}, {"time": 161.5380221667001, "event": "start", "flip_time": 161.53798033337807}, {"time": 161.53811700001825, "event": "start acting"}, {"time": 161.5434088750044, "event": "get move", "selected": 9}, {"time": 161.76801879168488, "event": "select", "selected": 9}, {"time": 161.76805770839565, "event": "visit", "state": 9}, {"time": 165.5903022083803, "event": "done"}]
+2024-06-16 19:27:16,858 [DEBUG]  message: Great job! You've successfully passed 4 out of 10 trials. (None)
+2024-06-16 19:27:16,864 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [], [], [], [2, 5], [], []], "rewards": [null, null, 3, null, null, -1, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 7}
+2024-06-16 19:27:16,864 [DEBUG]  GraphTrial.log 165.597 begin space 
+2024-06-16 19:27:17,235 [DEBUG]  GraphTrial.log 165.968 initialize status = ok
+2024-06-16 19:27:17,235 [DEBUG]  GraphTrial.log 165.968 show graph 
+2024-06-16 19:27:17,245 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:17,245 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:17,254 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:17,254 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:17,262 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:17,262 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:17,271 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:17,271 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:17,288 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:17,288 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:17,296 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:17,296 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:17,304 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:17,304 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:17,311 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:17,311 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:17,333 [DEBUG]  GraphTrial.log 166.066 visit state = 7
+2024-06-16 19:27:17,337 [DEBUG]  GraphTrial.log 166.070 start flip_time = 166.06939670839347
+2024-06-16 19:27:17,337 [DEBUG]  GraphTrial.log 166.070 start acting 
+2024-06-16 19:27:17,339 [DEBUG]  GraphTrial.log 166.072 get move selected = 2
+2024-06-16 19:27:17,595 [DEBUG]  GraphTrial.log 166.328 select selected = 2
+2024-06-16 19:27:17,595 [DEBUG]  GraphTrial.log 166.328 visit state = 2
+2024-06-16 19:27:21,457 [DEBUG]  GraphTrial.log 170.190 done 
+2024-06-16 19:27:21,458 [INFO]  end trial [{"time": 165.59677337500034, "event": "begin space"}, {"time": 165.9681140416651, "event": "initialize", "status": "ok"}, {"time": 165.9681911666994, "event": "show graph"}, {"time": 166.06629770837026, "event": "visit", "state": 7}, {"time": 166.0696524999803, "event": "start", "flip_time": 166.06939670839347}, {"time": 166.0697536250227, "event": "start acting"}, {"time": 166.07226195838302, "event": "get move", "selected": 2}, {"time": 166.32814379170304, "event": "select", "selected": 2}, {"time": 166.32818208337994, "event": "visit", "state": 2}, {"time": 170.19033637503162, "event": "done"}]
+2024-06-16 19:27:21,458 [DEBUG]  message: Great job! You've successfully passed 5 out of 10 trials. (None)
+2024-06-16 19:27:21,465 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [], [], [], [5, 2], [], []], "rewards": [null, null, 4, null, null, -4, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 7}
+2024-06-16 19:27:21,465 [DEBUG]  GraphTrial.log 170.198 begin space 
+2024-06-16 19:27:21,885 [DEBUG]  GraphTrial.log 170.618 initialize status = ok
+2024-06-16 19:27:21,886 [DEBUG]  GraphTrial.log 170.618 show graph 
+2024-06-16 19:27:21,895 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:21,895 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:21,904 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:21,904 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:21,913 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:21,913 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:21,921 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:21,921 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:21,939 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:21,939 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:21,947 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:21,947 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:21,954 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:21,955 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:21,962 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:21,962 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:21,985 [DEBUG]  GraphTrial.log 170.718 visit state = 7
+2024-06-16 19:27:21,988 [DEBUG]  GraphTrial.log 170.721 start flip_time = 170.72068825003225
+2024-06-16 19:27:21,988 [DEBUG]  GraphTrial.log 170.721 start acting 
+2024-06-16 19:27:21,990 [DEBUG]  GraphTrial.log 170.723 get move selected = 2
+2024-06-16 19:27:22,275 [DEBUG]  GraphTrial.log 171.008 select selected = 2
+2024-06-16 19:27:22,275 [DEBUG]  GraphTrial.log 171.008 visit state = 2
+2024-06-16 19:27:26,124 [DEBUG]  GraphTrial.log 174.857 done 
+2024-06-16 19:27:26,124 [INFO]  end trial [{"time": 170.19816045835614, "event": "begin space"}, {"time": 170.61839170835447, "event": "initialize", "status": "ok"}, {"time": 170.61847320839297, "event": "show graph"}, {"time": 170.71754816669272, "event": "visit", "state": 7}, {"time": 170.72072733339155, "event": "start", "flip_time": 170.72068825003225}, {"time": 170.72084758337587, "event": "start acting"}, {"time": 170.7234458749881, "event": "get move", "selected": 2}, {"time": 171.00791708339239, "event": "select", "selected": 2}, {"time": 171.00795699999435, "event": "visit", "state": 2}, {"time": 174.85704454168444, "event": "done"}]
+2024-06-16 19:27:26,124 [DEBUG]  message: Great job! You've successfully passed 6 out of 10 trials. (None)
+2024-06-16 19:27:26,131 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [], [], [1, 3], [], [], []], "rewards": [null, 0, null, 3, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 6}
+2024-06-16 19:27:26,131 [DEBUG]  GraphTrial.log 174.864 begin space 
+2024-06-16 19:27:26,686 [DEBUG]  GraphTrial.log 175.419 initialize status = ok
+2024-06-16 19:27:26,686 [DEBUG]  GraphTrial.log 175.419 show graph 
+2024-06-16 19:27:26,693 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:26,693 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:26,701 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:26,701 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:26,709 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:26,709 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:26,716 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:26,716 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:26,730 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:26,730 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:26,739 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:26,739 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:26,747 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:26,747 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:26,755 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:26,755 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:26,784 [DEBUG]  GraphTrial.log 175.517 visit state = 6
+2024-06-16 19:27:26,787 [DEBUG]  GraphTrial.log 175.520 start flip_time = 175.5203110833536
+2024-06-16 19:27:26,788 [DEBUG]  GraphTrial.log 175.520 start acting 
+2024-06-16 19:27:26,790 [DEBUG]  GraphTrial.log 175.523 get move selected = 3
+2024-06-16 19:27:27,918 [DEBUG]  GraphTrial.log 176.651 switch selected = 1
+2024-06-16 19:27:28,215 [DEBUG]  GraphTrial.log 176.948 select selected = 1
+2024-06-16 19:27:28,215 [DEBUG]  GraphTrial.log 176.948 visit state = 1
+2024-06-16 19:27:32,026 [DEBUG]  GraphTrial.log 180.759 done 
+2024-06-16 19:27:32,026 [INFO]  end trial [{"time": 174.86421083338792, "event": "begin space"}, {"time": 175.41892208339414, "event": "initialize", "status": "ok"}, {"time": 175.41899937501876, "event": "show graph"}, {"time": 175.51705233339453, "event": "visit", "state": 6}, {"time": 175.52035491669085, "event": "start", "flip_time": 175.5203110833536}, {"time": 175.52048270840896, "event": "start acting"}, {"time": 175.52310516667785, "event": "get move", "selected": 3}, {"time": 176.65120008337544, "event": "switch", "selected": 1}, {"time": 176.94813837500988, "event": "select", "selected": 1}, {"time": 176.94817954167956, "event": "visit", "state": 1}, {"time": 180.7588005833677, "event": "done"}]
+2024-06-16 19:27:32,026 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:27:32,041 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [0, 1], [], [], [], [], [], [], []], "rewards": [-4, -1, null, null, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 2}
+2024-06-16 19:27:32,041 [DEBUG]  GraphTrial.log 180.774 begin space 
+2024-06-16 19:27:32,536 [DEBUG]  GraphTrial.log 181.269 initialize status = ok
+2024-06-16 19:27:32,536 [DEBUG]  GraphTrial.log 181.269 show graph 
+2024-06-16 19:27:32,540 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:32,540 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:32,548 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:32,548 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:32,556 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:32,556 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:32,564 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:32,564 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:32,575 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:32,575 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:32,583 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:32,583 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:32,590 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:32,590 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:32,598 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:32,598 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:32,632 [DEBUG]  GraphTrial.log 181.365 visit state = 2
+2024-06-16 19:27:32,635 [DEBUG]  GraphTrial.log 181.368 start flip_time = 181.36806179169798
+2024-06-16 19:27:32,635 [DEBUG]  GraphTrial.log 181.368 start acting 
+2024-06-16 19:27:32,638 [DEBUG]  GraphTrial.log 181.371 get move selected = 0
+2024-06-16 19:27:34,215 [DEBUG]  GraphTrial.log 182.948 select selected = 0
+2024-06-16 19:27:34,215 [DEBUG]  GraphTrial.log 182.948 visit state = 0
+2024-06-16 19:27:38,026 [DEBUG]  GraphTrial.log 186.759 done 
+2024-06-16 19:27:38,026 [INFO]  end trial [{"time": 180.77391108340817, "event": "begin space"}, {"time": 181.26891199999955, "event": "initialize", "status": "ok"}, {"time": 181.26898220839212, "event": "show graph"}, {"time": 181.3649471667013, "event": "visit", "state": 2}, {"time": 181.36810399999376, "event": "start", "flip_time": 181.36806179169798}, {"time": 181.3682169583626, "event": "start acting"}, {"time": 181.37072891672142, "event": "get move", "selected": 0}, {"time": 182.94833179167472, "event": "select", "selected": 0}, {"time": 182.94840824999847, "event": "visit", "state": 0}, {"time": 186.75860866671428, "event": "done"}]
+2024-06-16 19:27:38,026 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:27:38,041 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[4, 1], [], [], [], [], [], [], [], [], []], "rewards": [null, 3, null, null, 0, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-16 19:27:38,041 [DEBUG]  GraphTrial.log 186.774 begin space 
+2024-06-16 19:27:38,688 [DEBUG]  GraphTrial.log 187.421 initialize status = ok
+2024-06-16 19:27:38,688 [DEBUG]  GraphTrial.log 187.421 show graph 
+2024-06-16 19:27:38,695 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:38,695 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:38,704 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:38,704 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:38,712 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:38,712 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:38,720 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:38,720 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:38,738 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:38,738 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:38,746 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:38,746 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:38,753 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:38,753 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:38,761 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:27:38,761 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:27:38,786 [DEBUG]  GraphTrial.log 187.519 visit state = 0
+2024-06-16 19:27:38,789 [DEBUG]  GraphTrial.log 187.522 start flip_time = 187.52210312499665
+2024-06-16 19:27:38,789 [DEBUG]  GraphTrial.log 187.522 start acting 
+2024-06-16 19:27:38,793 [DEBUG]  GraphTrial.log 187.526 get move selected = 4
+2024-06-16 19:27:39,826 [DEBUG]  GraphTrial.log 188.559 select selected = 4
+2024-06-16 19:27:39,827 [DEBUG]  GraphTrial.log 188.559 visit state = 4
+2024-06-16 19:27:43,676 [DEBUG]  GraphTrial.log 192.409 done 
+2024-06-16 19:27:43,676 [INFO]  end trial [{"time": 186.77381070837146, "event": "begin space"}, {"time": 187.42095283337403, "event": "initialize", "status": "ok"}, {"time": 187.4210240833927, "event": "show graph"}, {"time": 187.5190115000005, "event": "visit", "state": 0}, {"time": 187.52214345836546, "event": "start", "flip_time": 187.52210312499665}, {"time": 187.52223537501413, "event": "start acting"}, {"time": 187.52564533340046, "event": "get move", "selected": 4}, {"time": 188.55940445838496, "event": "select", "selected": 4}, {"time": 188.55949975003023, "event": "visit", "state": 4}, {"time": 192.40901904169004, "event": "done"}]
+2024-06-16 19:27:43,676 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:27:43,691 [DEBUG]  message: Good job! You passed 6 out of 10.  (None)
+2024-06-16 19:27:43,700 [DEBUG]  message: You only get 6 out of 10 trials correct.Let's try again. Press any key to start attempt. (None)
+2024-06-16 19:28:04,637 [ERROR]  Practice index exceeds available trials.
+2024-06-16 19:28:04,638 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [], [], [9, 0], [], [], []], "rewards": [2, null, null, null, null, null, null, null, null, 4], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 6}
+2024-06-16 19:28:04,638 [DEBUG]  GraphTrial.log 213.371 begin space 
+2024-06-16 19:28:05,237 [DEBUG]  GraphTrial.log 213.970 initialize status = ok
+2024-06-16 19:28:05,237 [DEBUG]  GraphTrial.log 213.970 show graph 
+2024-06-16 19:28:05,242 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:05,242 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:05,251 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:05,251 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:05,259 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:05,259 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:05,267 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:05,267 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:05,302 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:05,302 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:05,312 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:05,312 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:05,320 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:05,320 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:05,329 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:05,329 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:05,340 [DEBUG]  GraphTrial.log 214.073 visit state = 6
+2024-06-16 19:28:05,344 [DEBUG]  GraphTrial.log 214.077 start flip_time = 214.0767801250331
+2024-06-16 19:28:05,344 [DEBUG]  GraphTrial.log 214.077 start acting 
+2024-06-16 19:28:05,347 [DEBUG]  GraphTrial.log 214.080 get move selected = 0
+2024-06-16 19:28:06,618 [DEBUG]  GraphTrial.log 215.351 select selected = 0
+2024-06-16 19:28:06,618 [DEBUG]  GraphTrial.log 215.351 visit state = 0
+2024-06-16 19:28:10,443 [DEBUG]  GraphTrial.log 219.176 done 
+2024-06-16 19:28:10,443 [INFO]  end trial [{"time": 213.3711357084103, "event": "begin space"}, {"time": 213.97027629171498, "event": "initialize", "status": "ok"}, {"time": 213.9703569583944, "event": "show graph"}, {"time": 214.0730272916844, "event": "visit", "state": 6}, {"time": 214.07683129172074, "event": "start", "flip_time": 214.0767801250331}, {"time": 214.07696525001666, "event": "start acting"}, {"time": 214.0799392084009, "event": "get move", "selected": 0}, {"time": 215.35055129171815, "event": "select", "selected": 0}, {"time": 215.35064779169625, "event": "visit", "state": 0}, {"time": 219.17579275002936, "event": "done"}]
+2024-06-16 19:28:10,443 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:28:10,457 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [5, 0], [], [], [], [], [], [], []], "rewards": [-4, null, null, null, null, 1, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 2}
+2024-06-16 19:28:10,458 [DEBUG]  GraphTrial.log 219.190 begin space 
+2024-06-16 19:28:10,878 [DEBUG]  GraphTrial.log 219.611 initialize status = ok
+2024-06-16 19:28:10,878 [DEBUG]  GraphTrial.log 219.611 show graph 
+2024-06-16 19:28:10,883 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:10,883 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:10,892 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:10,892 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:10,899 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:10,900 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:10,907 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:10,907 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:10,930 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:10,930 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:10,939 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:10,939 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:10,946 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:10,946 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:10,954 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:10,954 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:10,976 [DEBUG]  GraphTrial.log 219.709 visit state = 2
+2024-06-16 19:28:10,979 [DEBUG]  GraphTrial.log 219.712 start flip_time = 219.7121374583803
+2024-06-16 19:28:10,979 [DEBUG]  GraphTrial.log 219.712 start acting 
+2024-06-16 19:28:10,982 [DEBUG]  GraphTrial.log 219.715 get move selected = 0
+2024-06-16 19:28:11,359 [DEBUG]  GraphTrial.log 220.092 select selected = 0
+2024-06-16 19:28:11,359 [DEBUG]  GraphTrial.log 220.092 visit state = 0
+2024-06-16 19:28:15,207 [DEBUG]  GraphTrial.log 223.940 done 
+2024-06-16 19:28:15,208 [INFO]  end trial [{"time": 219.1904784583603, "event": "begin space"}, {"time": 219.6107141667162, "event": "initialize", "status": "ok"}, {"time": 219.61080424999818, "event": "show graph"}, {"time": 219.70894254167797, "event": "visit", "state": 2}, {"time": 219.71218054171186, "event": "start", "flip_time": 219.7121374583803}, {"time": 219.71229154168395, "event": "start acting"}, {"time": 219.71485945838504, "event": "get move", "selected": 0}, {"time": 220.09213258337695, "event": "select", "selected": 0}, {"time": 220.0921725417138, "event": "visit", "state": 0}, {"time": 223.94028462498682, "event": "done"}]
+2024-06-16 19:28:15,208 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:28:15,210 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[2, 9], [], [], [], [], [], [], [], [], []], "rewards": [null, null, 0, null, null, null, null, null, null, -3], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-16 19:28:15,210 [DEBUG]  GraphTrial.log 223.943 begin space 
+2024-06-16 19:28:15,678 [DEBUG]  GraphTrial.log 224.411 initialize status = ok
+2024-06-16 19:28:15,678 [DEBUG]  GraphTrial.log 224.411 show graph 
+2024-06-16 19:28:15,689 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:15,689 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:15,699 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:15,699 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:15,708 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:15,708 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:15,716 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:15,716 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:15,745 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:15,745 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:15,753 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:15,753 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:15,761 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:15,761 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:15,769 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:15,769 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:15,780 [DEBUG]  GraphTrial.log 224.513 visit state = 0
+2024-06-16 19:28:15,783 [DEBUG]  GraphTrial.log 224.516 start flip_time = 224.51583837502403
+2024-06-16 19:28:15,783 [DEBUG]  GraphTrial.log 224.516 start acting 
+2024-06-16 19:28:15,786 [DEBUG]  GraphTrial.log 224.519 get move selected = 2
+2024-06-16 19:28:17,358 [DEBUG]  GraphTrial.log 226.091 select selected = 2
+2024-06-16 19:28:17,358 [DEBUG]  GraphTrial.log 226.091 visit state = 2
+2024-06-16 19:28:21,209 [DEBUG]  GraphTrial.log 229.942 done 
+2024-06-16 19:28:21,210 [INFO]  end trial [{"time": 223.943248125026, "event": "begin space"}, {"time": 224.4105896250112, "event": "initialize", "status": "ok"}, {"time": 224.41068291669944, "event": "show graph"}, {"time": 224.51265208335826, "event": "visit", "state": 0}, {"time": 224.5158785416861, "event": "start", "flip_time": 224.51583837502403}, {"time": 224.51597549999133, "event": "start acting"}, {"time": 224.51852879166836, "event": "get move", "selected": 2}, {"time": 226.0909094166709, "event": "select", "selected": 2}, {"time": 226.09098849998554, "event": "visit", "state": 2}, {"time": 229.94226841669297, "event": "done"}]
+2024-06-16 19:28:21,210 [DEBUG]  message: Great job! You've successfully passed 1 out of 10 trials. (None)
+2024-06-16 19:28:21,224 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [6, 2], [], [], [], [], []], "rewards": [null, null, 2, null, null, null, -1, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 4}
+2024-06-16 19:28:21,224 [DEBUG]  GraphTrial.log 229.957 begin space 
+2024-06-16 19:28:22,037 [DEBUG]  GraphTrial.log 230.770 initialize status = ok
+2024-06-16 19:28:22,038 [DEBUG]  GraphTrial.log 230.770 show graph 
+2024-06-16 19:28:22,047 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:22,047 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:22,056 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:22,056 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:22,064 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:22,064 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:22,071 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:22,071 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:22,092 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:22,092 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:22,100 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:22,100 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:22,108 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:22,108 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:22,116 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:22,116 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:22,135 [DEBUG]  GraphTrial.log 230.868 visit state = 4
+2024-06-16 19:28:22,138 [DEBUG]  GraphTrial.log 230.871 start flip_time = 230.87088900001254
+2024-06-16 19:28:22,138 [DEBUG]  GraphTrial.log 230.871 start acting 
+2024-06-16 19:28:22,144 [DEBUG]  GraphTrial.log 230.877 get move selected = 2
+2024-06-16 19:28:23,029 [DEBUG]  GraphTrial.log 231.762 switch selected = 6
+2024-06-16 19:28:23,419 [DEBUG]  GraphTrial.log 232.152 switch selected = 2
+2024-06-16 19:28:23,658 [DEBUG]  GraphTrial.log 232.391 select selected = 2
+2024-06-16 19:28:23,658 [DEBUG]  GraphTrial.log 232.391 visit state = 2
+2024-06-16 19:28:27,508 [DEBUG]  GraphTrial.log 236.241 done 
+2024-06-16 19:28:27,508 [INFO]  end trial [{"time": 229.9571010833606, "event": "begin space"}, {"time": 230.77029829169624, "event": "initialize", "status": "ok"}, {"time": 230.77037149999524, "event": "show graph"}, {"time": 230.86776041670237, "event": "visit", "state": 4}, {"time": 230.87093366670888, "event": "start", "flip_time": 230.87088900001254}, {"time": 230.87103650002973, "event": "start acting"}, {"time": 230.87673854170134, "event": "get move", "selected": 2}, {"time": 231.76183433335973, "event": "switch", "selected": 6}, {"time": 232.15162779169623, "event": "switch", "selected": 2}, {"time": 232.39061170839705, "event": "select", "selected": 2}, {"time": 232.39065129170194, "event": "visit", "state": 2}, {"time": 236.24054362502648, "event": "done"}]
+2024-06-16 19:28:27,508 [DEBUG]  message: Great job! You've successfully passed 2 out of 10 trials. (None)
+2024-06-16 19:28:27,511 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [9, 8], [], [], [], [], [], []], "rewards": [null, null, null, null, null, null, null, null, -4, 1], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 3}
+2024-06-16 19:28:27,511 [DEBUG]  GraphTrial.log 236.244 begin space 
+2024-06-16 19:28:27,888 [DEBUG]  GraphTrial.log 236.621 initialize status = ok
+2024-06-16 19:28:27,889 [DEBUG]  GraphTrial.log 236.621 show graph 
+2024-06-16 19:28:27,916 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:27,916 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:27,924 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:27,924 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:27,932 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:27,932 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:27,940 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:27,940 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:27,951 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:27,951 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:27,958 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:27,959 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:27,966 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:27,966 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:27,974 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:27,974 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:27,984 [DEBUG]  GraphTrial.log 236.717 visit state = 3
+2024-06-16 19:28:27,987 [DEBUG]  GraphTrial.log 236.720 start flip_time = 236.7199349583825
+2024-06-16 19:28:27,987 [DEBUG]  GraphTrial.log 236.720 start acting 
+2024-06-16 19:28:27,990 [DEBUG]  GraphTrial.log 236.723 get move selected = 9
+2024-06-16 19:28:28,819 [DEBUG]  GraphTrial.log 237.552 switch selected = 8
+2024-06-16 19:28:29,118 [DEBUG]  GraphTrial.log 237.851 select selected = 8
+2024-06-16 19:28:29,118 [DEBUG]  GraphTrial.log 237.851 visit state = 8
+2024-06-16 19:28:32,941 [DEBUG]  GraphTrial.log 241.674 done 
+2024-06-16 19:28:32,941 [INFO]  end trial [{"time": 236.24375166668324, "event": "begin space"}, {"time": 236.62134837498888, "event": "initialize", "status": "ok"}, {"time": 236.62142966670217, "event": "show graph"}, {"time": 236.7168983333977, "event": "visit", "state": 3}, {"time": 236.71997704170644, "event": "start", "flip_time": 236.7199349583825}, {"time": 236.7200741667184, "event": "start acting"}, {"time": 236.722612041689, "event": "get move", "selected": 9}, {"time": 237.55205541668693, "event": "switch", "selected": 8}, {"time": 237.85098991671111, "event": "select", "selected": 8}, {"time": 237.8510302916984, "event": "visit", "state": 8}, {"time": 241.67366916668834, "event": "done"}]
+2024-06-16 19:28:32,941 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:28:32,943 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [], [], [], [2, 5], [], []], "rewards": [null, null, 3, null, null, -1, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 7}
+2024-06-16 19:28:32,944 [DEBUG]  GraphTrial.log 241.676 begin space 
+2024-06-16 19:28:33,379 [DEBUG]  GraphTrial.log 242.112 initialize status = ok
+2024-06-16 19:28:33,379 [DEBUG]  GraphTrial.log 242.112 show graph 
+2024-06-16 19:28:33,389 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:33,389 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:33,399 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:33,399 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:33,407 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:33,407 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:33,415 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:33,415 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:33,433 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:33,433 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:33,441 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:33,441 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:33,448 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:33,449 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:33,456 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:33,456 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:33,478 [DEBUG]  GraphTrial.log 242.211 visit state = 7
+2024-06-16 19:28:33,481 [DEBUG]  GraphTrial.log 242.214 start flip_time = 242.21411766670644
+2024-06-16 19:28:33,481 [DEBUG]  GraphTrial.log 242.214 start acting 
+2024-06-16 19:28:33,484 [DEBUG]  GraphTrial.log 242.217 get move selected = 2
+2024-06-16 19:28:33,918 [DEBUG]  GraphTrial.log 242.651 select selected = 2
+2024-06-16 19:28:33,919 [DEBUG]  GraphTrial.log 242.651 visit state = 2
+2024-06-16 19:28:37,741 [DEBUG]  GraphTrial.log 246.474 done 
+2024-06-16 19:28:37,741 [INFO]  end trial [{"time": 241.67642508336576, "event": "begin space"}, {"time": 242.11152562499046, "event": "initialize", "status": "ok"}, {"time": 242.11160487501184, "event": "show graph"}, {"time": 242.21098987502046, "event": "visit", "state": 7}, {"time": 242.21416116668843, "event": "start", "flip_time": 242.21411766670644}, {"time": 242.21426108339801, "event": "start acting"}, {"time": 242.21718454168877, "event": "get move", "selected": 2}, {"time": 242.65134720836068, "event": "select", "selected": 2}, {"time": 242.65138729166938, "event": "visit", "state": 2}, {"time": 246.4735377500183, "event": "done"}]
+2024-06-16 19:28:37,741 [DEBUG]  message: Great job! You've successfully passed 3 out of 10 trials. (None)
+2024-06-16 19:28:37,743 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [], [], [], [5, 2], [], []], "rewards": [null, null, 4, null, null, -4, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 7}
+2024-06-16 19:28:37,743 [DEBUG]  GraphTrial.log 246.476 begin space 
+2024-06-16 19:28:38,119 [DEBUG]  GraphTrial.log 246.852 initialize status = ok
+2024-06-16 19:28:38,119 [DEBUG]  GraphTrial.log 246.852 show graph 
+2024-06-16 19:28:38,129 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:38,129 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:38,138 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:38,138 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:38,146 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:38,146 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:38,155 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:38,155 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:38,172 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:38,172 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:38,180 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:38,180 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:38,188 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:38,188 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:38,196 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:38,196 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:38,218 [DEBUG]  GraphTrial.log 246.951 visit state = 7
+2024-06-16 19:28:38,221 [DEBUG]  GraphTrial.log 246.954 start flip_time = 246.9540486666956
+2024-06-16 19:28:38,221 [DEBUG]  GraphTrial.log 246.954 start acting 
+2024-06-16 19:28:38,224 [DEBUG]  GraphTrial.log 246.957 get move selected = 2
+2024-06-16 19:28:38,359 [DEBUG]  GraphTrial.log 247.092 select selected = 2
+2024-06-16 19:28:38,359 [DEBUG]  GraphTrial.log 247.092 visit state = 2
+2024-06-16 19:28:42,207 [DEBUG]  GraphTrial.log 250.940 done 
+2024-06-16 19:28:42,208 [INFO]  end trial [{"time": 246.47633087501163, "event": "begin space"}, {"time": 246.85191429167753, "event": "initialize", "status": "ok"}, {"time": 246.85199216671754, "event": "show graph"}, {"time": 246.95096708339406, "event": "visit", "state": 7}, {"time": 246.9540812500054, "event": "start", "flip_time": 246.9540486666956}, {"time": 246.95418870839057, "event": "start acting"}, {"time": 246.9567402083776, "event": "get move", "selected": 2}, {"time": 247.0917549583828, "event": "select", "selected": 2}, {"time": 247.09180858335458, "event": "visit", "state": 2}, {"time": 250.94023562502116, "event": "done"}]
+2024-06-16 19:28:42,208 [DEBUG]  message: Great job! You've successfully passed 4 out of 10 trials. (None)
+2024-06-16 19:28:42,210 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [], [], [1, 3], [], [], []], "rewards": [null, 0, null, 3, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 6}
+2024-06-16 19:28:42,211 [DEBUG]  GraphTrial.log 250.943 begin space 
+2024-06-16 19:28:42,589 [DEBUG]  GraphTrial.log 251.322 initialize status = ok
+2024-06-16 19:28:42,589 [DEBUG]  GraphTrial.log 251.322 show graph 
+2024-06-16 19:28:42,596 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:42,596 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:42,604 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:42,604 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:42,612 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:42,612 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:42,620 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:42,620 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:42,634 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:42,634 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:42,642 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:42,642 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:42,650 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:42,650 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:42,659 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:42,659 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:42,687 [DEBUG]  GraphTrial.log 251.420 visit state = 6
+2024-06-16 19:28:42,690 [DEBUG]  GraphTrial.log 251.423 start flip_time = 251.42301304166904
+2024-06-16 19:28:42,690 [DEBUG]  GraphTrial.log 251.423 start acting 
+2024-06-16 19:28:42,693 [DEBUG]  GraphTrial.log 251.426 get move selected = 3
+2024-06-16 19:28:42,859 [DEBUG]  GraphTrial.log 251.591 select selected = 3
+2024-06-16 19:28:42,859 [DEBUG]  GraphTrial.log 251.592 visit state = 3
+2024-06-16 19:28:46,707 [DEBUG]  GraphTrial.log 255.440 done 
+2024-06-16 19:28:46,707 [INFO]  end trial [{"time": 250.94341233337764, "event": "begin space"}, {"time": 251.32181916671107, "event": "initialize", "status": "ok"}, {"time": 251.3219098750269, "event": "show graph"}, {"time": 251.41989966668189, "event": "visit", "state": 6}, {"time": 251.423054541694, "event": "start", "flip_time": 251.42301304166904}, {"time": 251.42316354170907, "event": "start acting"}, {"time": 251.4258664167137, "event": "get move", "selected": 3}, {"time": 251.5914809583919, "event": "select", "selected": 3}, {"time": 251.5915210833773, "event": "visit", "state": 3}, {"time": 255.44018391671125, "event": "done"}]
+2024-06-16 19:28:46,708 [DEBUG]  message: Great job! You've successfully passed 5 out of 10 trials. (None)
+2024-06-16 19:28:46,710 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [0, 1], [], [], [], [], [], [], []], "rewards": [-4, -1, null, null, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 2}
+2024-06-16 19:28:46,710 [DEBUG]  GraphTrial.log 255.443 begin space 
+2024-06-16 19:28:47,090 [DEBUG]  GraphTrial.log 255.822 initialize status = ok
+2024-06-16 19:28:47,090 [DEBUG]  GraphTrial.log 255.823 show graph 
+2024-06-16 19:28:47,094 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:47,094 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:47,102 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:47,102 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:47,110 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:47,110 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:47,118 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:47,118 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:47,129 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:47,129 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:47,137 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:47,137 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:47,144 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:47,144 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:47,152 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:47,152 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:47,216 [DEBUG]  GraphTrial.log 255.949 visit state = 2
+2024-06-16 19:28:47,220 [DEBUG]  GraphTrial.log 255.953 start flip_time = 255.95252770837396
+2024-06-16 19:28:47,220 [DEBUG]  GraphTrial.log 255.953 start acting 
+2024-06-16 19:28:47,223 [DEBUG]  GraphTrial.log 255.956 get move selected = 0
+2024-06-16 19:28:47,329 [DEBUG]  GraphTrial.log 256.061 select selected = 0
+2024-06-16 19:28:47,329 [DEBUG]  GraphTrial.log 256.061 visit state = 0
+2024-06-16 19:28:51,191 [DEBUG]  GraphTrial.log 259.924 done 
+2024-06-16 19:28:51,191 [INFO]  end trial [{"time": 255.4432735000155, "event": "begin space"}, {"time": 255.82248429168249, "event": "initialize", "status": "ok"}, {"time": 255.82255699997768, "event": "show graph"}, {"time": 255.94924016669393, "event": "visit", "state": 2}, {"time": 255.9527853333857, "event": "start", "flip_time": 255.95252770837396}, {"time": 255.95291787502356, "event": "start acting"}, {"time": 255.9556478333543, "event": "get move", "selected": 0}, {"time": 256.0613986667013, "event": "select", "selected": 0}, {"time": 256.0614422917133, "event": "visit", "state": 0}, {"time": 259.9236139166751, "event": "done"}]
+2024-06-16 19:28:51,191 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:28:51,194 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[4, 1], [], [], [], [], [], [], [], [], []], "rewards": [null, 3, null, null, 0, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-16 19:28:51,194 [DEBUG]  GraphTrial.log 259.927 begin space 
+2024-06-16 19:28:51,440 [DEBUG]  GraphTrial.log 260.172 initialize status = ok
+2024-06-16 19:28:51,440 [DEBUG]  GraphTrial.log 260.172 show graph 
+2024-06-16 19:28:51,447 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:51,447 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:51,455 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:51,455 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:51,464 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:51,464 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:51,472 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:51,472 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:51,490 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:51,490 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:51,497 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:51,498 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:51,505 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:51,505 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:51,513 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:51,513 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:51,538 [DEBUG]  GraphTrial.log 260.271 visit state = 0
+2024-06-16 19:28:51,541 [DEBUG]  GraphTrial.log 260.274 start flip_time = 260.27377450000495
+2024-06-16 19:28:51,541 [DEBUG]  GraphTrial.log 260.274 start acting 
+2024-06-16 19:28:51,544 [DEBUG]  GraphTrial.log 260.277 get move selected = 4
+2024-06-16 19:28:52,009 [DEBUG]  GraphTrial.log 260.742 select selected = 4
+2024-06-16 19:28:52,009 [DEBUG]  GraphTrial.log 260.742 visit state = 4
+2024-06-16 19:28:55,859 [DEBUG]  GraphTrial.log 264.592 done 
+2024-06-16 19:28:55,859 [INFO]  end trial [{"time": 259.9267680000048, "event": "begin space"}, {"time": 260.1723379166797, "event": "initialize", "status": "ok"}, {"time": 260.17241095838835, "event": "show graph"}, {"time": 260.2706973333843, "event": "visit", "state": 0}, {"time": 260.2738158333814, "event": "start", "flip_time": 260.27377450000495}, {"time": 260.27391004166566, "event": "start acting"}, {"time": 260.2767947500106, "event": "get move", "selected": 4}, {"time": 260.7420569167007, "event": "select", "selected": 4}, {"time": 260.74209399998654, "event": "visit", "state": 4}, {"time": 264.59200937498827, "event": "done"}]
+2024-06-16 19:28:55,859 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:28:55,874 [DEBUG]  message: Good job! You passed 5 out of 10.  (None)
+2024-06-16 19:28:55,884 [DEBUG]  message: You only get 5 out of 10 trials correct.Let's try again. Press any key to start attempt. (None)
+2024-06-16 19:28:56,180 [ERROR]  Practice index exceeds available trials.
+2024-06-16 19:28:56,180 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [], [], [9, 0], [], [], []], "rewards": [2, null, null, null, null, null, null, null, null, 4], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 6}
+2024-06-16 19:28:56,180 [DEBUG]  GraphTrial.log 264.913 begin space 
+2024-06-16 19:28:57,019 [DEBUG]  GraphTrial.log 265.752 initialize status = ok
+2024-06-16 19:28:57,019 [DEBUG]  GraphTrial.log 265.752 show graph 
+2024-06-16 19:28:57,023 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:57,023 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:57,032 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:57,032 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:57,040 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:57,040 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:57,048 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:57,048 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:57,083 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:57,083 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:57,092 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:57,092 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:57,100 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:57,100 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:57,109 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:28:57,109 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:28:57,120 [DEBUG]  GraphTrial.log 265.853 visit state = 6
+2024-06-16 19:28:57,123 [DEBUG]  GraphTrial.log 265.856 start flip_time = 265.85604199999943
+2024-06-16 19:28:57,124 [DEBUG]  GraphTrial.log 265.856 start acting 
+2024-06-16 19:28:57,127 [DEBUG]  GraphTrial.log 265.860 get move selected = 0
+2024-06-16 19:28:57,319 [DEBUG]  GraphTrial.log 266.052 select selected = 0
+2024-06-16 19:28:57,319 [DEBUG]  GraphTrial.log 266.052 visit state = 0
+2024-06-16 19:29:01,142 [DEBUG]  GraphTrial.log 269.875 done 
+2024-06-16 19:29:01,143 [INFO]  end trial [{"time": 264.9126669166726, "event": "begin space"}, {"time": 265.7520483334083, "event": "initialize", "status": "ok"}, {"time": 265.75212141667726, "event": "show graph"}, {"time": 265.8525736249867, "event": "visit", "state": 6}, {"time": 265.85630716668675, "event": "start", "flip_time": 265.85604199999943}, {"time": 265.8564032500144, "event": "start acting"}, {"time": 265.8600073333946, "event": "get move", "selected": 0}, {"time": 266.0521098333993, "event": "select", "selected": 0}, {"time": 266.05214799998794, "event": "visit", "state": 0}, {"time": 269.875227166689, "event": "done"}]
+2024-06-16 19:29:01,143 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:29:01,157 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [5, 0], [], [], [], [], [], [], []], "rewards": [-4, null, null, null, null, 1, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 2}
+2024-06-16 19:29:01,158 [DEBUG]  GraphTrial.log 269.890 begin space 
+2024-06-16 19:29:01,520 [DEBUG]  GraphTrial.log 270.253 initialize status = ok
+2024-06-16 19:29:01,520 [DEBUG]  GraphTrial.log 270.253 show graph 
+2024-06-16 19:29:01,524 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:01,524 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:01,532 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:01,532 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:01,540 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:01,540 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:01,548 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:01,548 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:01,571 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:01,571 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:01,579 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:01,579 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:01,586 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:01,587 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:01,594 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:01,594 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:01,616 [DEBUG]  GraphTrial.log 270.349 visit state = 2
+2024-06-16 19:29:01,619 [DEBUG]  GraphTrial.log 270.352 start flip_time = 270.3519194999826
+2024-06-16 19:29:01,619 [DEBUG]  GraphTrial.log 270.352 start acting 
+2024-06-16 19:29:01,622 [DEBUG]  GraphTrial.log 270.355 get move selected = 5
+2024-06-16 19:29:01,910 [DEBUG]  GraphTrial.log 270.642 select selected = 5
+2024-06-16 19:29:01,910 [DEBUG]  GraphTrial.log 270.642 visit state = 5
+2024-06-16 19:29:05,759 [DEBUG]  GraphTrial.log 274.492 done 
+2024-06-16 19:29:05,759 [INFO]  end trial [{"time": 269.89045154169435, "event": "begin space"}, {"time": 270.2527589999954, "event": "initialize", "status": "ok"}, {"time": 270.2528387084021, "event": "show graph"}, {"time": 270.348868958361, "event": "visit", "state": 2}, {"time": 270.35196191672003, "event": "start", "flip_time": 270.3519194999826}, {"time": 270.3520656666951, "event": "start acting"}, {"time": 270.354772333405, "event": "get move", "selected": 5}, {"time": 270.6424417499802, "event": "select", "selected": 5}, {"time": 270.64248154166853, "event": "visit", "state": 5}, {"time": 274.4915130417212, "event": "done"}]
+2024-06-16 19:29:05,759 [DEBUG]  message: Great job! You've successfully passed 1 out of 10 trials. (None)
+2024-06-16 19:29:05,774 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[2, 9], [], [], [], [], [], [], [], [], []], "rewards": [null, null, 0, null, null, null, null, null, null, -3], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-16 19:29:05,774 [DEBUG]  GraphTrial.log 274.507 begin space 
+2024-06-16 19:29:08,120 [DEBUG]  GraphTrial.log 276.853 initialize status = ok
+2024-06-16 19:29:08,120 [DEBUG]  GraphTrial.log 276.853 show graph 
+2024-06-16 19:29:08,130 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:08,130 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:08,139 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:08,139 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:08,146 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:08,146 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:08,154 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:08,154 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:08,183 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:08,183 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:08,191 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:08,191 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:08,198 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:08,198 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:08,206 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:08,206 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:08,217 [DEBUG]  GraphTrial.log 276.950 visit state = 0
+2024-06-16 19:29:08,221 [DEBUG]  GraphTrial.log 276.954 start flip_time = 276.9536364583764
+2024-06-16 19:29:08,221 [DEBUG]  GraphTrial.log 276.954 start acting 
+2024-06-16 19:29:08,224 [DEBUG]  GraphTrial.log 276.957 get move selected = 9
+2024-06-16 19:29:09,980 [DEBUG]  GraphTrial.log 278.713 select selected = 9
+2024-06-16 19:29:09,980 [DEBUG]  GraphTrial.log 278.713 visit state = 9
+2024-06-16 19:29:13,792 [DEBUG]  GraphTrial.log 282.525 done 
+2024-06-16 19:29:13,793 [INFO]  end trial [{"time": 274.50710583338514, "event": "begin space"}, {"time": 276.85318358335644, "event": "initialize", "status": "ok"}, {"time": 276.85325783339795, "event": "show graph"}, {"time": 276.9495123749948, "event": "visit", "state": 0}, {"time": 276.95387537498027, "event": "start", "flip_time": 276.9536364583764}, {"time": 276.9539715417195, "event": "start acting"}, {"time": 276.95683970837854, "event": "get move", "selected": 9}, {"time": 278.7131335416925, "event": "select", "selected": 9}, {"time": 278.71320050000213, "event": "visit", "state": 9}, {"time": 282.5252398333978, "event": "done"}]
+2024-06-16 19:29:13,793 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:29:13,807 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [6, 2], [], [], [], [], []], "rewards": [null, null, 2, null, null, null, -1, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 4}
+2024-06-16 19:29:13,808 [DEBUG]  GraphTrial.log 282.540 begin space 
+2024-06-16 19:29:14,721 [DEBUG]  GraphTrial.log 283.453 initialize status = ok
+2024-06-16 19:29:14,721 [DEBUG]  GraphTrial.log 283.453 show graph 
+2024-06-16 19:29:14,730 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:14,731 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:14,739 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:14,739 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:14,747 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:14,747 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:14,755 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:14,755 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:14,775 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:14,775 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:14,783 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:14,783 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:14,790 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:14,790 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:14,798 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:14,798 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:14,817 [DEBUG]  GraphTrial.log 283.550 visit state = 4
+2024-06-16 19:29:14,820 [DEBUG]  GraphTrial.log 283.553 start flip_time = 283.5527648749994
+2024-06-16 19:29:14,820 [DEBUG]  GraphTrial.log 283.553 start acting 
+2024-06-16 19:29:14,823 [DEBUG]  GraphTrial.log 283.555 get move selected = 6
+2024-06-16 19:29:15,022 [DEBUG]  GraphTrial.log 283.755 select selected = 6
+2024-06-16 19:29:15,022 [DEBUG]  GraphTrial.log 283.755 visit state = 6
+2024-06-16 19:29:18,876 [DEBUG]  GraphTrial.log 287.609 done 
+2024-06-16 19:29:18,876 [INFO]  end trial [{"time": 282.54029258340597, "event": "begin space"}, {"time": 283.4533361250069, "event": "initialize", "status": "ok"}, {"time": 283.45340875000693, "event": "show graph"}, {"time": 283.54969991667895, "event": "visit", "state": 4}, {"time": 283.5528039583587, "event": "start", "flip_time": 283.5527648749994}, {"time": 283.55291349999607, "event": "start acting"}, {"time": 283.5554380833637, "event": "get move", "selected": 6}, {"time": 283.75488362502074, "event": "select", "selected": 6}, {"time": 283.75492866669083, "event": "visit", "state": 6}, {"time": 287.6089463334065, "event": "done"}]
+2024-06-16 19:29:18,876 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:29:18,891 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [9, 8], [], [], [], [], [], []], "rewards": [null, null, null, null, null, null, null, null, -4, 1], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 3}
+2024-06-16 19:29:18,891 [DEBUG]  GraphTrial.log 287.624 begin space 
+2024-06-16 19:29:19,461 [DEBUG]  GraphTrial.log 288.193 initialize status = ok
+2024-06-16 19:29:19,461 [DEBUG]  GraphTrial.log 288.193 show graph 
+2024-06-16 19:29:19,488 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:19,488 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:19,496 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:19,496 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:19,504 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:19,504 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:19,512 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:19,512 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:19,523 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:19,523 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:19,531 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:19,531 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:19,539 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:19,539 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:19,546 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:19,546 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:19,556 [DEBUG]  GraphTrial.log 288.289 visit state = 3
+2024-06-16 19:29:19,560 [DEBUG]  GraphTrial.log 288.292 start flip_time = 288.2922836666694
+2024-06-16 19:29:19,560 [DEBUG]  GraphTrial.log 288.292 start acting 
+2024-06-16 19:29:19,562 [DEBUG]  GraphTrial.log 288.295 get move selected = 8
+2024-06-16 19:29:19,760 [DEBUG]  GraphTrial.log 288.493 select selected = 8
+2024-06-16 19:29:19,760 [DEBUG]  GraphTrial.log 288.493 visit state = 8
+2024-06-16 19:29:23,610 [DEBUG]  GraphTrial.log 292.342 done 
+2024-06-16 19:29:23,610 [INFO]  end trial [{"time": 287.623730375024, "event": "begin space"}, {"time": 288.19341800000984, "event": "initialize", "status": "ok"}, {"time": 288.19349304167554, "event": "show graph"}, {"time": 288.28924683335936, "event": "visit", "state": 3}, {"time": 288.29232595837675, "event": "start", "flip_time": 288.2922836666694}, {"time": 288.2924194167135, "event": "start acting"}, {"time": 288.29493441671366, "event": "get move", "selected": 8}, {"time": 288.4930925000226, "event": "select", "selected": 8}, {"time": 288.4931325833895, "event": "visit", "state": 8}, {"time": 292.3424742500065, "event": "done"}]
+2024-06-16 19:29:23,610 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:29:23,624 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [], [], [], [2, 5], [], []], "rewards": [null, null, 3, null, null, -1, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 7}
+2024-06-16 19:29:23,624 [DEBUG]  GraphTrial.log 292.357 begin space 
+2024-06-16 19:29:24,261 [DEBUG]  GraphTrial.log 292.994 initialize status = ok
+2024-06-16 19:29:24,261 [DEBUG]  GraphTrial.log 292.994 show graph 
+2024-06-16 19:29:24,271 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:24,271 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:24,280 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:24,280 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:24,288 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:24,288 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:24,296 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:24,296 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:24,314 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:24,314 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:24,322 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:24,322 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:24,330 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:24,330 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:24,337 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:24,337 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:24,359 [DEBUG]  GraphTrial.log 293.092 visit state = 7
+2024-06-16 19:29:24,362 [DEBUG]  GraphTrial.log 293.095 start flip_time = 293.0951285000192
+2024-06-16 19:29:24,363 [DEBUG]  GraphTrial.log 293.095 start acting 
+2024-06-16 19:29:24,365 [DEBUG]  GraphTrial.log 293.098 get move selected = 5
+2024-06-16 19:29:25,041 [DEBUG]  GraphTrial.log 293.774 select selected = 5
+2024-06-16 19:29:25,041 [DEBUG]  GraphTrial.log 293.774 visit state = 5
+2024-06-16 19:29:28,891 [DEBUG]  GraphTrial.log 297.623 done 
+2024-06-16 19:29:28,891 [INFO]  end trial [{"time": 292.3569681249792, "event": "begin space"}, {"time": 292.99368954170495, "event": "initialize", "status": "ok"}, {"time": 292.9937651666696, "event": "show graph"}, {"time": 293.0920988333528, "event": "visit", "state": 7}, {"time": 293.09517204167787, "event": "start", "flip_time": 293.0951285000192}, {"time": 293.0952897500247, "event": "start acting"}, {"time": 293.09801320836414, "event": "get move", "selected": 5}, {"time": 293.77353487501387, "event": "select", "selected": 5}, {"time": 293.7735777084017, "event": "visit", "state": 5}, {"time": 297.62349795835325, "event": "done"}]
+2024-06-16 19:29:28,891 [DEBUG]  message: Incorrect, let's try anothe trial! (None)
+2024-06-16 19:29:28,894 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [], [], [], [5, 2], [], []], "rewards": [null, null, 4, null, null, -4, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 7}
+2024-06-16 19:29:28,894 [DEBUG]  GraphTrial.log 297.627 begin space 
+2024-06-16 19:29:29,511 [DEBUG]  GraphTrial.log 298.244 initialize status = ok
+2024-06-16 19:29:29,511 [DEBUG]  GraphTrial.log 298.244 show graph 
+2024-06-16 19:29:29,521 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:29,521 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:29,530 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:29,530 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:29,538 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:29,538 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:29,547 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:29,547 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:29,565 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:29,565 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:29,573 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:29,573 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:29,580 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:29,580 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:29,588 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:29,588 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:29,610 [DEBUG]  GraphTrial.log 298.343 visit state = 7
+2024-06-16 19:29:29,613 [DEBUG]  GraphTrial.log 298.346 start flip_time = 298.3462091250112
+2024-06-16 19:29:29,614 [DEBUG]  GraphTrial.log 298.346 start acting 
+2024-06-16 19:29:29,616 [DEBUG]  GraphTrial.log 298.349 get move selected = 2
+2024-06-16 19:29:29,811 [DEBUG]  GraphTrial.log 298.544 select selected = 2
+2024-06-16 19:29:29,811 [DEBUG]  GraphTrial.log 298.544 visit state = 2
+2024-06-16 19:29:33,659 [DEBUG]  GraphTrial.log 302.392 done 
+2024-06-16 19:29:33,659 [INFO]  end trial [{"time": 297.62652995839017, "event": "begin space"}, {"time": 298.24383783340454, "event": "initialize", "status": "ok"}, {"time": 298.2439150833525, "event": "show graph"}, {"time": 298.3431599166943, "event": "visit", "state": 7}, {"time": 298.346248041722, "event": "start", "flip_time": 298.3462091250112}, {"time": 298.34635141666513, "event": "start acting"}, {"time": 298.34890554170124, "event": "get move", "selected": 2}, {"time": 298.5435799167026, "event": "select", "selected": 2}, {"time": 298.5436217917013, "event": "visit", "state": 2}, {"time": 302.3920531666954, "event": "done"}]
+2024-06-16 19:29:33,659 [DEBUG]  message: Great job! You've successfully passed 2 out of 10 trials. (None)
+2024-06-16 19:29:33,674 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [], [], [], [], [1, 3], [], [], []], "rewards": [null, 0, null, 3, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 6}
+2024-06-16 19:29:33,674 [DEBUG]  GraphTrial.log 302.407 begin space 
+2024-06-16 19:29:34,311 [DEBUG]  GraphTrial.log 303.044 initialize status = ok
+2024-06-16 19:29:34,311 [DEBUG]  GraphTrial.log 303.044 show graph 
+2024-06-16 19:29:34,318 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:34,318 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:34,326 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:34,326 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:34,334 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:34,334 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:34,342 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:34,342 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:34,356 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:34,356 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:34,364 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:34,364 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:34,373 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:34,373 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:34,381 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:34,381 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:34,409 [DEBUG]  GraphTrial.log 303.142 visit state = 6
+2024-06-16 19:29:34,413 [DEBUG]  GraphTrial.log 303.145 start flip_time = 303.1452761666733
+2024-06-16 19:29:34,413 [DEBUG]  GraphTrial.log 303.145 start acting 
+2024-06-16 19:29:34,415 [DEBUG]  GraphTrial.log 303.148 get move selected = 3
+2024-06-16 19:29:34,611 [DEBUG]  GraphTrial.log 303.344 select selected = 3
+2024-06-16 19:29:34,611 [DEBUG]  GraphTrial.log 303.344 visit state = 3
+2024-06-16 19:29:38,459 [DEBUG]  GraphTrial.log 307.192 done 
+2024-06-16 19:29:38,459 [INFO]  end trial [{"time": 302.4071512083756, "event": "begin space"}, {"time": 303.0440804584068, "event": "initialize", "status": "ok"}, {"time": 303.04415804171003, "event": "show graph"}, {"time": 303.1421191666741, "event": "visit", "state": 6}, {"time": 303.14530779171037, "event": "start", "flip_time": 303.1452761666733}, {"time": 303.14541416667635, "event": "start acting"}, {"time": 303.1479348333669, "event": "get move", "selected": 3}, {"time": 303.34373904170934, "event": "select", "selected": 3}, {"time": 303.34377987502376, "event": "visit", "state": 3}, {"time": 307.19195716670947, "event": "done"}]
+2024-06-16 19:29:38,459 [DEBUG]  message: Great job! You've successfully passed 3 out of 10 trials. (None)
+2024-06-16 19:29:38,474 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [], [0, 1], [], [], [], [], [], [], []], "rewards": [-4, -1, null, null, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 2}
+2024-06-16 19:29:38,474 [DEBUG]  GraphTrial.log 307.207 begin space 
+2024-06-16 19:29:38,962 [DEBUG]  GraphTrial.log 307.694 initialize status = ok
+2024-06-16 19:29:38,962 [DEBUG]  GraphTrial.log 307.694 show graph 
+2024-06-16 19:29:38,965 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:38,966 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:38,974 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:38,974 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:38,982 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:38,982 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:38,989 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:38,989 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:39,001 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:39,001 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:39,008 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:39,008 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:39,016 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:39,016 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:39,024 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:39,024 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:39,057 [DEBUG]  GraphTrial.log 307.790 visit state = 2
+2024-06-16 19:29:39,060 [DEBUG]  GraphTrial.log 307.793 start flip_time = 307.7929092500126
+2024-06-16 19:29:39,060 [DEBUG]  GraphTrial.log 307.793 start acting 
+2024-06-16 19:29:39,063 [DEBUG]  GraphTrial.log 307.796 get move selected = 1
+2024-06-16 19:29:39,231 [DEBUG]  GraphTrial.log 307.964 select selected = 1
+2024-06-16 19:29:39,231 [DEBUG]  GraphTrial.log 307.964 visit state = 1
+2024-06-16 19:29:43,093 [DEBUG]  GraphTrial.log 311.825 done 
+2024-06-16 19:29:43,093 [INFO]  end trial [{"time": 307.20696441672044, "event": "begin space"}, {"time": 307.6943037083838, "event": "initialize", "status": "ok"}, {"time": 307.6943802500027, "event": "show graph"}, {"time": 307.7898878750275, "event": "visit", "state": 2}, {"time": 307.7929449583753, "event": "start", "flip_time": 307.7929092500126}, {"time": 307.7930463333614, "event": "start acting"}, {"time": 307.79558820836246, "event": "get move", "selected": 1}, {"time": 307.9640010833973, "event": "select", "selected": 1}, {"time": 307.9640422083903, "event": "visit", "state": 1}, {"time": 311.8252554166829, "event": "done"}]
+2024-06-16 19:29:43,093 [DEBUG]  message: Great job! You've successfully passed 4 out of 10 trials. (None)
+2024-06-16 19:29:43,108 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[4, 1], [], [], [], [], [], [], [], [], []], "rewards": [null, 3, null, null, 0, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-16 19:29:43,108 [DEBUG]  GraphTrial.log 311.841 begin space 
+2024-06-16 19:29:43,612 [DEBUG]  GraphTrial.log 312.345 initialize status = ok
+2024-06-16 19:29:43,612 [DEBUG]  GraphTrial.log 312.345 show graph 
+2024-06-16 19:29:43,619 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:43,619 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:43,627 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:43,627 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:43,636 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:43,636 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:43,644 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:43,644 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:43,662 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:43,662 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:43,669 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:43,669 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:43,677 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:43,677 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:43,685 [DEBUG]  STREAM b'IHDR' 16 13
+2024-06-16 19:29:43,685 [DEBUG]  STREAM b'IDAT' 41 65536
+2024-06-16 19:29:43,710 [DEBUG]  GraphTrial.log 312.442 visit state = 0
+2024-06-16 19:29:43,713 [DEBUG]  GraphTrial.log 312.446 start flip_time = 312.4455285833683
+2024-06-16 19:29:43,713 [DEBUG]  GraphTrial.log 312.446 start acting 
+2024-06-16 19:29:43,715 [DEBUG]  GraphTrial.log 312.448 get move selected = 1
+2024-06-16 19:29:43,822 [DEBUG]  GraphTrial.log 312.554 select selected = 1
+2024-06-16 19:29:43,822 [DEBUG]  GraphTrial.log 312.554 visit state = 1
+2024-06-16 19:29:47,657 [DEBUG]  GraphTrial.log 316.390 done 
+2024-06-16 19:29:47,657 [INFO]  end trial [{"time": 311.8407645000261, "event": "begin space"}, {"time": 312.3445517499931, "event": "initialize", "status": "ok"}, {"time": 312.34462641668506, "event": "show graph"}, {"time": 312.4423640416935, "event": "visit", "state": 0}, {"time": 312.4455735000083, "event": "start", "flip_time": 312.4455285833683}, {"time": 312.44569066667464, "event": "start acting"}, {"time": 312.44823287503095, "event": "get move", "selected": 1}, {"time": 312.5543028333923, "event": "select", "selected": 1}, {"time": 312.5543437083834, "event": "visit", "state": 1}, {"time": 316.3899839167134, "event": "done"}]
+2024-06-16 19:29:47,657 [DEBUG]  message: Great job! You've successfully passed 5 out of 10 trials. (None)
+2024-06-16 19:29:47,660 [DEBUG]  message: Good job! You passed 5 out of 10.  (None)
+2024-06-16 19:29:47,674 [DEBUG]  message: Unfortunately, you didn't pass enough trials successfully after all attempts. Please check in with the experimenter (Wait for the experimenter (space))
+2024-06-16 19:29:50,966 [INFO]  begin practice
+2024-06-16 19:29:50,966 [DEBUG]  message: Let's try a few harder practice rounds. (complete 2 practice rounds to continue)
+2024-06-16 19:29:50,972 [ERROR]  Practice index exceeds available trials.
+2024-06-16 19:29:50,972 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[1, 3], [2, 4], [3, 5], [4, 6], [5, 7], [6, 8], [7, 9], [8, 0], [9, 1], [0, 2]], "rewards": [null, null, null, null, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-16 19:29:50,972 [DEBUG]  GraphTrial.log 319.705 begin space 
+2024-06-16 19:29:52,642 [DEBUG]  GraphTrial.log 321.375 initialize status = ok
+2024-06-16 19:29:52,642 [DEBUG]  GraphTrial.log 321.375 show graph 
+2024-06-16 19:29:52,691 [DEBUG]  GraphTrial.log 321.424 visit state = 0
+2024-06-16 19:29:52,697 [DEBUG]  GraphTrial.log 321.430 start flip_time = 321.4301085000043
+2024-06-16 19:29:52,698 [DEBUG]  GraphTrial.log 321.430 start acting 
+2024-06-16 19:29:52,708 [DEBUG]  GraphTrial.log 321.440 get move selected = 3

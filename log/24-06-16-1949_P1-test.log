@@ -1,0 +1,63 @@
+2024-06-16 19:49:28,549 [INFO]  starting up 24-06-16-1949_P1-test at 2.1235005416092463
+2024-06-16 19:49:28,570 [INFO]  git SHA: 6f600602567f36d6fed1ee549fc9878f3980d90a
+2024-06-16 19:49:28,570 [INFO]  Configuration file: config/m2/1.json
+2024-06-16 19:49:28,571 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.2938926261462365, 0.4045084971874737], [-0.47552825814757677, 0.15450849718747373], [-0.4755282581475768, -0.15450849718747361], [-0.2938926261462366, -0.40450849718747367], [-1.1102230246251565e-16, -0.5], [0.29389262614623646, -0.4045084971874738], [0.4755282581475768, -0.15450849718747384], [0.4755282581475768, 0.15450849718747361], [0.2938926261462367, 0.4045084971874736]]}
+2024-06-16 19:49:29,755 [INFO]  begin setup_eyetracker
+2024-06-16 19:49:29,756 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-16 19:49:30,254 [INFO]  New EyeLink object
+2024-06-16 19:49:30,254 [INFO]  Initializing new tracker
+2024-06-16 19:49:34,216 [DEBUG]  EyeLink.message Set up calibration
+2024-06-16 19:49:34,375 [INFO]  Tracker initialized
+2024-06-16 19:49:34,375 [DEBUG]  EyeLink.message Set up calibration
+2024-06-16 19:49:34,420 [INFO]  doTrackerSetup
+2024-06-16 19:49:44,612 [INFO]  done doTrackerSetup
+2024-06-16 19:49:44,657 [INFO]  begin show_gaze_demo
+2024-06-16 19:49:44,657 [DEBUG]  message: Check it out! This is where the eyetracker thinks you're looking. (press space to continue)
+2024-06-16 19:49:44,679 [INFO]  start_recording
+2024-06-16 19:49:47,074 [INFO]  begin intro_gaze
+2024-06-16 19:49:47,074 [DEBUG]  message: At the beginning of each round, a circle will appear. Look straight at it and press space to start the round. (look at the circle and press space)
+2024-06-16 19:49:47,257 [DEBUG]  message: Yup just like that. Make sure you hold your gaze steady on the circle before pressing space. (None)
+2024-06-16 19:49:47,422 [INFO]  begin intro_contingent
+2024-06-16 19:49:47,422 [DEBUG]  message: There's just one more thing... (None)
+2024-06-16 19:49:47,855 [DEBUG]  message: For the rest of the experiment, the points will only be visible when you're looking at them. (None)
+2024-06-16 19:49:50,376 [DEBUG]  message: Try it out! (select a path to continue
+press X if it's not working)
+2024-06-16 19:49:50,382 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[1, 3], [2, 4], [3, 5], [4, 6], [5, 7], [6, 8], [7, 9], [8, 0], [9, 1], [0, 2]], "rewards": [null, null, null, null, null, null, null, null, null, null], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "start": 0}
+2024-06-16 19:49:50,383 [DEBUG]  GraphTrial.log 23.957 initialize status = ok
+2024-06-16 19:49:50,383 [DEBUG]  GraphTrial.log 23.957 start recording 
+2024-06-16 19:49:50,383 [DEBUG]  GraphTrial.log 23.957 show graph 
+2024-06-16 19:49:50,405 [DEBUG]  GraphTrial.log 23.979 visit state = 0
+2024-06-16 19:49:50,416 [DEBUG]  GraphTrial.log 23.990 start flip_time = 23.990419833280612
+2024-06-16 19:49:50,416 [DEBUG]  GraphTrial.log 23.991 start acting 
+2024-06-16 19:49:50,424 [DEBUG]  GraphTrial.log 23.998 get move selected = 1
+2024-06-16 19:49:58,896 [DEBUG]  GraphTrial.log 32.470 switch selected = 3
+2024-06-16 19:49:59,466 [DEBUG]  GraphTrial.log 33.040 select selected = 3
+2024-06-16 19:49:59,466 [DEBUG]  GraphTrial.log 33.040 visit state = 3
+2024-06-16 19:49:59,478 [DEBUG]  GraphTrial.log 33.052 get move selected = 4
+2024-06-16 19:49:59,886 [DEBUG]  GraphTrial.log 33.460 select selected = 4
+2024-06-16 19:49:59,886 [DEBUG]  GraphTrial.log 33.460 visit state = 4
+2024-06-16 19:49:59,895 [DEBUG]  GraphTrial.log 33.469 get move selected = 5
+2024-06-16 19:50:00,096 [DEBUG]  GraphTrial.log 33.670 select selected = 5
+2024-06-16 19:50:00,096 [DEBUG]  GraphTrial.log 33.670 visit state = 5
+2024-06-16 19:50:00,105 [DEBUG]  GraphTrial.log 33.679 get move selected = 8
+2024-06-16 19:50:00,245 [DEBUG]  GraphTrial.log 33.820 select selected = 8
+2024-06-16 19:50:00,246 [DEBUG]  GraphTrial.log 33.820 visit state = 8
+2024-06-16 19:50:00,254 [DEBUG]  GraphTrial.log 33.829 get move selected = 1
+2024-06-16 19:50:00,410 [DEBUG]  GraphTrial.log 33.985 select selected = 1
+2024-06-16 19:50:00,411 [DEBUG]  GraphTrial.log 33.985 visit state = 1
+2024-06-16 19:50:00,419 [DEBUG]  GraphTrial.log 33.994 get move selected = 4
+2024-06-16 19:50:00,590 [DEBUG]  GraphTrial.log 34.165 select selected = 4
+2024-06-16 19:50:00,591 [DEBUG]  GraphTrial.log 34.165 visit state = 4
+2024-06-16 19:50:00,600 [DEBUG]  GraphTrial.log 34.174 get move selected = 5
+2024-06-16 19:50:00,740 [DEBUG]  GraphTrial.log 34.315 select selected = 5
+2024-06-16 19:50:00,741 [DEBUG]  GraphTrial.log 34.315 visit state = 5
+2024-06-16 19:50:00,749 [DEBUG]  GraphTrial.log 34.324 get move selected = 8
+2024-06-16 19:50:00,906 [DEBUG]  GraphTrial.log 34.480 select selected = 8
+2024-06-16 19:50:00,906 [DEBUG]  GraphTrial.log 34.480 visit state = 8
+2024-06-16 19:50:00,924 [DEBUG]  GraphTrial.log 34.498 get move selected = 1
+2024-06-16 19:50:01,071 [DEBUG]  GraphTrial.log 34.645 select selected = 1
+2024-06-16 19:50:01,071 [DEBUG]  GraphTrial.log 34.645 visit state = 1
+2024-06-16 19:50:01,080 [DEBUG]  GraphTrial.log 34.654 get move selected = 4
+2024-06-16 19:50:01,221 [DEBUG]  GraphTrial.log 34.795 select selected = 4
+2024-06-16 19:50:01,221 [DEBUG]  GraphTrial.log 34.795 visit state = 4
+2024-06-16 19:50:01,230 [DEBUG]  GraphTrial.log 34.804 get move selected = 5

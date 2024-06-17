@@ -11,7 +11,7 @@ def main(config_number=None, name=None, test=False, fast=False, full=False, mous
     if test:
         # exp.practice_start()
         exp.intro()
-        exp.intro_reward()
+        # exp.intro_reward()
         # exp.learn(8)
         # exp.practice(2)
         # exp.pratice_timelimit()
@@ -20,9 +20,9 @@ def main(config_number=None, name=None, test=False, fast=False, full=False, mous
         # exp.intro_gaze()
         # exp.calibrate_gaze_tolerance()
         # exp.intro_contingent()
-        # exp.intro_main()
+        exp.intro_main()
         exp.run_main()
-        # exp.save_data()
+        exp.save_data()
         return
     else:
         try:

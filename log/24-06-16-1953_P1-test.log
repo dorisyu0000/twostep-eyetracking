@@ -1,0 +1,31 @@
+2024-06-16 19:53:36,723 [INFO]  starting up 24-06-16-1953_P1-test at 1.6286642916384153
+2024-06-16 19:53:36,748 [INFO]  git SHA: 6f600602567f36d6fed1ee549fc9878f3980d90a
+2024-06-16 19:53:36,749 [INFO]  Configuration file: config/m2/1.json
+2024-06-16 19:53:36,751 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.2938926261462365, 0.4045084971874737], [-0.47552825814757677, 0.15450849718747373], [-0.4755282581475768, -0.15450849718747361], [-0.2938926261462366, -0.40450849718747367], [-1.1102230246251565e-16, -0.5], [0.29389262614623646, -0.4045084971874738], [0.4755282581475768, -0.15450849718747384], [0.4755282581475768, 0.15450849718747361], [0.2938926261462367, 0.4045084971874736]]}
+2024-06-16 19:53:37,925 [INFO]  begin setup_eyetracker
+2024-06-16 19:53:37,925 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-16 19:53:39,111 [INFO]  New EyeLink object
+2024-06-16 19:53:39,111 [INFO]  Initializing new tracker
+2024-06-16 19:53:39,656 [DEBUG]  EyeLink.message Set up calibration
+2024-06-16 19:53:39,794 [INFO]  Tracker initialized
+2024-06-16 19:53:39,795 [DEBUG]  EyeLink.message Set up calibration
+2024-06-16 19:53:39,811 [INFO]  doTrackerSetup
+2024-06-16 19:53:45,090 [INFO]  done doTrackerSetup
+2024-06-16 19:53:45,111 [INFO]  begin show_gaze_demo
+2024-06-16 19:53:45,111 [DEBUG]  message: Check it out! This is where the eyetracker thinks you're looking. (press space to continue)
+2024-06-16 19:53:45,132 [INFO]  start_recording
+2024-06-16 19:53:48,210 [INFO]  begin intro_gaze
+2024-06-16 19:53:48,210 [DEBUG]  message: At the beginning of each round, a circle will appear. Look straight at it and press space to start the round. (look at the circle and press space)
+2024-06-16 19:53:48,358 [DEBUG]  message: Yup just like that. Make sure you hold your gaze steady on the circle before pressing space. (None)
+2024-06-16 19:53:48,524 [INFO]  begin intro_contingent
+2024-06-16 19:53:48,524 [DEBUG]  message: There's just one more thing... (None)
+2024-06-16 19:53:48,853 [DEBUG]  message: For the rest of the experiment, the points will only be visible when you're looking at them. (None)
+2024-06-16 19:53:49,018 [DEBUG]  message: Try it out! (select a path to continue
+press X if it's not working)
+2024-06-16 19:53:49,023 [ERROR]  Caught exception in stage intro_contingent
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 36, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 576, in intro_contingent
+    gt = self.trials['practice'][3](gaze_contingent=True, eyelink=self.eyelink, pos=(0,0), stop_on_x=True)
+TypeError: 'list' object is not callable

@@ -9,7 +9,7 @@ from psychopy.tools.filetools import fromFile, toFile
 import numpy as np
 
 from util import jsonify
-from trial import GraphTrial, CalibrationTrial, COLOR_ACT, COLOR_PLAN
+from trial import GraphTrial, CalibrationTrial, COLOR_ACT, COLOR_PLAN, reward_string
 from graphics import Graphics
 from bonus import Bonus
 from eyetracking import EyeLink, MouseLink
@@ -110,6 +110,7 @@ class Experiment(object):
 
         # self._practice_trials = iter(self.trials['practice'])
         self.practice_i = -1
+        self.learn_i = 0
         self.trial_data = []
         self.practice_data = []
 
@@ -153,14 +154,14 @@ class Experiment(object):
     
     def get_learn_reward_trial(self, repeat=False, **kws):
         if not repeat:
-            self.practice_i += 1  # Index to track which set of practice trials to use
+            self.learn_i += 1 
 
-        if self.practice_i >= len(self.trials['learn_rewards']):
+        if self.learn_i >= len(self.trials['learn_rewards']):
             logging.error("Practice index exceeds available trials.")
-            self.practice_i = 0  # Reset or handle as needed
+            self.learn_i = 0  # Reset or handle as needed
 
         # Accessing the specific trial set and then the individual trial within that set
-        trial_set = self.trials['learn_rewards'][self.practice_i]
+        trial_set = self.trials['learn_rewards'][self.learn_i]
         if not isinstance(trial_set, list) or not all(isinstance(trial, dict) for trial in trial_set):
             logging.error("Expected a list of dictionaries for trial_set.")
             return None 
@@ -290,73 +291,64 @@ class Experiment(object):
         # self.message("The round ends when you get to a location with no outgoing connections.",
         #              tip_text= f'press {LABEL_SELECT} and {LABEL_SWITCH} to continue ')
        
-    @stage
 
     @stage
     def intro_reward(self):
          # self.message('Welcome!', space=True)
-         gt = self.get_practice_trial(highlight_edges=False, hide_rewards_while_acting=False, initial_stage='acting')
-         gt.show()
+        gt = self.get_practice_trial(highlight_edges=False, hide_rewards_while_acting=False, initial_stage='acting')
+        gt.show()
 
-         gt.set_reward_display(False)
-         self.message("In this experiment, you will play a game on the board shown to the right.", space=True)
 
-         gt.set_state(gt.start)
-         self.message("Your current location on the board is highlighted in blue.", space=True)
+        self.message("In this game, you will see these diamonds.", space=True)
+        reward_texts = []  
+        for i, (node, reward) in enumerate(zip(gt.nodes, gt.rewards)):
+            if reward > 0:
+                node.setLineColor('#1BD30C')
+                reward_text = reward_string(reward)
+                txt = visual.TextStim(gt.win, text=reward_text,
+                                    pos=node.pos + np.array([.06, .06]),
+                                    bold=True, height=.04, color='#1BD30C')
+                txt.setAutoDraw(True)
+                reward_texts.append(txt) 
+            else: 
+                node.setLineColor('black')
 
-         gt.set_reward_display(True)
-         self.message("The goal of the game is to collect these diamonds.", space=True)
+            
+        self.message("Specifically, you want the ones that look lik those. These earn you points. ",
+                      space=True)
+        
+        for i, (node, reward) in enumerate(zip(gt.nodes, gt.rewards)):
+            if reward < 0:
+                node.setLineColor('#E3000A')
+                reward_text = reward_string(reward)
+                txt = visual.TextStim(gt.win, text=reward_text,
+                                    pos=node.pos + np.array([.06, .06]),
+                                    bold=True, height=.04, color='#E3000A')
+                txt.setAutoDraw(True)
+                reward_texts.append(txt) 
+            else: 
+                node.setLineColor('black')
 
-         for (n, r) in zip(gt.nodes, gt.rewards):
-             if r > 0:
-                 n.setLineColor('#1BD30C')
-         self.message("Specifically, you want the ones that look lik those. These earn you points.", space=True)
-
-         for (n, r) in zip(gt.nodes, gt.rewards):
-             if r < 0:
-                 n.setLineColor('#E3000A')
-             else:
-                 n.setLineColor('black')
-         self.message("The diamonds look like those are bad. They take away points!", space=True)
+        self.message("The diamonds look like those are bad. They take away points!", space=True)
          
-         for (n, r) in zip(gt.nodes, gt.rewards):
-             if r == 0:
-                 n.setLineColor('yellow')
-             else:
-                 n.setLineColor('black')
-         self.message("The diamonds that with four edges are natual. You won't gain or loss any point!", space=True)
+        for i, (node, reward) in enumerate(zip(gt.nodes, gt.rewards)):
+            if reward == 0:
+                node.setLineColor('yellow')
+                reward_text = reward_string(reward)
+                txt = visual.TextStim(gt.win, text=reward_text,
+                                    pos=node.pos + np.array([.06, .06]),
+                                    bold=True, height=.04, color='yellow')
+                txt.setAutoDraw(True)
+                reward_texts.append(txt) 
+            else: 
+                node.setLineColor('black')
+                
+        self.message("The diamonds that with four edges are natual. You won't gain or loss any point!", space=True)
+        self.message("Take you time to remeber how much each item wroth!", space=True )
+        
 
-         for (n, r) in zip(gt.nodes, gt.rewards):
-             n.setLineColor('black')
 
-         self.message( f"Press {LABEL_SWITCH} and {LABEL_SELECT} to move to each diamond to see its point value",
-                      tip_text='hover over every diamond to cotntinue', space=False)
-
-
-         seen = set()
-         n_reward = sum(l is not None for l in gt.reward_labels)
-         while len(seen) < n_reward:
-             pos = gt.mouse.getPos()
-             for (i, n) in enumerate(gt.nodes):
-                 if gt.reward_labels[i]:
-                     hovered = n.contains(pos)
-                     if hovered:
-                         seen.add(i)
-                     gt.reward_labels[i].autoDraw = not hovered
-                     gt.reward_text[i].autoDraw = hovered
-             self.win.flip()
-        #  sleep(0.5)
              
-        
-
-    
-    
-
-
-
-        
-
-    
     @stage
     def practice_start(self):
         gt = self.get_practice_trial()
@@ -416,29 +408,48 @@ class Experiment(object):
         gt.run()
         self.message("If you run out of time, we'll make random decisions for you. Probably something to avoid.", space=True)
 
-    def learn(self, n): 
-        intervened = False
-        for i in range(n):
-            self.message("Let's try a few round to see if you learn how to indentify the items or.",
-                         space=False, tip_text=f'Get {n - i} practice rounds correct to continue.')
-            gt = self.get_learn_reward_trial()
-            for i in range(3):
+    @stage
+    def learn(self, n):
+        total_trials = 10
+        max_attempts = 3
+        successes_needed = 8
+
+        self.message("Now, let's see if you can identify the items and their value."
+                     f"You have {max_attempts} attempts to get {successes_needed} trials correct out of {total_trials} before you can start the main tasks.", space=True)
+        
+        for attempt in range(max_attempts):
+            successes = 0
+            for trial_index in range(total_trials):
+                gt = self.get_learn_reward_trial() 
                 gt.run()
-                gt = self.get_learn_reward_trial(repeat=True)
-            else:  # never succeeded
-                logging.warning(f"failed practice trial {i}")
-                if not intervened:
-                    intervened = True
-                    self.message("Please check in with the experimenter",
+
+                if gt.score == gt.max_score:
+                    successes += 1
+                    self.message(f"You've successfully passed {successes} out of {total_trials} trials.")
+                else:
+                    self.message(f"Incorrect, let's try anothe trial!")
+
+                if successes >= successes_needed:
+                    self.message(f"Congratulations! You've achieved the required {successes_needed} correct trials.", space=True)
+                    return  # Exit the function as the required successes have been achieved
+
+            # After all trials in an attempt
+            if successes < successes_needed:
+                self.message(f"Good job! You passed {successes} out of {total_trials}. ", space=False)
+                if attempt < max_attempts - 1:
+                    self.message(f"You only get {successes} out of {total_trials} trials correct." 
+                                 "Let's try again. Press any key to try again.", space=True)
+                else:
+                    self.message("Unfortunately, you didn't pass enough trials successfully after all attempts. Please check in with the experimenter",
                         tip_text="Wait for the experimenter (space)", space=True)
-                    self.get_learn_reward_trial(repeat=True).run()
-        self.message("Great job!", space=True)
+
+
 
     @stage
     def practice(self, n):
         intervened = False
         for i in range(n):
-            self.message("Let's try a few more practice rounds.",
+            self.message("Let's try a few harder practice rounds.",
                          space=False, tip_text=f'complete {n - i} practice rounds to continue')
 
             gt = self.get_practice_trial()
@@ -503,7 +514,7 @@ class Experiment(object):
             space=True)
         self.hide_message()
 
-        t = deepcopy(self.trials['practice'][0])
+        t = deepcopy(self.trials['practice'][3])
         t['graph'] = [[] for edges in t['graph']]
 
         result = None

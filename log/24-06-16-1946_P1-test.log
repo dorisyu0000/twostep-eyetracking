@@ -1,0 +1,54 @@
+2024-06-16 19:46:05,270 [INFO]  starting up 24-06-16-1946_P1-test at 1.5472355415695347
+2024-06-16 19:46:05,288 [INFO]  git SHA: 6f600602567f36d6fed1ee549fc9878f3980d90a
+2024-06-16 19:46:05,289 [INFO]  Configuration file: config/m2/1.json
+2024-06-16 19:46:05,289 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.2938926261462365, 0.4045084971874737], [-0.47552825814757677, 0.15450849718747373], [-0.4755282581475768, -0.15450849718747361], [-0.2938926261462366, -0.40450849718747367], [-1.1102230246251565e-16, -0.5], [0.29389262614623646, -0.4045084971874738], [0.4755282581475768, -0.15450849718747384], [0.4755282581475768, 0.15450849718747361], [0.2938926261462367, 0.4045084971874736]]}
+2024-06-16 19:46:06,460 [INFO]  begin setup_eyetracker
+2024-06-16 19:46:06,460 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-16 19:46:06,903 [INFO]  New EyeLink object
+2024-06-16 19:46:06,903 [INFO]  Initializing new tracker
+2024-06-16 19:46:10,143 [DEBUG]  EyeLink.message Set up calibration
+2024-06-16 19:46:10,266 [INFO]  Tracker initialized
+2024-06-16 19:46:10,266 [DEBUG]  EyeLink.message Set up calibration
+2024-06-16 19:46:10,282 [INFO]  doTrackerSetup
+2024-06-16 19:46:32,502 [INFO]  starting up 24-06-16-1946_P1-test at 1.5269039166742004
+2024-06-16 19:46:32,521 [INFO]  git SHA: 6f600602567f36d6fed1ee549fc9878f3980d90a
+2024-06-16 19:46:32,521 [INFO]  Configuration file: config/m2/1.json
+2024-06-16 19:46:32,522 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.2938926261462365, 0.4045084971874737], [-0.47552825814757677, 0.15450849718747373], [-0.4755282581475768, -0.15450849718747361], [-0.2938926261462366, -0.40450849718747367], [-1.1102230246251565e-16, -0.5], [0.29389262614623646, -0.4045084971874738], [0.4755282581475768, -0.15450849718747384], [0.4755282581475768, 0.15450849718747361], [0.2938926261462367, 0.4045084971874736]]}
+2024-06-16 19:46:33,689 [INFO]  begin show_gaze_demo
+2024-06-16 19:46:33,689 [DEBUG]  message: Check it out! This is where the eyetracker thinks you're looking. (press space to continue)
+2024-06-16 19:46:33,707 [ERROR]  Caught exception in stage show_gaze_demo
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 36, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 502, in show_gaze_demo
+    self.eyelink.start_recording()
+AttributeError: 'NoneType' object has no attribute 'start_recording'
+2024-06-16 19:46:48,014 [INFO]  starting up 24-06-16-1946_P1-test at 1.5411930832779035
+2024-06-16 19:46:48,032 [INFO]  git SHA: 6f600602567f36d6fed1ee549fc9878f3980d90a
+2024-06-16 19:46:48,032 [INFO]  Configuration file: config/m2/1.json
+2024-06-16 19:46:48,033 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.2938926261462365, 0.4045084971874737], [-0.47552825814757677, 0.15450849718747373], [-0.4755282581475768, -0.15450849718747361], [-0.2938926261462366, -0.40450849718747367], [-1.1102230246251565e-16, -0.5], [0.29389262614623646, -0.4045084971874738], [0.4755282581475768, -0.15450849718747384], [0.4755282581475768, 0.15450849718747361], [0.2938926261462367, 0.4045084971874736]]}
+2024-06-16 19:46:49,204 [INFO]  begin setup_eyetracker
+2024-06-16 19:46:49,204 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-16 19:46:49,656 [INFO]  New EyeLink object
+2024-06-16 19:46:49,656 [INFO]  Initializing new tracker
+2024-06-16 19:46:49,952 [DEBUG]  EyeLink.message Set up calibration
+2024-06-16 19:46:50,099 [INFO]  Tracker initialized
+2024-06-16 19:46:50,099 [DEBUG]  EyeLink.message Set up calibration
+2024-06-16 19:46:50,116 [INFO]  doTrackerSetup
+2024-06-16 19:47:05,371 [INFO]  done doTrackerSetup
+2024-06-16 19:47:05,391 [INFO]  begin show_gaze_demo
+2024-06-16 19:47:05,391 [DEBUG]  message: Check it out! This is where the eyetracker thinks you're looking. (press space to continue)
+2024-06-16 19:47:05,406 [INFO]  start_recording
+2024-06-16 19:47:08,574 [INFO]  begin intro_gaze
+2024-06-16 19:47:08,574 [DEBUG]  message: At the beginning of each round, a circle will appear. Look straight at it and press space to start the round. (look at the circle and press space)
+2024-06-16 19:47:09,361 [DEBUG]  message: Yup just like that. Make sure you hold your gaze steady on the circle before pressing space. (None)
+2024-06-16 19:47:10,381 [INFO]  begin calibrate_gaze_tolerance
+2024-06-16 19:47:10,381 [DEBUG]  message: We're going to check how well the eyetracker is working. (None)
+2024-06-16 19:47:10,860 [DEBUG]  message: When the board comes up, just look at the O's as they appear. They should disappear. If it's not working, press X. (None)
+2024-06-16 19:47:11,281 [ERROR]  Caught exception in stage calibrate_gaze_tolerance
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 36, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 518, in calibrate_gaze_tolerance
+    t['graph'] = [[] for edges in t['graph']]
+TypeError: list indices must be integers or slices, not str

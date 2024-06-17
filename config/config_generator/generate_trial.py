@@ -210,7 +210,7 @@ def sample_problem_1(n, trialNumber=None, rewards = None, n_steps=-1, graph=None
     initial_rewards = [None] + selected_combination + random_rewards
     
     # Sample and shuffle the graph, keeping track of the permutation used
-    graph, perm, start = sample_graph(n, base=[[1, 2], [3, 4], [5], [], [], [], [7, 8], [8, 9], [], []])
+    graph, perm, start = sample_graph(n, base=[[1, 2], [3, 4], [5], [], [], [], [7, 8], [8, 9], [], [10],[]])
     
     # Apply the same permutation to shuffle the initial rewards
     shuffled_rewards = [None] * n
@@ -252,7 +252,7 @@ def sample_problem_2(n, trialNumber=None, n_steps=-1, graph=None, start=None, rd
     initial_rewards = [None] + selected_combination + random_rewards
     
     # Sample and shuffle the graph, keeping track of the permutation used
-    graph, perm, start = sample_graph(n, base = [[1, 2],[3, 4],[5,6],[],[],[],[],[8,9],[9],[]])
+    graph, perm, start = sample_graph(n, base = [[1, 2],[3, 4],[5,6],[],[],[],[],[8,9],[9,10],[],[]])
     
     # Apply the same permutation to shuffle the initial rewards
     shuffled_rewards = [None] * n
@@ -422,6 +422,7 @@ def learn_reward(n, graph=None, start=None):
 
     # Sample rewards from the given combinations
     rewards = random.choice(reward_combinations)
+    max_score = max(rewards)
 
     # Initialize all rewards to None
     all_rewards = [None] * n
@@ -431,7 +432,8 @@ def learn_reward(n, graph=None, start=None):
         all_rewards[graph[start][0]] = rewards[0]
         all_rewards[graph[start][1]] = rewards[1]
 
-    return {'graph': graph, 'rewards': all_rewards, 'start': start}
+
+    return {'graph': graph, 'rewards': all_rewards, 'start': start, 'max_score':max_score}
 
 
 # Example usage
@@ -476,7 +478,10 @@ import networkx as nx
 def intro_graph(n):
     g = []
     for i in range(n):
-        g.append([(i + 1)%n,(i + 3)%n])
+        if i > n-4:
+            g.append([])
+        else:
+            g.append([i + 1, i +3])
     return g
 
 def intro_problem(n, n_steps=-1, rdist=None, rewards=None, graph=None, start=None):
@@ -498,7 +503,7 @@ def intro_problem(n, n_steps=-1, rdist=None, rewards=None, graph=None, start=Non
     
 
 def make_trials():
-    n = 10
+    n = 11
     rewards = [1,2,3,4,-1,-2,-3,-4,0]
     rdist = IIDSampler(n, rewards) 
     kws = {'n': n, 'rdist': rdist}
@@ -616,7 +621,7 @@ for i, trials in enumerate(subj_trials, start=0):
         'images': IMAGES,  # Map permutation indices to image filenames
         'points_per_cent': 1,
         'revealed': True,
-        'layout': circle_layout(10)
+        'layout': circle_layout(11)
     }
     with open(f"{dest}/{i}.json", "w", encoding='utf-8') as file:
         json.dump({"parameters": parameters, "trials": trials}, file, ensure_ascii=False)
