@@ -365,7 +365,7 @@ class GraphTrial(object):
 
     def start_recording(self):
         self.log('start recording')
-        # self.eyelink.start_recording()
+        self.eyelink.start_recording()
         # TODO: draw reference
         # left = int(scn_width/2.0) - 60
         # top = int(scn_height/2.0) - 60

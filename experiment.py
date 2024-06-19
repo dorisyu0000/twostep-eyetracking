@@ -41,15 +41,19 @@ def stage(f):
                 logging.warning('Continuing to save data...')
             else:
                 self.win.clearAutoDraw()
-                self.win.showMessage('The experiment ran into a problem! Please tell the experimenter.\nThen press C to continue.')
+                self.win.showMessage('The experiment ran into a problem! Press C to continue or Q to quit and save data')
                 self.win.flip()
-                event.waitKeys(keyList=['c'])
+                keys = event.waitKeys(keyList=['c', 'q'])
                 self.win.showMessage(None)
-                logging.warning(f'Retrying {stage}')
-                f(self, *args, **kwargs)
+                if 'c' in keys:
+                    logging.warning(f'Retrying {stage}')
+                    wrapper(self, *args, **kwargs)
+                else:
+                    raise
         finally:
             self.win.clearAutoDraw()
             self.win.flip()
+
 
     return wrapper
 
@@ -70,7 +74,7 @@ def get_next_config_number():
 
 
 class Experiment(object):
-    def __init__(self, config_number, name=None, full_screen=False, score_limit=650, **kws):
+    def __init__(self, config_number, name=None, full_screen=False, score_limit=800, **kws):
         if config_number is None:
             config_number = get_next_config_number()
         self.config_number = config_number
@@ -730,7 +734,8 @@ class Experiment(object):
 
     @stage
     def save_data(self):
-        self.message("You're done! Let's just save your data...", tip_text="give us a few seconds", space=False)
+        self.message(f"You're done! {self.bonus.report_bonus('final')}",
+                     tip_text="give us a few seconds to save the data", space=False)
         psychopy.logging.flush()
 
         fp = f'{DATA_PATH}/{self.id}.json'
@@ -740,11 +745,16 @@ class Experiment(object):
 
         if self.eyelink:
             self.eyelink.save_data()
-        self.message("Data saved! Please let the experimenter that you've completed the study.", space=True,
-                    tip_text='press space to exit')
+
+        self.message(f"You're done! {self.bonus.report_bonus('final')}",
+                     tip_text="data saved! press Button 1 to exit", space=True)
+        print("\n\nFINAL BONUS: ", self.bonus.dollars())
 
     def emergency_save_data(self):
         logging.warning('emergency save data')
+        if self.eyelink:
+            self.eyelink.save_data()
+        logging.warning('eyelink data saved?')
         fp = f'{DATA_PATH}/{self.id}.txt'
         with open(fp, 'w') as f:
             f.write(str(self.all_data))

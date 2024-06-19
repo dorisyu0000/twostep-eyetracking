@@ -1,0 +1,27 @@
+2024-06-19 12:21:04,857 [INFO]  starting up 24-06-19-1221_P3-test at 2.710483708360698
+2024-06-19 12:21:04,878 [INFO]  git SHA: ab1e32a9da087c26fd6f0e279a9b26943260ff12
+2024-06-19 12:21:04,878 [INFO]  Configuration file: config/m2/3.json
+2024-06-19 12:21:04,880 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-06-19 12:21:06,031 [INFO]  Setting up window with size: (900, 500) and full_screen: False
+2024-06-19 12:21:06,031 [INFO]  Created window with size [1800 1000]
+2024-06-19 12:21:06,082 [INFO]  begin setup_eyetracker
+2024-06-19 12:21:06,082 [DEBUG]  message: Now we're going to calibrate the eyetracker. Please tell the experimenter. (Wait for the experimenter (space))
+2024-06-19 12:21:06,667 [INFO]  New EyeLink object
+2024-06-19 12:21:06,667 [INFO]  Initializing new tracker
+2024-06-19 12:21:07,258 [DEBUG]  EyeLink.message Set up calibration
+2024-06-19 12:21:07,491 [INFO]  Tracker initialized
+2024-06-19 12:21:07,491 [DEBUG]  EyeLink.message Set up calibration
+2024-06-19 12:21:07,507 [INFO]  doTrackerSetup
+2024-06-19 12:21:24,436 [INFO]  done doTrackerSetup
+2024-06-19 12:21:24,477 [INFO]  begin intro_main
+2024-06-19 12:21:24,477 [DEBUG]  message: Alright! We're ready to begin the main phase of the experiment. (None)
+2024-06-19 12:21:26,806 [DEBUG]  message: But first, you might be asking "What's in it for me?" ...Well, we thought of that! (None)
+2024-06-19 12:21:26,973 [DEBUG]  message: Unlike other experiments you might have done, we don't have a fixed number of rounds. (None)
+2024-06-19 12:21:27,118 [DEBUG]  message: Instead, you will do as as many rounds as it takes to earn 800 points. (None)
+2024-06-19 12:21:27,270 [DEBUG]  message: To finish the study as quickly as possible, you'll have to balance making fast choices and selecting the best possible path. (None)
+2024-06-19 12:21:27,734 [DEBUG]  message: Good luck! (None)
+2024-06-19 12:21:28,079 [INFO]  begin run_main
+2024-06-19 12:21:28,079 [INFO]  Trial 1 of 10
+2024-06-19 12:21:28,734 [INFO]  begin trial {"kind": "GraphTrial", "graph": [[], [0, 4], [9, 5], [], [8], [7], [1, 0], [], [], [10, 3], []], "rewards": [1, 0, null, 1, -2, 4, 0, 0, -2, 1, -3], "reward_info": {"-4": {"desc": "pattern_1", "image": "images[0]"}, "-3": {"desc": "pattern_2", "image": "images[1]"}, "-2": {"desc": "pattern_3", "image": "images[2]"}, "-1": {"desc": "pattern_4", "image": "images[3]"}, "0": {"desc": "pattern_5", "image": "images[4]"}, "1": {"desc": "pattern_6", "image": "images[5]"}, "2": {"desc": "pattern_7", "image": "images[6]"}, "3": {"desc": "pattern_8", "image": "images[7]"}, "4": {"desc": "pattern_9", "image": "images[8]"}}, "initial_stage": "planning", "hide_states": false, "hide_rewards_while_acting": false, "hide_edges_while_acting": false, "gaze_contingent": false, "gaze_tolerance": 1.5, "fixation_lag": 0.5, "start": 2}
+2024-06-19 12:21:28,734 [INFO]  <eyetracking.EyeLink object at 0x306581070>
+2024-06-19 12:21:28,734 [DEBUG]  GraphTrial.log 26.588 begin drift_check 

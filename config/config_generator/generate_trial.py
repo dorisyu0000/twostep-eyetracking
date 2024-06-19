@@ -594,8 +594,8 @@ def reward_contours(n=9):
     if len(png) < n:
         png.extend(["pattern_default"] * (n - len(png)))
 
-    # return dict(zip([4,3,2,1,0,-1,-2,-3,-4], png)) 
-    return dict(zip([-4,-3,-2,-1,0,1,2,3,4], png))
+    return dict(zip([4,3,2,1,0,-1,-2,-3,-4], png)) 
+    # return dict(zip([-4,-3,-2,-1,0,1,2,3,4], png))
 
 from random import sample
 
@@ -624,7 +624,7 @@ dest = "config/m2"
 os.makedirs(dest, exist_ok=True)
 
 # Save trials as JSON
-for i, trials in enumerate(subj_trials, start=0):
+for i, trials in enumerate(subj_trials, start=3):
     parameters = {
         'reward_info': reward_info(), 
         'images': IMAGES,  # Map permutation indices to image filenames

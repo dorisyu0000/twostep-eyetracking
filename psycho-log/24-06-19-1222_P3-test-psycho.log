@@ -1,0 +1,135 @@
+1.6458 	WARNING 	The 'psychtoolbox' library cannot be loaded but is required for audio capture (use `pip install psychtoolbox` to get it). Microphone recording will be unavailable this session. Note that opening a microphone stream will raise an error.
+1.6490 	ERROR 	Support for the `sounddevice` audio backend is not available this session. Please install `psychopy-sounddevice` and restart the session to enable support.
+1.6492 	ERROR 	Support for the `pyo` audio backend is not available this session. Please install `psychopy-pyo` and restart the session to enable support.
+1.6494 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['PTB', 'sounddevice', 'pyo', 'pygame'] (in that order).
+1.6585 	INFO 	time is 2024-06-19 12:22:49,318652
+1.6806 	WARNING 	Monitor specification not found. Creating a temporary one...
+2.6864 	DATA 	Mouse: Left button down, pos=(453,357)
+2.7528 	DATA 	Mouse:  Left button up, pos=(453,357)
+2.8372 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+2.8375 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x16fe3ccd0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x16fe3cc70>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x16fe3cac0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x177efb790>, multiSample=False, name='window1', numSamples=2, pos=(735, 415), screen=0, size=array([1800, 1000]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=False, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+2.8376 	EXP 	window1: mouseVisible = True
+2.8376 	EXP 	window1: backgroundImage = None
+2.8376 	EXP 	window1: backgroundFit = 'cover'
+2.8515 	EXP 	window1: mouseVisible = True
+2.8517 	EXP 	window1: mouseVisible = True
+2.8523 	EXP 	window1: mouseVisible = True
+2.8527 	EXP 	window1: mouseVisible = True
+2.8587 	EXP 	window1: mouseVisible = True
+2.8588 	EXP 	window1: mouseVisible = True
+2.8592 	EXP 	window1: mouseVisible = True
+2.8596 	EXP 	window1: mouseVisible = True
+2.8718 	EXP 	window1: mouseVisible = True
+2.8719 	EXP 	window1: mouseVisible = True
+2.8723 	EXP 	window1: mouseVisible = True
+2.8725 	EXP 	window1: mouseVisible = True
+2.8758 	EXP 	window1: mouseVisible = True
+2.8759 	EXP 	window1: mouseVisible = True
+2.8762 	EXP 	window1: mouseVisible = True
+2.8765 	EXP 	window1: mouseVisible = True
+2.9052 	WARNING 	t of last frame was 54.02ms (=1/18)
+3.2721 	DATA 	Keypress: space
+3.2735 	WARNING 	t of last frame was 368.33ms (=1/2)
+3.5767 	EXP 	window1: mouseVisible = False
+3.5768 	EXP 	window1: units = 'pix'
+3.5768 	INFO 	Mouse: using default window
+3.7282 	INFO 	Mouse: using default window
+3.7428 	DATA 	Keypress: space
+3.7444 	WARNING 	t of last frame was 470.85ms (=1/2)
+4.2706 	DATA 	Keypress: space
+4.5453 	DATA 	Keypress: space
+5.9878 	DATA 	Keypress: return
+6.1175 	WARNING 	t of last frame was 2373.16ms (=1/0)
+6.1545 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+19.0343 	DATA 	Mouse: Left button down, pos=(476,220)
+19.1240 	DATA 	Mouse:  Left button up, pos=(476,220)
+26.8534 	EXP 	window1: units = 'pix'
+27.1924 	EXP 	window1: units = 'pix'
+27.1950 	EXP 	window1: units = 'pix'
+29.1069 	DATA 	Keypress: space
+29.3465 	DATA 	Keypress: space
+29.5224 	DATA 	Keypress: space
+29.7224 	DATA 	Keypress: space
+30.7466 	DATA 	Keypress: space
+31.0663 	DATA 	Keypress: space
+31.9594 	DATA 	Mouse: Left button down, pos=(647,374)
+32.0415 	DATA 	Mouse:  Left button up, pos=(647,374)
+32.1627 	DATA 	Keypress: space
+32.1633 	INFO 	Mouse: using default window
+34.0348 	DATA 	Keypress: f
+34.2023 	DATA 	Keypress: j
+34.3863 	DATA 	Keypress: j
+34.5687 	DATA 	Keypress: j
+34.7518 	DATA 	Keypress: j
+34.9151 	DATA 	Keypress: j
+35.0951 	DATA 	Keypress: j
+37.0907 	DATA 	Keypress: space
+37.0913 	INFO 	Mouse: using default window
+38.5068 	DATA 	Keypress: f
+38.9065 	DATA 	Keypress: j
+43.8826 	DATA 	Keypress: f
+44.0025 	DATA 	Keypress: j
+44.2532 	DATA 	Keypress: j
+44.6904 	DATA 	Keypress: j
+47.7148 	DATA 	Keypress: space
+47.7154 	INFO 	Mouse: using default window
+48.4747 	DATA 	Keypress: f
+48.6182 	DATA 	Keypress: j
+48.8183 	DATA 	Keypress: j
+53.3550 	DATA 	Keypress: f
+53.4346 	DATA 	Keypress: j
+53.6103 	DATA 	Keypress: f
+53.6983 	DATA 	Keypress: j
+53.8743 	DATA 	Keypress: f
+53.8982 	DATA 	Keypress: j
+54.0902 	DATA 	Keypress: j
+54.2902 	DATA 	Keypress: j
+56.7065 	DATA 	Keypress: j
+56.9064 	DATA 	Keypress: j
+57.0983 	DATA 	Keypress: j
+57.8825 	DATA 	Keypress: j
+58.1063 	DATA 	Keypress: space
+58.1067 	INFO 	Mouse: using default window
+58.9787 	DATA 	Keypress: j
+59.1461 	DATA 	Keypress: j
+59.3169 	DATA 	Keypress: j
+61.2988 	DATA 	Keypress: space
+61.2994 	INFO 	Mouse: using default window
+61.8267 	DATA 	Keypress: space
+62.1224 	DATA 	Keypress: j
+62.3063 	DATA 	Keypress: j
+62.4767 	DATA 	Keypress: j
+65.4349 	DATA 	Keypress: j
+65.7464 	DATA 	Keypress: space
+65.7469 	INFO 	Mouse: using default window
+66.0928 	DATA 	Keypress: space
+66.2104 	DATA 	Keypress: j
+66.3943 	DATA 	Keypress: j
+66.5764 	DATA 	Keypress: j
+68.5788 	DATA 	Keypress: space
+68.5794 	INFO 	Mouse: using default window
+68.9222 	DATA 	Keypress: j
+69.0264 	DATA 	Keypress: j
+69.2108 	DATA 	Keypress: j
+69.4050 	DATA 	Keypress: j
+71.3468 	DATA 	Keypress: space
+71.3474 	INFO 	Mouse: using default window
+71.8587 	DATA 	Keypress: j
+72.0184 	DATA 	Keypress: j
+72.2008 	DATA 	Keypress: j
+73.9548 	DATA 	Keypress: space
+73.9554 	INFO 	Mouse: using default window
+74.3050 	DATA 	Keypress: j
+74.4264 	DATA 	Keypress: j
+74.5943 	DATA 	Keypress: j
+77.4109 	DATA 	Keypress: space
+77.4115 	INFO 	Mouse: using default window
+77.7787 	DATA 	Keypress: j
+78.4105 	DATA 	Keypress: j
+78.6499 	DATA 	Keypress: j
+78.9391 	DATA 	Keypress: f
+86.0109 	DATA 	Keypress: 1
+86.8025 	DATA 	Keypress: space
