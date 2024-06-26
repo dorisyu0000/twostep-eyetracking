@@ -1,11 +1,11 @@
 from ast import literal_eval
 from glob import glob
 import re
-os.makedirs('data/exp/m1-bad', exist_ok=True)
-for fp in glob('data/exp/m1/*.json'):
+os.makedirs('data/exp/m2', exist_ok=True)
+for fp in glob('data/exp/m2/*.json'):
     with open(fp) as f:
         data = f.read()
-    with open(fp.replace('m1', 'm1-bad'), 'w') as f:
+    with open(fp.replace('m2', 'm2-bad'), 'w') as f:
 
         f.write(data)
 

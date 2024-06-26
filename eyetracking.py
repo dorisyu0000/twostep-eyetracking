@@ -187,7 +187,8 @@ class EyeLink(object):
 
         scale = 0.85
         h_trim = int(((1 - scale) * scn_height) / 2)
-        w_trim = int((scn_width - scale * scn_height) / 2)
+        w_trim = int(((1 - scale) * scn_width) / 2)
+        # w_trim = int((scn_width - scale * scn_height) / 2)
 
         el_coords = f"screen_pixel_coords = {w_trim} {h_trim} {scn_width - w_trim - 1} {scn_height - h_trim - 1}"
         self.tracker.sendCommand(el_coords)
@@ -219,7 +220,7 @@ class EyeLink(object):
         self.win.mouseVisible = True
 
     def save_data(self):
-        self.tracker.closeDataFile()
+        # self.tracker.closeDataFile()
 
         # Set up a folder to store the EDF data files and the associated resources
         # e.g., files defining the interest areas used in each trial

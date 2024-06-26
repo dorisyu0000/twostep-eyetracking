@@ -42,4 +42,3 @@ os.makedirs(f'data/processed/{VERSION}/', exist_ok=True)
 with open(f'data/processed/{VERSION}/trials.json', 'w') as f:
     json.dump(trials, f)
 
-

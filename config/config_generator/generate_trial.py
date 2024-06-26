@@ -514,7 +514,7 @@ def make_trials():
     trialNumber = 1
 
 
-    for _ in range(200):  
+    for _ in range(180):  
         if trialNumber % 2 == 0:
             problem_1 = sample_problem_1(**kws, trialNumber=trialNumber)
             main.append(problem_1)
@@ -529,6 +529,8 @@ def make_trials():
         #     problem_5 = sample_problem_4(**kws, trialNumber=trialNumber)
         #     main.append(problem_5)
         trialNumber += 1
+        
+    random.shuffle(main)
     
     for _ in range(200):  
         if trialNumber % 2 == 0:
@@ -539,11 +541,11 @@ def make_trials():
             main.append(problem_2)
         trialNumber += 1
 
-    random.shuffle(main)
+    
     practice.append([intro_problem(**kws, rewards=[None] * n)])
     practice.append([intro_problem(**kws, graph = []*n, rewards= [1,2,3,4, -1,-2,-3,-4,0,0,0])])
     for _ in range(5):
-        trial = [sample_practice(**kws)]
+        trial = [sample_problem_2(**kws)]
         practice.append(trial)
     
    
@@ -617,14 +619,14 @@ def circle_layout(N):
     ]
 
 # Generate trials
-subj_trials = [make_trials() for _ in range(2)]
+subj_trials = [make_trials() for _ in range(4)]
 
 # Directory setup
 dest = "config/m2"
 os.makedirs(dest, exist_ok=True)
 
 # Save trials as JSON
-for i, trials in enumerate(subj_trials, start=3):
+for i, trials in enumerate(subj_trials, start=12):
     parameters = {
         'reward_info': reward_info(), 
         'images': IMAGES,  # Map permutation indices to image filenames

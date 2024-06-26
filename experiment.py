@@ -354,7 +354,7 @@ class Experiment(object):
                 node.setLineColor('black')
                 
         self.message("The diamonds that with four edges are natual. You won't gain or loss any point!", space=True)
-        self.message("Take you time to remeber how much each item wroth!", space=True )
+        self.message("Take you time to remeber how much each item worth!", space=True )
         
 
 
@@ -734,8 +734,7 @@ class Experiment(object):
 
     @stage
     def save_data(self):
-        self.message(f"You're done! {self.bonus.report_bonus('final')}",
-                     tip_text="give us a few seconds to save the data", space=False)
+        self.message("You're done! Let's just save your data...", tip_text="give us a few seconds", space=False)
         psychopy.logging.flush()
 
         fp = f'{DATA_PATH}/{self.id}.json'
@@ -745,16 +744,11 @@ class Experiment(object):
 
         if self.eyelink:
             self.eyelink.save_data()
-
-        self.message(f"You're done! {self.bonus.report_bonus('final')}",
-                     tip_text="data saved! press Button 1 to exit", space=True)
-        print("\n\nFINAL BONUS: ", self.bonus.dollars())
+        self.message("Data saved! Please let the experimenter that you've completed the study.", space=True,
+                    tip_text='press space to exit')
 
     def emergency_save_data(self):
         logging.warning('emergency save data')
-        if self.eyelink:
-            self.eyelink.save_data()
-        logging.warning('eyelink data saved?')
         fp = f'{DATA_PATH}/{self.id}.txt'
         with open(fp, 'w') as f:
             f.write(str(self.all_data))

@@ -42,6 +42,7 @@ def main(config_number=None, name=None, test=False, fast=False, full=False, mous
                exp.learn(8)
                exp.practice(2)
                exp.setup_eyetracker()
+               exp.intro_gaze()
                exp.intro_main()
                exp.run_main()
                exp.save_data()
