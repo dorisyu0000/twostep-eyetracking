@@ -46,7 +46,6 @@ def main(config_number=None, name=None, test=False, fast=False, full=False, mous
                exp.intro_main()
                exp.run_main()
                exp.save_data()
-
             exp.save_data()
         except:
             if test:

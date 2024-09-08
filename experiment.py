@@ -8,17 +8,20 @@ from psychopy import core, visual, gui, data, event
 from psychopy.tools.filetools import fromFile, toFile
 import numpy as np
 
+from time import sleep
 from util import jsonify
-from trial import GraphTrial, CalibrationTrial, COLOR_ACT, COLOR_PLAN, reward_string
+from config import KEY_CONTINUE, KEY_SWITCH, LABEL_CONTINUE, LABEL_SWITCH, LABEL_SELECT,COLOR_ACT
+from trial import GraphTrial, AbortKeyPressed
 from graphics import Graphics
 from bonus import Bonus
 from eyetracking import EyeLink, MouseLink
-from config import COLOR_PLAN, COLOR_ACT, COLOR_WIN, COLOR_LOSS, COLOR_NEUTRAL, COLOR_HIGHLIGHT, KEY_CONTINUE, KEY_SWITCH, KEY_SELECT, KEY_ABORT,LABEL_SELECT, LABEL_SWITCH
 
 import subprocess
 from copy import deepcopy
 from config import VERSION
 
+from triggers import Triggers
+import hackfix
 
 DATA_PATH = f'data/exp/{VERSION}'
 CONFIG_PATH = f'config/{VERSION}'
@@ -26,7 +29,6 @@ LOG_PATH = 'log'
 PSYCHO_LOG_PATH = 'psycho-log'
 for p in (DATA_PATH, CONFIG_PATH, LOG_PATH, PSYCHO_LOG_PATH):
     os.makedirs(p, exist_ok=True)
-
 
 def stage(f):
     def wrapper(self, *args, **kwargs):
@@ -54,7 +56,6 @@ def stage(f):
             self.win.clearAutoDraw()
             self.win.flip()
 
-
     return wrapper
 
 def get_next_config_number():
@@ -64,7 +65,7 @@ def get_next_config_number():
         if m:
             used.add(int(m.group(1)))
 
-    possible = range(1, 1 + len(os.listdir(CONFIG_PATH)))
+    possible = range(0, 1 + len(os.listdir(CONFIG_PATH)))
     try:
         n = next(i for i in possible if i not in used)
         return n
@@ -73,14 +74,23 @@ def get_next_config_number():
         return np.random.choice(list(possible))
 
 
+def text_box(win, msg, pos, autoDraw=True, wrapWidth=.8, height=.035, alignText='left', **kwargs):
+    stim = visual.TextStim(win, msg, pos=pos, color='white', wrapWidth=wrapWidth, height=height, alignText=alignText, anchorHoriz='left', **kwargs)
+    stim.autoDraw = autoDraw
+    return stim
+    import IPython, time; IPython.embed(); time.sleep(0.5)
+
 class Experiment(object):
-    def __init__(self, config_number, name=None, full_screen=False, score_limit=800, **kws):
+    def __init__(self, config_number, name=None, full_screen=False, score_limit=None, n_block=3, block_duration=10, n_practice=10, test_mode=False, **kws):
         if config_number is None:
             config_number = get_next_config_number()
         self.config_number = config_number
         print('>>>', self.config_number)
         self.full_screen = full_screen
         self.score_limit = score_limit
+        self.n_block = n_block
+        self.block_duration = block_duration
+        self.n_practice = n_practice
 
         timestamp = datetime.now().strftime('%y-%m-%d-%H%M')
         self.id = f'{timestamp}_P{config_number}'
@@ -103,86 +113,37 @@ class Experiment(object):
             self.parameters['gaze_tolerance'] = 1.5
 
         self.win = self.setup_window()
-        self.bonus = Bonus(0, 50)
+        self.eyelink = MouseLink(self.win, self.id)  # use mouse by default
+        self.win._heldDraw = []  # see hackfix
+        self.bonus = Bonus(1, 0)
         self.total_score = 0
         # self.bonus = Bonus(self.parameters['points_per_cent'], 50)
-        self.eyelink = None
         self.disable_gaze_contingency = False
 
-        self._message = visual.TextBox2(self.win, '', pos=(-.85, 0), color='white', autoDraw=True, size=(0.5, None), letterHeight=.035, anchor='left')
-        self._tip = visual.TextBox2(self.win, '', pos=(-.85, -0.2), color='white', autoDraw=True, size=(0.5, None), letterHeight=.025, anchor='left')
+        self._message = text_box(self.win, '', pos=(-0.4, 0.1), autoDraw=True, height=.035)
+        self._tip = text_box(self.win, '', pos=(-0.4, -0.05), autoDraw=True, height=.025)
 
         # self._practice_trials = iter(self.trials['practice'])
+        self.main_trials = iter(self.trials['main'])
         self.practice_i = -1
-        self.learn_i = 0
         self.trial_data = []
         self.practice_data = []
+        self.parameters['triggers'] = self.triggers = Triggers(**({'port': 'dummy'} if test_mode else {}))
 
-    def _reset_practice(self):
-        self._practice_trials = iter(self.trials['practice'])
-
-    def get_practice_trial(self, repeat=False, **kws):
+    def get_practice_trial(self, repeat=False,**kws):
         if not repeat:
-            self.practice_i += 1  # Index to track which set of practice trials to use
-
-        # Make sure we don't go out of bounds
-        if self.practice_i >= len(self.trials['practice']):
-            logging.error("Practice index exceeds available trials.")
-            self.practice_i = 0  # Reset or handle as needed
-
-        # Accessing the specific trial set and then the individual trial within that set
-        trial_set = self.trials['practice'][self.practice_i]
-        if not isinstance(trial_set, list) or not all(isinstance(trial, dict) for trial in trial_set):
-            logging.error("Expected a list of dictionaries for trial_set.")
-            return None  # Handle this error as appropriate
-
-        # Assuming there's a mechanism or UI allowing selection of specific trials from a set
-        # For simplicity, let's take the first trial for now
-        trial_params = trial_set[0] if trial_set else {}
-        if not isinstance(trial_params, dict):
-            logging.error(f"Expected trial_params to be a dictionary, got {type(trial_params)} instead.")
-            return None
-
-        # Combine parameters
+            self.practice_i += 1
         prm = {
             'eyelink': self.eyelink,
             **self.parameters,
-            **trial_params,
+            # 'gaze_contingent': False,
+            # 'time_limit': None,
+            # 'pos': (.3, 0),
+            # 'start_mode': 'immediate',
+            # 'space_start': False,
+            **self.trials['practice'][self.practice_i],
             **kws
         }
-
-        # Initialize and return GraphTrial object
-        gt = GraphTrial(self.win, **prm)
-        self.practice_data.append(gt.data)
-        return gt
-    
-    def get_learn_reward_trial(self, repeat=False, **kws):
-        if not repeat:
-            self.learn_i += 1 
-
-        if self.learn_i >= len(self.trials['learn_rewards']):
-            logging.error("Practice index exceeds available trials.")
-            self.learn_i = 0  # Reset or handle as needed
-
-        # Accessing the specific trial set and then the individual trial within that set
-        trial_set = self.trials['learn_rewards'][self.learn_i]
-        if not isinstance(trial_set, list) or not all(isinstance(trial, dict) for trial in trial_set):
-            logging.error("Expected a list of dictionaries for trial_set.")
-            return None 
-        
-        trial_params = trial_set[0] if trial_set else {}
-        if not isinstance(trial_params, dict):
-            logging.error(f"Expected trial_params to be a dictionary, got {type(trial_params)} instead.")
-            return None
-
-        # Combine parameters
-        prm = {
-            'eyelink': self.eyelink,
-            **self.parameters,
-            **trial_params,
-            **kws
-        }
-
         gt = GraphTrial(self.win, **prm)
         self.practice_data.append(gt.data)
         return gt
@@ -213,19 +174,14 @@ class Experiment(object):
 
 
     def setup_window(self):
-        size = (1350,750) if self.full_screen else (900,500)
+        size = (1350,750) if self.full_screen else (650,500)
         win = visual.Window(size, allowGUI=True, units='height', fullscr=self.full_screen)
+        logging.info(f'Created window with size {win.size}')
         # framerate = win.getActualFrameRate(threshold=1, nMaxFrames=1000)
         # assert abs(framerate - 60) < 2
-        logging.info(f'Setting up window with size: {size} and full_screen: {self.full_screen}')
-        logging.info(f'Created window with size {win.size}')
         win.flip()
         # win.callOnFlip(self.on_flip)
         return win
- 
-       
-
-
 
     def on_flip(self):
         if 'q' in event.getKeys():
@@ -247,118 +203,96 @@ class Experiment(object):
         logging.debug('message: %s (%s)', msg, tip_text)
         self.show_message()
         self._message.setText(msg)
-        self._tip.setText(tip_text if tip_text else 'press space to continue' if space else '')
+        self._tip.setText(tip_text if tip_text else f'press {LABEL_CONTINUE} to continue' if space else '')
         self.win.flip()
         if space:
-            event.waitKeys(keyList=['space'])
+            event.waitKeys(keyList=['space', KEY_CONTINUE])
+
+    
+    # @stage
+
+    # def welcome(self):
+    #     self.triggers.send(4)
+    #     self.message(
+    #         "Before we start, let's review the buttons. "
+    #         f"{LABEL_CONTINUE} is the blue one. It should be under your right index finger. "
+    #         f"You can press to confirm your choice", space=True
+    #     )
+    #     self.message(
+    #         f"{LABEL_SWITCH} is the yellow one. It should be under your left index finger. "
+    #         f"You can press to switch between the two options", 
+    #         tip_text = f'press {LABEL_SWITCH} to continue')
+    #     event.waitKeys(keyList=[KEY_SWITCH])
 
     @stage
     def intro(self):
-        self.message('Welcome!', space=True)
-        gt = self.get_practice_trial(highlight_edges=True, hide_rewards_while_acting=False, initial_stage='acting')
-
+        # self.message('Welcome!', space=True)
+        gt = self.get_practice_trial(highlight_edges=False, hide_rewards_while_acting=False, initial_stage='acting')
         gt.show()
-        for l in gt.reward_labels:
-            l.setOpacity(0)
+
+        gt.set_reward_display(False)
         self.message("In this experiment, you will play a game on the board shown to the right.", space=True)
 
         gt.set_state(gt.start)
         self.message("Your current location on the board is highlighted in blue.", space=True)
 
-        for l in gt.reward_labels:
-            l.setOpacity(1)
-        self.message("The goal of the game is to collect as many points as you can.", space=True)
+        gt.set_reward_display(True)
+        self.message("The goal of the game is to collect these diamonds.", space=True)
 
-        if self.bonus:
-            self.message(f"The points will be converted to a cash bonus: {self.bonus.describe_scheme()}!", space=True)
-        else:
-            pass
-            # self.message(f"", space=True)
+        for (n, r) in zip(gt.nodes, gt.rewards):
+            if r > 0:
+                n.setLineColor('#1BD30C')
+        self.message("Specifically, you want the ones that point to the right. These earn you points.", space=True)
 
-        self.message( "Before we start, let's learn all the buttons you need in this game . ", space = True)
+        for (n, r) in zip(gt.nodes, gt.rewards):
+            if r < 0:
+                n.setLineColor('#E3000A')
+            else:
+                n.setLineColor('black')
+        self.message("The diamonds that point left are bad. They take away points!", space=True)
+
+        for (n, r) in zip(gt.nodes, gt.rewards):
+            n.setLineColor('black')
+
+        self.message("The further the diamond points to either side, the more points it is worth.", space=True)
+        self.message("Hover over each diamond to see its point value",
+                     tip_text='hover over every diamond to cotntinue', space=False)
+
+
+        seen = set()
+        n_reward = sum(l is not None for l in gt.reward_labels)
+        while len(seen) < n_reward:
+            pos = gt.mouse.getPos()
+            for (i, n) in enumerate(gt.nodes):
+                if gt.reward_labels[i]:
+                    hovered = n.contains(pos)
+                    if hovered:
+                        seen.add(i)
+                    gt.reward_labels[i].autoDraw = not hovered
+                    gt.reward_text[i].autoDraw = hovered
+            self.win.flip()
+        sleep(0.5)
+
+
+
         
         self.message(
-            f"{LABEL_SWITCH} should be under your left index finger which you can switch the line you select. ",
-            tip_text = f"Press {LABEL_SWITCH} to continue")
-        
-        event.waitKeys(keyList=[KEY_SWITCH])
-        
-        self.message(
-           
-            f"{LABEL_SELECT} should be under your right index finger which to confirm your choice. ",
-            tip_text = f"Press {LABEL_SELECT} to continue")
-        
-        event.waitKeys(keyList=[KEY_SELECT])
-        
-        self.message(
-            "Now, let's try to play one round"
-            f"Press {LABEL_SWITCH} and {LABEL_SELECT} to move. "
+            "Before we start, let's review the buttons. "
+            f"{LABEL_SELECT} is the blue one. It should be under your right index finger. "
+            f"You can press to confirm your choice", space=False
         )
+        self.message(
+            f"{LABEL_SWITCH} is the yellow one. It should be under your left index finger. "
+            f"You can press to switch between the two options", 
+            tip_text = f'try to press {LABEL_SWITCH} and {LABEL_SELECT} to continue',space=False)
         
-        gt.run(one_step=True) 
-        # gt.start = gt.current_state
+        gt.run(one_step=True)
+        gt.start = gt.current_state
 
-        # self.message("The round ends when you get to a location with no outgoing connections.",
-        #              tip_text= f'press {LABEL_SELECT} and {LABEL_SWITCH} to continue ')
-       
+        self.message("The round ends when you get to a location with no outgoing connections.",
+                     tip_text='click one of the highlighted locations', space=False)
+        gt.run(skip_planning=True)
 
-    @stage
-    def intro_reward(self):
-         # self.message('Welcome!', space=True)
-        gt = self.get_practice_trial(highlight_edges=False, hide_rewards_while_acting=False, initial_stage='acting')
-        gt.show()
-
-
-        self.message("In this game, you will see these diamonds.", space=True)
-        reward_texts = []  
-        for i, (node, reward) in enumerate(zip(gt.nodes, gt.rewards)):
-            if reward > 0:
-                node.setLineColor('#1BD30C')
-                reward_text = reward_string(reward)
-                txt = visual.TextStim(gt.win, text=reward_text,
-                                    pos=node.pos + np.array([.06, .06]),
-                                    bold=True, height=.04, color='#1BD30C')
-                txt.setAutoDraw(True)
-                reward_texts.append(txt) 
-            else: 
-                node.setLineColor('black')
-
-            
-        self.message("Specifically, you want the ones that look like those. These earn you points. ",
-                      space=True)
-        
-        for i, (node, reward) in enumerate(zip(gt.nodes, gt.rewards)):
-            if reward < 0:
-                node.setLineColor('#E3000A')
-                reward_text = reward_string(reward)
-                txt = visual.TextStim(gt.win, text=reward_text,
-                                    pos=node.pos + np.array([.06, .06]),
-                                    bold=True, height=.04, color='#E3000A')
-                txt.setAutoDraw(True)
-                reward_texts.append(txt) 
-            else: 
-                node.setLineColor('black')
-
-        self.message("The diamonds look like those are bad. They take away points!", space=True)
-         
-        for i, (node, reward) in enumerate(zip(gt.nodes, gt.rewards)):
-            if reward == 0:
-                node.setLineColor('yellow')
-                reward_text = reward_string(reward)
-                txt = visual.TextStim(gt.win, text=reward_text,
-                                    pos=node.pos + np.array([.06, .06]),
-                                    bold=True, height=.04, color='yellow')
-                txt.setAutoDraw(True)
-                reward_texts.append(txt) 
-            else: 
-                node.setLineColor('black')
-                
-        self.message("The diamonds that with four edges are natual. You won't gain or loss any point!", space=True)
-        self.message("Take you time to remeber how much each item worth!", space=True )
-        
-
-
-             
     @stage
     def practice_start(self):
         gt = self.get_practice_trial()
@@ -419,47 +353,10 @@ class Experiment(object):
         self.message("If you run out of time, we'll make random decisions for you. Probably something to avoid.", space=True)
 
     @stage
-    def learn(self, n):
-        total_trials = 10
-        max_attempts = 3
-        successes_needed = 8
-
-        self.message("Now, let's see if you can identify which item have higher value.", space = True)
-        self.message(f"You need to get {successes_needed} trials correct out of {total_trials} before you can start the main tasks.", space=True)
-        
-        for attempt in range(max_attempts):
-            successes = 0
-            for trial_index in range(total_trials):
-                gt = self.get_learn_reward_trial() 
-                gt.run()
-
-                if gt.score == gt.max_score:
-                    successes += 1
-                    self.message(f"You've successfully passed {successes} out of {total_trials} trials.")
-                else:
-                    self.message(f"Incorrect, let's try another trial!")
-
-                if successes >= successes_needed:
-                    self.message(f"Congratulations! You've achieved the required {successes_needed} correct trials.", space=True)
-                    return  # Exit the function as the required successes have been achieved
-
-            # After all trials in an attempt
-            if successes < successes_needed:
-                self.message(f"Good job! You passed {successes} out of {total_trials}. ", space=False)
-                if attempt < max_attempts - 1:
-                    self.message(f"You only get {successes} out of {total_trials} trials correct." 
-                                 "Let's try again. Press any key to try again.", space=True)
-                else:
-                    self.message("Unfortunately, you didn't pass enough trials successfully after all attempts. Please check in with the experimenter",
-                        tip_text="Wait for the experimenter (space)", space=True)
-
-
-
-    @stage
     def practice(self, n):
         intervened = False
         for i in range(n):
-            self.message("Let's try a few harder practice rounds.",
+            self.message("Let's try a few more practice rounds.",
                          space=False, tip_text=f'complete {n - i} practice rounds to continue')
 
             gt = self.get_practice_trial()
@@ -468,10 +365,9 @@ class Experiment(object):
                 if intervened or gt.score == gt.max_score:
                     break
                 else:
-                    max_score_msg = f"but you could have gotten {int(gt.max_score)}." 
                     self.message(
-                        f"You got {gt.score} points on that round, {max_score_msg}\n"
-                        "Let's try again. Try to make as many points as possible!"
+                        f"You got {int(gt.score)} points on that round, but you could have gotten {int(gt.max_score)}.\n"
+                        f"Let's try again. Try to make as many points as possible!"
                     )
                 gt = self.get_practice_trial(repeat=True)
             else:  # never succeeded
@@ -481,143 +377,83 @@ class Experiment(object):
                     self.message("Please check in with the experimenter",
                         tip_text="Wait for the experimenter (space)", space=True)
                     self.get_practice_trial(repeat=True).run()
+
+
         self.message("Great job!", space=True)
 
     @stage
     def setup_eyetracker(self, mouse=False):
-        self.message("Now we're going to calibrate the eyetracker. Please tell the experimenter.",
-            tip_text="Wait for the experimenter (space)", space=True)
+        self.message("Now we're going to calibrate the eyetracker. When you see a black "
+                      "circle, look at it and hold your gaze steady", tip_text="wait for the experimenter")
+        event.waitKeys(keyList=['space', 'c'])
         self.hide_message()
-        if mouse:
-            self.eyelink = MouseLink(self.win, self.id)
-        else:
+        if not mouse:
             self.eyelink = EyeLink(self.win, self.id)
         self.eyelink.setup_calibration()
         self.eyelink.calibrate()
 
     @stage
-    def recalibrate(self):
-        self.message("We're going to recalibrate the eyetracker. Please tell the experimenter.",
-            tip_text="Wait for the experimenter (space)", space=True)
-        self.hide_message()
-        self.eyelink.calibrate()
-        self.calibrate_gaze_tolerance()
-
-
-    @stage
     def show_gaze_demo(self):
         self.message("Check it out! This is where the eyetracker thinks you're looking.",
-                     tip_text='press space to continue')
+                     tip_text=f'press {LABEL_CONTINUE} to continue')
 
         self.eyelink.start_recording()
-        while 'space' not in event.getKeys():
+        while KEY_CONTINUE not in event.getKeys():
             visual.Circle(self.win, radius=.01, pos=self.eyelink.gaze_position(), color='red').draw()
             self.win.flip()
         self.win.flip()
 
+    # @stage
+    # def intro_gaze(self):
+    #     self.message("At the beginning of each round, a circle will appear. "
+    #                  f"Look straight at it and press {LABEL_CONTINUE} to start the round.",
+    #                  tip_text=f"look at the circle and press {LABEL_CONTINUE}", space=False)
+
+    #     self.eyelink.drift_check()
+    #     self.message("Yup just like that. Make sure you hold your gaze steady on the circle before pressing space.", space=True)
+
     @stage
-    def calibrate_gaze_tolerance(self):
-        self.message("We're going to check how well the eyetracker is working.", space=True)
-        self.message(
-            "When the board comes up, just look at the O's as they appear. "
-            "They should disappear. If it's not working, press X.",
-            space=True)
+    def practice(self):
+        self.message("Before we begin the main phase, we'll do a few practice rounds with all the images visible.", space=True)
         self.hide_message()
-
-        trial = deepcopy(self.trials['practice'][3])
-        t = trial[0]
-        t['graph'] = [[] for edges in t['graph']]
-        logging.error("Expected a list with a dictionary for trial data, got: %s", t['graph'])
-
-
-        result = None
-        attempt = 0
-        while True:
-            prm = {**self.parameters, **t, 'time_limit': 10}
-            gt = CalibrationTrial(self.win, **prm, eyelink=self.eyelink)
-            attempt += 1
-            self.practice_data.append(gt.data)
-            result = gt.run()
-            if result == 'success':
-                break
-            else:
-                self.message("Let's make some quick adjustments...", tip_text='Press space to continue')
-                keys = event.waitKeys(keyList=['c', 'd', 'r', 'space'])
-                self.hide_message()
-                if 'd' in keys:
-                    break
-                if 'r' in keys:
-                    self.message("We're going to try recalibrating the eyetracker", space=True)
-                    self.hide_message()
+        i = 0
+        gt = self.get_practice_trial()
+        while i < self.n_practice:
+            try:
+                logging.info('practice %s', i)
+                gt.run()
+                i += 1
+                gt = self.get_practice_trial()
+            except AbortKeyPressed:
+                gt = self.get_practice_trial(repeat=True)
+                self.win.clearAutoDraw()
+                self.win.showMessage('Abort key pressed!\nPress C to continue, R to recalibrate, or Q to terminate the experiment and save data')
+                self.win.flip()
+                logging.warning('ABORT in practice, i=%s', i)
+                keys = event.waitKeys(keyList=['c', 'r', 'q'])
+                self.win.showMessage(None)
+                self.win.flip()
+                if 'c' in keys:
+                    continue
+                elif 'r' in keys:
                     self.eyelink.calibrate()
-                    self.message("OK let's try again. Look at the O's as they appear.", space=True)
-                    self.hide_message()
                 else:
-                    self.parameters['gaze_tolerance'] *= 1.2
-                    logging.warning('gaze_tolerance is %s', self.parameters['gaze_tolerance'])
-                    if self.parameters['gaze_tolerance'] > 3:
-                        break
+                    raise
+                gt.gfx.clear()
+                self.win.clearAutoDraw()
+                self.win.flip()
 
-        if result == 'success':
-            self.message("Great! It looks like the eyetracker is working well.", space=True)
-        else:
-            logging.warning('disabling gaze contingency')
-            self.disable_gaze_contingency = True
-            self.message("OK let's move on.", space=True)
-
-    @stage
-    def intro_gaze(self):
-        self.message("At the beginning of each round, a circle will appear. "
-                     "Look straight at it and press space to start the round.",
-                     tip_text="look at the circle and press space", space=False)
-
-        self.eyelink.drift_check()
-        self.message("Yup just like that. Make sure you hold your gaze steady on the circle before pressing space.", space=True)
-
-    @stage
-    def intro_contingent(self):
-        if self.disable_gaze_contingency:
-            return
-        self.message("There's just one more thing...", space=True)
-        self.message("For the rest of the experiment, the points will only be visible when you're looking at them.", space=True)
-        tip = "select a path to continue\npress X if it's not working"
-        self.message("Try it out!", tip_text=tip, space=False)
-
-        status = None
-
-        while True:
-            gt = self.get_practice_trial(gaze_contingent=True, eyelink=self.eyelink, pos=(0,0), stop_on_x=True)
-            gt.start_mode = 'immediate'
-            gt.run()
-            if gt.status == 'ok':
-                break
-            self.recalibrate()
-            self.message("Let's try again!", space=False, tip_text=tip)
-
-        self.message("Great! If you ever find that the points don't appear when you look at them, "
-            "please let the experimenter know so we can fix it!", space=True)
 
 
     @stage
     def intro_main(self):
-        if self.score_limit:
-            self.message("Alright! We're ready to begin the main phase of the experiment.", space=True)
-            self.message("But first, you might be asking \"What's in it for me?\" ...Well, we thought of that!", space=True)
-            self.message("Unlike other experiments you might have done, we don't have a fixed number of rounds.", space=True)
-            self.message(f"Instead, you will do as as many rounds as it takes to earn {self.score_limit} points.", space=True)
-            self.message("To finish the study as quickly as possible, you'll have to balance making fast choices and selecting the best possible path.", space=True)
-            self.message("Good luck!", space=True)
-
-        else:
-            self.message("Alright! We're ready to begin the main phase of the experiment.", space=True)
-            self.message("Remember: at the beginning of each round, look at the circle and press space.", space=True)
-            if self.bonus:
-                self.message(f"There will be {self.n_trial} rounds. "
-                             f"Remember, you'll earn {self.bonus.describe_scheme()} you make in the game. "
-                             "We'll start you off with 50 points for all your hard work so far.", space=True )
-                self.message("Good luck!", space=True)
-            else:
-                self.message(f"There will be {self.n_trial} rounds. Good luck!", space=True)
+        self.message("Alright! We're ready to begin the main phase of the experiment.", space=True)
+        self.message(f"There will be {self.n_block} blocks of {self.block_duration} minutes each.", space=True)
+        self.message(f"Like before, the clock doesn't run in between rounds "
+            "(when the cross is visible).", space=True)
+        self.message(f"Remember, you will earn {self.bonus.describe_scheme()} you make the game.", space=True)
+        self.message("Good luck!", space=True)
+        # self.message("At the beginning of each round, look at the circle and press space.", space=True)
 
     @stage
     def run_one(self, i, **kws):
@@ -633,93 +469,68 @@ class Experiment(object):
         self.trial_data.append(gt.data)
 
     def center_message(self, msg, space=True):
-        visual.TextBox2(self.win, msg, color='white', letterHeight=.035).draw()
+        visual.TextStim(self.win, msg, color='white', wrapWidth=.8, alignText='center', height=.035).draw()
         self.win.flip()
-        event.waitKeys(keyList=['space'])
+        if space:
+            event.waitKeys(keyList=[KEY_CONTINUE])
+
+    def run_trial(self):
+        trial = next(self.main_trials)
+        prm = {**self.parameters, **trial}
+        gt = GraphTrial(self.win, **prm, hide_states=True, eyelink=self.eyelink)
+        gt.run()
+        psychopy.logging.flush()
+        self.trial_data.append(gt.data)
+
+        logging.info('gt.status is %s', gt.status)
+        self.bonus.add_points(gt.score)
+        logging.info('current bonus: %s', self.bonus.dollars())
+        self.total_score += int(gt.score)
+
+        return core.getTime() - gt.start_time
+        # if gt.status == 'recalibrate':
+            # self.eyelink.calibrate()
 
     @stage
-    def run_main(self, n=None):
-        summarize_every = 10000
-        # summarize_every = self.parameters.get('summarize_every', 5)
+    def main(self, resume_block=None):
+        start = 0 if resume_block is None else resume_block - 1
 
-        trials = self.trials['main']
-        if n is not None:
-            trials = trials[:n]
+        for i in range(start, self.n_block):
+            elapsed = 0
 
-        block_earned = 0
-        block_possible = 0
-        for (i, trial) in enumerate(trials):
-            logging.info(f"Trial {i+1} of {len(trials)}")
-            try:
-                if self.score_limit:
-                    if self.total_score >= self.score_limit:
-                        self.center_message(f"Congratulations! You hit {self.score_limit} points!")
-                        return
+            while elapsed < 60 * self.block_duration:
+                try:
+                    elapsed += self.run_trial()
+                    logging.info('elapsed is %s', elapsed)
+
+                except Exception as e:
+                    if isinstance(e, AbortKeyPressed):
+                        logging.warning("Abort key pressed")
+                        msg = 'Abort key pressed!'
                     else:
-                        self.center_message(f"Your current score is {self.total_score}.\n"
-                                            f"You're {self.score_limit - self.total_score} points away from finishing.")
+                        logging.exception(f"Caught exception in main")
+                        msg = 'The experiment ran into a problem! Please tell the experimenter.'
 
-                prm = {**self.parameters, **trial}
-                if self.disable_gaze_contingency:
-                    prm['gaze_contingent'] = False
-                    prm['start_mode'] = 'fixation'
-
-
-                gt = GraphTrial(self.win, **prm, eyelink=self.eyelink)
-                logging.info(self.eyelink)
-                gt.run()
-                psychopy.logging.flush()
-                self.trial_data.append(gt.data)
-
-                if gt.status != 'recalibrate':
-                    logging.info('gt.status is %s', gt.status)
-                    block_earned += gt.score
-                    block_possible += gt.max_score
-                    self.bonus.add_points(gt.score)
-                    self.total_score += int(gt.score)
-
-                if gt.status == 'recalibrate':
-                    self.recalibrate()
-                    
-                elif gt.status == 'abort':
                     self.win.clearAutoDraw()
-                    self.win.showMessage(
-                       'Abort key was pressed!\n'
-                       'Press A again to stop the experiment early.'
-                       )
+                    self.win.showMessage(msg + '\n' + 'Press C to continue, R to recalibrate, or Q to terminate the experiment and save data')
                     self.win.flip()
-                    keys = event.waitKeys()
+                    keys = event.waitKeys(keyList=['c', 'r', 'q'])
                     self.win.showMessage(None)
-                    if 'a' in keys:
-                        break
-
-                if i % summarize_every == (summarize_every - 1):
-                    msg = f"In the last {summarize_every} rounds, you earned {int(block_earned)} points out of {int(block_possible)} possible points."
-                    block_earned = block_possible = 0
-                    if self.bonus:
-                        msg += f"\n{self.bonus.report_bonus()}"
-                    n_left = len(trials) - i - 1
-                    if n_left:
-                        msg += f'\n\nThere are {n_left} rounds left. Feel free to take a quick break. Then press space to continue.'
+                    if 'c' in keys:
+                        continue
+                    elif 'r' in keys:
+                        self.eyelink.calibrate()
                     else:
-                        msg += "\n\nYou've completed all the rounds! Press space to continue."
-                    self.center_message(msg)
+                        raise
 
-            except:
-                logging.exception(f"Caught exception in run_main")
-                self.win.clearAutoDraw()
-                self.win.showMessage(
-                    'The experiment ran into a problem! Please tell the experimenter.\n'
-                    'Press C to continue or A to abort and save data'
-                    )
-                self.win.flip()
-                keys = event.waitKeys(keyList=['c', 'a'])
-                self.win.showMessage(None)
-                print('keys are', keys)
-                if 'c' in keys:
-                    continue
-                else:
-                    return
+            # end while
+            # block summary
+            if i < self.n_block - 1:
+                self.center_message(f"You've completed block {i + 1} of {self.n_block}.\n{self.bonus.report_bonus()}.\n\n"
+                    "Take a short break. Then let the experimenter know when you're ready to continue.", space=False)
+                event.waitKeys(keyList=['space', 'c'])
+                self.eyelink.calibrate()
+
 
     @property
     def all_data(self):
@@ -734,7 +545,8 @@ class Experiment(object):
 
     @stage
     def save_data(self):
-        self.message("You're done! Let's just save your data...", tip_text="give us a few seconds", space=False)
+        self.message(f"You're done! {self.bonus.report_bonus('final')}",
+                     tip_text="give us a few seconds to save the data", space=False)
         psychopy.logging.flush()
 
         fp = f'{DATA_PATH}/{self.id}.json'
@@ -744,14 +556,17 @@ class Experiment(object):
 
         if self.eyelink:
             self.eyelink.save_data()
-        self.message("Data saved! Please let the experimenter that you've completed the study.", space=True,
-                    tip_text='press space to exit')
+
+        self.message(f"You're done! {self.bonus.report_bonus('final')}",
+                     tip_text="data saved! press Button 1 to exit", space=True)
+        print("\n\nFINAL BONUS: ", self.bonus.dollars())
 
     def emergency_save_data(self):
         logging.warning('emergency save data')
+        if self.eyelink:
+            self.eyelink.save_data()
+        logging.warning('eyelink data saved?')
         fp = f'{DATA_PATH}/{self.id}.txt'
         with open(fp, 'w') as f:
             f.write(str(self.all_data))
         logging.info('wrote %s', fp)
-
-

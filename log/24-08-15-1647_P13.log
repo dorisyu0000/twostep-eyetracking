@@ -1,0 +1,8 @@
+2024-08-15 16:47:13,100 [INFO]  starting up 24-08-15-1647_P13 at 2.0396385001949966
+2024-08-15 16:47:13,118 [INFO]  git SHA: 6232633ac05f1b6fe28bd2d39a77bec062e08a87
+2024-08-15 16:47:13,119 [INFO]  Configuration file: config/m2/13.json
+2024-08-15 16:47:13,121 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-08-15 16:47:14,288 [INFO]  Setting up window with size: (1350, 750) and full_screen: True
+2024-08-15 16:47:14,289 [INFO]  Created window with size [3840 2160]
+2024-08-15 16:47:14,335 [INFO]  begin intro
+2024-08-15 16:47:14,335 [DEBUG]  message: Welcome! (None)
