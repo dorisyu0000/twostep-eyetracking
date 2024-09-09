@@ -29,6 +29,7 @@ for file in sorted(os.listdir(f"data/exp/{VERSION}/")):
 
     # eyelink data
     edf = f'data/eyelink/{wid}/raw.edf'
+
     assert os.path.isfile(edf)
     dest = f'data/eyelink/{wid}/samples.asc'
     if os.path.isfile(edf) and not os.path.isfile(dest):
@@ -41,4 +42,3 @@ for file in sorted(os.listdir(f"data/exp/{VERSION}/")):
 os.makedirs(f'data/processed/{VERSION}/', exist_ok=True)
 with open(f'data/processed/{VERSION}/trials.json', 'w') as f:
     json.dump(trials, f)
-

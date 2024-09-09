@@ -26,16 +26,13 @@ def main(config_number=None, name=None, test=False, fast=False, full=False, mous
     else:
         try:
             if fast:
-                exp.intro()
-                exp.practice_start()
-                exp.practice(1)
-                exp.setup_eyetracker(mouse)
-                exp.show_gaze_demo()
-                exp.intro_gaze()
-                exp.calibrate_gaze_tolerance()
-                exp.intro_contingent()
-                exp.intro_main()
-                exp.run_main()
+               exp.intro()
+               exp.intro_reward()
+               exp.setup_eyetracker()
+               exp.intro_gaze()
+               exp.intro_main()
+               exp.run_main()
+               exp.save_data()
             else:
                exp.intro()
                exp.intro_reward()
@@ -46,6 +43,7 @@ def main(config_number=None, name=None, test=False, fast=False, full=False, mous
                exp.intro_main()
                exp.run_main()
                exp.save_data()
+
             exp.save_data()
         except:
             if test:

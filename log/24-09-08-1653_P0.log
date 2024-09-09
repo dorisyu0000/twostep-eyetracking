@@ -1,0 +1,19 @@
+2024-09-08 16:53:02,471 [INFO]  starting up 24-09-08-1653_P0 at 2.051275125006214
+2024-09-08 16:53:02,500 [INFO]  git SHA: 81bb9571f5ebf4a29a61722b4b9ef57e80f22bd5
+2024-09-08 16:53:02,500 [INFO]  Configuration file: config/v1/0.json
+2024-09-08 16:53:02,501 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-09-08 16:53:03,656 [INFO]  Created window with size [3840 2160]
+2024-09-08 16:53:03,859 [ERROR]  Failed to open port: /dev/cu.usbserial-A900a2R9
+Traceback (most recent call last):
+  File "/Users/labadmin/miniconda3/lib/python3.8/site-packages/serial/serialposix.py", line 322, in open
+    self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/cu.usbserial-A900a2R9'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/triggers.py", line 23, in __init__
+    self.ser.open()
+  File "/Users/labadmin/miniconda3/lib/python3.8/site-packages/serial/serialposix.py", line 325, in open
+    raise SerialException(msg.errno, "could not open port {}: {}".format(self._port, msg))
+serial.serialutil.SerialException: [Errno 2] could not open port /dev/cu.usbserial-A900a2R9: [Errno 2] No such file or directory: '/dev/cu.usbserial-A900a2R9'

@@ -1,0 +1,46 @@
+2024-09-08 17:00:52,130 [INFO]  starting up 24-09-08-1700_P0 at 2.3018687500152737
+2024-09-08 17:00:52,154 [INFO]  git SHA: 81bb9571f5ebf4a29a61722b4b9ef57e80f22bd5
+2024-09-08 17:00:52,154 [INFO]  Configuration file: config/v1/0.json
+2024-09-08 17:00:52,155 [INFO]  parameters {'reward_info': {'-4': {'desc': 'pattern_1', 'image': 'images[0]'}, '-3': {'desc': 'pattern_2', 'image': 'images[1]'}, '-2': {'desc': 'pattern_3', 'image': 'images[2]'}, '-1': {'desc': 'pattern_4', 'image': 'images[3]'}, '0': {'desc': 'pattern_5', 'image': 'images[4]'}, '1': {'desc': 'pattern_6', 'image': 'images[5]'}, '2': {'desc': 'pattern_7', 'image': 'images[6]'}, '3': {'desc': 'pattern_8', 'image': 'images[7]'}, '4': {'desc': 'pattern_9', 'image': 'images[8]'}}, 'images': ['pattern_1.png', 'pattern_2.png', 'pattern_3.png', 'pattern_4.png', 'pattern_5.png', 'pattern_6.png', 'pattern_7.png', 'pattern_8.png', 'pattern_9.png'], 'points_per_cent': 1, 'revealed': True, 'layout': [[0.0, 0.5], [-0.27032040872779883, 0.4206267664155905], [-0.4548159976772592, 0.20770750650094316], [-0.4949107209404664, -0.07115741913664247], [-0.3778747871771292, -0.3274303669726425], [-0.14086627842071486, -0.4797464868072487], [0.14086627842071464, -0.47974648680724874], [0.37787478717712886, -0.32743036697264283], [0.4949107209404664, -0.07115741913664264], [0.4548159976772592, 0.20770750650094305], [0.27032040872779883, 0.4206267664155906]]}
+2024-09-08 17:00:53,286 [INFO]  Created window with size [3840 2160]
+2024-09-08 17:00:53,492 [INFO]  begin intro
+2024-09-08 17:00:53,492 [ERROR]  Caught exception in stage intro
+Traceback (most recent call last):
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 38, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 230, in intro
+    gt = self.get_practice_trial(highlight_edges=False, hide_rewards_while_acting=False, initial_stage='acting')
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 136, in get_practice_trial
+    prm = {
+TypeError: 'list' object is not a mapping
+2024-09-08 17:00:56,889 [ERROR]  Uncaught exception in main
+Traceback (most recent call last):
+  File "main.py", line 40, in main
+    exp.intro()
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 38, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 230, in intro
+    gt = self.get_practice_trial(highlight_edges=False, hide_rewards_while_acting=False, initial_stage='acting')
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 136, in get_practice_trial
+    prm = {
+TypeError: 'list' object is not a mapping
+2024-09-08 17:00:56,894 [INFO]  begin save_data
+2024-09-08 17:00:56,894 [DEBUG]  message: You're done! Your final bonus is $0.00 (give us a few seconds to save the data)
+2024-09-08 17:00:56,911 [INFO]  wrote data/exp/v1/24-09-08-1700_P0.json
+2024-09-08 17:00:56,911 [INFO]  MouseLink save_data
+2024-09-08 17:00:56,911 [DEBUG]  message: You're done! Your final bonus is $0.00 (data saved! press Button 1 to exit)
+2024-09-08 17:01:02,447 [ERROR]  error on second save data attempt
+Traceback (most recent call last):
+  File "main.py", line 40, in main
+    exp.intro()
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 38, in wrapper
+    f(self, *args, **kwargs)
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 230, in intro
+    gt = self.get_practice_trial(highlight_edges=False, hide_rewards_while_acting=False, initial_stage='acting')
+  File "/Users/labadmin/twostep-eyetracking/experiment.py", line 136, in get_practice_trial
+    prm = {
+TypeError: 'list' object is not a mapping
+2024-09-08 17:01:02,447 [WARNING]  emergency save data
+2024-09-08 17:01:02,447 [INFO]  MouseLink save_data
+2024-09-08 17:01:02,447 [WARNING]  eyelink data saved?
+2024-09-08 17:01:02,448 [INFO]  wrote data/exp/v1/24-09-08-1700_P0.txt
