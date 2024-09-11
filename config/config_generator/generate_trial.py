@@ -514,7 +514,7 @@ def make_trials():
     trialNumber = 1
     add_main = []
 
-    for _ in range(160):  
+    for _ in range(150):  
         if trialNumber % 2 == 0:
             problem_1 = sample_problem_1(**kws, trialNumber=trialNumber)
             main.append(problem_1)
@@ -532,7 +532,7 @@ def make_trials():
         
     random.shuffle(main)
     
-    for _ in range(100):  
+    for _ in range(150):  
         if trialNumber % 2 == 0:
             problem_1 = sample_problem_1(**kws, trialNumber=trialNumber)
             main.append(problem_1)

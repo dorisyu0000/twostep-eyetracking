@@ -275,24 +275,24 @@ class Experiment(object):
             pass
             # self.message(f"", space=True)
 
-        self.message( "Before we start, let's learn all the buttons you need in this game . ", space = True)
+        self.message( "Before we start, let's learn all the buttons you need in this game. ", space = True)
         
         self.message(
-            f"{LABEL_SWITCH} should be under your left index finger which you can switch the line you select. ",
+            f"{LABEL_SWITCH} should be under your left index finger which you can switch the line (Yellow line) you select. ",
             tip_text = f"Press {LABEL_SWITCH} to continue")
         
         event.waitKeys(keyList=[KEY_SWITCH])
         
         self.message(
            
-            f"{LABEL_SELECT} should be under your right index finger which to confirm your choice. ",
+            f"{LABEL_SELECT} should be under your right index finger which to confirm your choice (Yellow lines). ",
             tip_text = f"Press {LABEL_SELECT} to continue")
         
         event.waitKeys(keyList=[KEY_SELECT])
         
         self.message(
-            "Now, let's try to play one round"
-            f"Press {LABEL_SWITCH} and {LABEL_SELECT} to move. "
+            f"Now, let's try to play one round"
+            f"Press  {LABEL_SWITCH} and then {LABEL_SELECT} to move. "
         )
         
         gt.run(one_step=True) 
@@ -309,7 +309,7 @@ class Experiment(object):
         gt.show()
 
 
-        self.message("In this game, you will see these diamonds.", space=True)
+        self.message("In this game, you will see those diamonds.", space=True)
         reward_texts = []  
         for i, (node, reward) in enumerate(zip(gt.nodes, gt.rewards)):
             if reward > 0:
@@ -459,7 +459,7 @@ class Experiment(object):
     def practice(self, n):
         intervened = False
         for i in range(n):
-            self.message("Let's try a few harder practice rounds.",
+            self.message("Let's try a few harder practice rounds. You need to get as many points as you can with two moves.",
                          space=False, tip_text=f'complete {n - i} practice rounds to continue')
 
             gt = self.get_practice_trial()
@@ -604,7 +604,7 @@ class Experiment(object):
             self.message("Alright! We're ready to begin the main phase of the experiment.", space=True)
             self.message("But first, you might be asking \"What's in it for me?\" ...Well, we thought of that!", space=True)
             self.message("Unlike other experiments you might have done, we don't have a fixed number of rounds.", space=True)
-            self.message(f"Instead, you will do as as many rounds as it takes to earn {self.score_limit} points.", space=True)
+            self.message(f"Instead, you will do as many rounds as it takes to earn {self.score_limit} points.", space=True)
             self.message("To finish the study as quickly as possible, you'll have to balance making fast choices and selecting the best possible path.", space=True)
             self.message("Good luck!", space=True)
 

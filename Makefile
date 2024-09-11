@@ -8,6 +8,9 @@ test:
 	git pull
 	python main.py --test
 
+fast: 
+	git pull
+	python main.py --fast
 fetch:
 	rsync -av mattar-mini:/Users/labadmin/eyeplan-experiment/data/ data/
 	rsync -av mattar-mini:/Users/labadmin/eyeplan-experiment/log/ log/

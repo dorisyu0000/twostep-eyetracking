@@ -16,7 +16,7 @@ def main(config_number=None, name=None, test=False, fast=False, full=False, mous
         # exp.practice(2)
         exp.setup_eyetracker(mouse)
         # exp.show_gaze_demo()
-        # exp.intro_gaze()
+        # exp.intro_gaze ()
         # exp.calibrate_gaze_tolerance()
         # exp.intro_contingent()
         exp.intro_main()
